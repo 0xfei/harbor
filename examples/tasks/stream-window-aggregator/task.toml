@@ -1,0 +1,45 @@
+schema_version = "1.1"
+
+[task]
+name = "harbor/stream-window-aggregator"
+description = "Implement a lock-free sliding-window user interest aggregation engine for a video recommendation feed."
+authors = [
+  { name = "0x01f", email = "hhxlovety@gmail.com" }
+]
+keywords = ["streaming", "lock-free", "atomics", "sliding-window", "systems-programming"]
+
+[metadata]
+author_name = "0x01f"
+author_email = "hhxlovety@gmail.com"
+difficulty = "hard"
+category = "systems"
+tags = [
+  "c++",
+  "lock-free",
+  "atomics",
+  "streaming",
+  "concurrency",
+  "sliding-window",
+  "recommendation-system",
+]
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 1800.0
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 4
+memory_mb = 512
+storage_mb = 10240
+gpus = 0
+allow_internet = false
+mcp_servers = []
+
+[verifier.env]
+
+[environment.env]
+
+[solution.env]

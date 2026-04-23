@@ -1,0 +1,33 @@
+schema_version = "1.1"
+
+[task]
+name = "harbor/stream-ingest-deadlock"
+description = "Fix a deadlock bug in a multi-threaded event ingestion system."
+authors = [
+  { name = "0x01f", email = "hhxlovety@gmail.com" }
+]
+keywords = ["python", "concurrency", "deadlock", "threading"]
+
+[metadata]
+difficulty = "hard"
+category = "systems"
+tags = ["python", "concurrency", "deadlock", "threading", "queue"]
+
+[verifier]
+timeout_sec = 60.0
+
+[agent]
+timeout_sec = 900.0
+
+[environment]
+build_timeout_sec = 300.0
+cpus = 4
+memory_mb = 2048
+storage_mb = 4096
+gpus = 0
+allow_internet = false
+mcp_servers = []
+
+[verifier.env]
+[environment.env]
+[solution.env]
