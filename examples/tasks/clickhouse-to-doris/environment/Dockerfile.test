@@ -1,0 +1,35 @@
+# 完整测试环境 - 包含 ClickHouse Server + Python 测试
+FROM clickhouse/clickhouse-server:24.3
+
+USER root
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# 安装额外依赖
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    python3 python3-pip \
+    default-mysql-client \
+    curl procps netcat-openbsd \
+    && rm -rf /var/lib/apt/lists/*
+
+# 安装 Python 依赖
+RUN pip3 install --no-cache-dir --break-system-packages \
+    pymysql clickhouse-driver pytest
+
+# 创建工作目录
+RUN mkdir -p /app /data /logs/verifier /tests /solution
+
+WORKDIR /app
+
+# 复制应用代码
+COPY app/ /app/
+COPY tests/ /tests/
+COPY solution/ /solution/
+
+# 启动脚本
+COPY environment/start_test.sh /start_test.sh
+RUN chmod +x /start_test.sh
+
+EXPOSE 9000 8123
+
+CMD ["/start_test.sh"]

@@ -1,0 +1,36 @@
+schema_version = "1.1"
+
+[task]
+name = "harbor/clickhouse-to-doris"
+description = "Migrate ClickHouse ads_seller_item_stat table to Apache Doris with optimized schema and queries."
+authors = [
+  { name = "0x01f", email = "hhxlovety@gmail.com" }
+]
+keywords = ["clickhouse", "doris", "migration", "olap", "sql-optimization"]
+
+[metadata]
+difficulty = "hard"
+category = "database-migration"
+tags = ["clickhouse", "doris", "olap", "sql", "migration", "optimization", "benchmark"]
+
+[verifier]
+timeout_sec = 600.0
+
+[agent]
+# 允许多轮迭代优化
+timeout_sec = 3600.0
+# 最大尝试次数
+max_attempts = 5
+
+[environment]
+build_timeout_sec = 900.0
+cpus = 6
+memory_mb = 12288  # 12GB for both CH and Doris
+storage_mb = 30720
+gpus = 0
+allow_internet = true
+mcp_servers = []
+
+[verifier.env]
+[environment.env]
+[solution.env]

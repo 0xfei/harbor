@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+    container_name: ch-server
+    ports:
+      - "9000:9000"   # Native protocol
+      - "8123:8123"   # HTTP API
+    environment:
+      CLICKHOUSE_DB: ads
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ""
+    volumes:
+      - ch_data:/var/lib/clickhouse
+      - ch_logs:/var/log/clickhouse-server
+      - ../app:/app
+    healthcheck:
+      test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  doris-fe:
+    image: apache/doris:2.1.0-fe
+    container_name: doris-fe
+    ports:
+      - "9030:9030"  # MySQL protocol
+      - "8030:8030"  # HTTP
+    environment:
+      FE_SERVERS: "doris-fe:9010"
+      FE_ID: "1"
+    volumes:
+      - doris_fe_meta:/opt/doris/fe/doris_meta
+      - ../app:/app
+    command: >
+      bash -c "echo 'meta_dir = /opt/doris/fe/doris_meta' >> /opt/doris/fe/conf/fe.conf &&
+               echo 'priority_networks = 172.16.0.0/12' >> /opt/doris/fe/conf/fe.conf &&
+               /opt/doris/fe/bin/start_fe.sh --daemon && tail -f /dev/null"
+    healthcheck:
+      test: ["CMD", "mysql", "-h127.0.0.1", "-P9030", "-uroot", "-e", "SELECT 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  doris-be:
+    image: apache/doris:2.1.0-be
+    container_name: doris-be
+    ports:
+      - "9050:9050"  # Heartbeat
+      - "8040:8040"  # Web
+    environment:
+      FE_SERVERS: "doris-fe:9010"
+      BE_ADDR: "doris-be:9050"
+    volumes:
+      - doris_be_storage:/opt/doris/be/storage
+      - ../app:/app
+    command: >
+      bash -c "echo 'storage_root_path = /opt/doris/be/storage' >> /opt/doris/be/conf/be.conf &&
+               echo 'priority_networks = 172.16.0.0/12' >> /opt/doris/be/conf/be.conf &&
+               /opt/doris/be/bin/start_be.sh --daemon && tail -f /dev/null"
+    depends_on:
+      doris-fe:
+        condition: service_healthy
+
+  test-runner:
+    build:
+      context: ..
+      dockerfile: environment/Dockerfile
+    container_name: test-runner
+    depends_on:
+      - clickhouse
+      - doris-fe
+      - doris-be
+    volumes:
+      - ../app:/app
+      - ../tests:/tests
+      - ../solution:/solution
+      - test_logs:/logs/verifier
+    environment:
+      CH_HOST: "clickhouse"
+      CH_PORT: "9000"
+      DORIS_HOST: "doris-fe"
+      DORIS_PORT: "9030"
+    command: >
+      bash -c "sleep 30 &&
+               python3 /app/benchmark.py"
+
+volumes:
+  ch_data:
+  ch_logs:
+  doris_fe_meta:
+  doris_be_storage:
+  test_logs:

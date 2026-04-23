@@ -1,0 +1,160 @@
+version: '3.8'
+
+# 大资源配置 - 本地资源充足
+services:
+  # ClickHouse Server
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+    container_name: ch-server
+    hostname: clickhouse
+    ports:
+      - "9000:9000"   # Native protocol
+      - "8123:8123"   # HTTP API
+    environment:
+      CLICKHOUSE_DB: ads
+      CLICKHOUSE_USER: default
+      CLICKHOUSE_PASSWORD: ""
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+    volumes:
+      - ch_data:/var/lib/clickhouse
+      - ch_logs:/var/log/clickhouse-server
+      - ./init_scripts:/docker-entrypoint-initdb.d
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    healthcheck:
+      test: ["CMD", "clickhouse-client", "--query", "SELECT 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - doris_net
+
+  # Doris FE (Frontend)
+  doris-fe:
+    image: apache/doris:2.1.0-fe
+    container_name: doris-fe
+    hostname: doris-fe
+    ports:
+      - "9030:9030"  # MySQL protocol
+      - "8030:8030"  # HTTP
+      - "9010:9010"  # FE RPC
+    environment:
+      FE_SERVERS: "doris-fe:9010"
+      FE_ID: "1"
+    volumes:
+      - doris_fe_meta:/opt/doris/fe/doris_meta
+      - ./doris_conf:/opt/doris/fe/conf
+    command: >
+      bash -c "
+      echo 'meta_dir = /opt/doris/fe/doris_meta' >> /opt/doris/fe/conf/fe.conf &&
+      echo 'priority_networks = 172.28.0.0/16' >> /opt/doris/fe/conf/fe.conf &&
+      echo 'edit_log_port = 9010' >> /opt/doris/fe/conf/fe.conf &&
+      echo 'query_port = 9030' >> /opt/doris/fe/conf/fe.conf &&
+      echo 'http_port = 8030' >> /opt/doris/fe/conf/fe.conf &&
+      /opt/doris/fe/bin/start_fe.sh --daemon &&
+      tail -f /dev/null"
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 4G
+    healthcheck:
+      test: ["CMD", "mysql", "-h127.0.0.1", "-P9030", "-uroot", "-e", "SELECT 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+    networks:
+      - doris_net
+
+  # Doris BE (Backend)
+  doris-be:
+    image: apache/doris:2.1.0-be
+    container_name: doris-be
+    hostname: doris-be
+    ports:
+      - "9050:9050"  # Heartbeat
+      - "8040:8040"  # Web
+      - "9060:9060"  # BE RPC
+    environment:
+      FE_SERVERS: "doris-fe:9010"
+      BE_ADDR: "doris-be:9050"
+    volumes:
+      - doris_be_storage:/opt/doris/be/storage
+      - ./doris_conf:/opt/doris/be/conf
+    command: >
+      bash -c "
+      echo 'storage_root_path = /opt/doris/be/storage' >> /opt/doris/be/conf/be.conf &&
+      echo 'priority_networks = 172.28.0.0/16' >> /opt/doris/be/conf/be.conf &&
+      echo 'heartbeat_service_port = 9050' >> /opt/doris/be/conf/be.conf &&
+      echo 'webserver_port = 8040' >> /opt/doris/be/conf/be.conf &&
+      echo 'brpc_port = 8060' >> /opt/doris/be/conf/be.conf &&
+      /opt/doris/be/bin/start_be.sh --daemon &&
+      tail -f /dev/null"
+    depends_on:
+      doris-fe:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '6'
+          memory: 12G
+        reservations:
+          cpus: '3'
+          memory: 6G
+    networks:
+      - doris_net
+
+  # 测试运行器
+  test-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile.runner
+    container_name: test-runner
+    depends_on:
+      - clickhouse
+      - doris-fe
+      - doris-be
+    volumes:
+      - ../app:/app
+      - ../tests:/tests
+      - ../solution:/solution
+      - test_logs:/logs
+    environment:
+      CH_HOST: "clickhouse"
+      CH_PORT: "9000"
+      DORIS_HOST: "doris-fe"
+      DORIS_PORT: "9030"
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+    networks:
+      - doris_net
+
+volumes:
+  ch_data:
+  ch_logs:
+  doris_fe_meta:
+  doris_be_storage:
+  test_logs:
+
+networks:
+  doris_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.28.0.0/16
