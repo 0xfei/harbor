@@ -1,0 +1,4809 @@
+{
+  "storage": {
+    "timeseries": [
+      {
+        "time": "2025-11-17 00:00",
+        "read_write_throughput_GBps": 31.0,
+        "iops": 106320,
+        "read_latency_ms": 3.9,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 71.2,
+        "metadata_pressure_pct": 86.8
+      },
+      {
+        "time": "2025-11-17 01:00",
+        "read_write_throughput_GBps": 36.22,
+        "iops": 115098,
+        "read_latency_ms": 4.3,
+        "write_latency_ms": 2.7,
+        "disk_pressure_pct": 64.2,
+        "metadata_pressure_pct": 85.1
+      },
+      {
+        "time": "2025-11-17 02:00",
+        "read_write_throughput_GBps": 31.91,
+        "iops": 125242,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 64.2,
+        "metadata_pressure_pct": 85.9
+      },
+      {
+        "time": "2025-11-17 03:00",
+        "read_write_throughput_GBps": 41.34,
+        "iops": 124487,
+        "read_latency_ms": 5.3,
+        "write_latency_ms": 4.3,
+        "disk_pressure_pct": 65.8,
+        "metadata_pressure_pct": 81.5
+      },
+      {
+        "time": "2025-11-17 04:00",
+        "read_write_throughput_GBps": 44.82,
+        "iops": 140255,
+        "read_latency_ms": 3.4,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 72.7,
+        "metadata_pressure_pct": 86.1
+      },
+      {
+        "time": "2025-11-17 05:00",
+        "read_write_throughput_GBps": 44.66,
+        "iops": 157191,
+        "read_latency_ms": 4.6,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 66.3,
+        "metadata_pressure_pct": 85.5
+      },
+      {
+        "time": "2025-11-17 06:00",
+        "read_write_throughput_GBps": 45.32,
+        "iops": 154266,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 4.0,
+        "disk_pressure_pct": 70.8,
+        "metadata_pressure_pct": 80.4
+      },
+      {
+        "time": "2025-11-17 07:00",
+        "read_write_throughput_GBps": 38.88,
+        "iops": 141447,
+        "read_latency_ms": 3.4,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 62.6,
+        "metadata_pressure_pct": 82.7
+      },
+      {
+        "time": "2025-11-17 08:00",
+        "read_write_throughput_GBps": 41.71,
+        "iops": 141245,
+        "read_latency_ms": 4.1,
+        "write_latency_ms": 3.1,
+        "disk_pressure_pct": 64.8,
+        "metadata_pressure_pct": 89.5
+      },
+      {
+        "time": "2025-11-17 09:00",
+        "read_write_throughput_GBps": 39.85,
+        "iops": 144911,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 4.3,
+        "disk_pressure_pct": 63.4,
+        "metadata_pressure_pct": 83.8
+      },
+      {
+        "time": "2025-11-17 10:00",
+        "read_write_throughput_GBps": 40.23,
+        "iops": 139535,
+        "read_latency_ms": 4.7,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 72.7,
+        "metadata_pressure_pct": 87.8
+      },
+      {
+        "time": "2025-11-17 11:00",
+        "read_write_throughput_GBps": 62.18,
+        "iops": 280990,
+        "read_latency_ms": 25.9,
+        "write_latency_ms": 20.0,
+        "disk_pressure_pct": 58.4,
+        "metadata_pressure_pct": 77.3
+      },
+      {
+        "time": "2025-11-17 12:00",
+        "read_write_throughput_GBps": 32.71,
+        "iops": 114662,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 73.6,
+        "metadata_pressure_pct": 84.6
+      },
+      {
+        "time": "2025-11-17 13:00",
+        "read_write_throughput_GBps": 25.38,
+        "iops": 105410,
+        "read_latency_ms": 4.7,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 69.2,
+        "metadata_pressure_pct": 89.1
+      },
+      {
+        "time": "2025-11-17 14:00",
+        "read_write_throughput_GBps": 42.95,
+        "iops": 117537,
+        "read_latency_ms": 4.5,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 61.8,
+        "metadata_pressure_pct": 81.0
+      },
+      {
+        "time": "2025-11-17 15:00",
+        "read_write_throughput_GBps": 51.58,
+        "iops": 96941,
+        "read_latency_ms": 3.3,
+        "write_latency_ms": 3.5,
+        "disk_pressure_pct": 74.7,
+        "metadata_pressure_pct": 85.3
+      },
+      {
+        "time": "2025-11-17 16:00",
+        "read_write_throughput_GBps": 55.88,
+        "iops": 82995,
+        "read_latency_ms": 5.1,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 68.5,
+        "metadata_pressure_pct": 82.6
+      },
+      {
+        "time": "2025-11-17 17:00",
+        "read_write_throughput_GBps": 19.03,
+        "iops": 82536,
+        "read_latency_ms": 4.3,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 74.2,
+        "metadata_pressure_pct": 88.8
+      },
+      {
+        "time": "2025-11-17 18:00",
+        "read_write_throughput_GBps": 16.98,
+        "iops": 90012,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 73.0,
+        "metadata_pressure_pct": 82.9
+      },
+      {
+        "time": "2025-11-17 19:00",
+        "read_write_throughput_GBps": 19.02,
+        "iops": 93402,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 68.5,
+        "metadata_pressure_pct": 87.8
+      },
+      {
+        "time": "2025-11-17 20:00",
+        "read_write_throughput_GBps": 19.75,
+        "iops": 82749,
+        "read_latency_ms": 4.0,
+        "write_latency_ms": 2.7,
+        "disk_pressure_pct": 73.8,
+        "metadata_pressure_pct": 88.9
+      },
+      {
+        "time": "2025-11-17 21:00",
+        "read_write_throughput_GBps": 23.23,
+        "iops": 94223,
+        "read_latency_ms": 3.3,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 74.1,
+        "metadata_pressure_pct": 80.8
+      },
+      {
+        "time": "2025-11-17 22:00",
+        "read_write_throughput_GBps": 23.92,
+        "iops": 94144,
+        "read_latency_ms": 5.2,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 62.9,
+        "metadata_pressure_pct": 84.7
+      },
+      {
+        "time": "2025-11-17 23:00",
+        "read_write_throughput_GBps": 27.22,
+        "iops": 105906,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 64.1,
+        "metadata_pressure_pct": 85.4
+      },
+      {
+        "time": "2025-11-18 00:00",
+        "read_write_throughput_GBps": 31.66,
+        "iops": 111393,
+        "read_latency_ms": 4.0,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 70.0,
+        "metadata_pressure_pct": 84.4
+      },
+      {
+        "time": "2025-11-18 01:00",
+        "read_write_throughput_GBps": 33.25,
+        "iops": 116143,
+        "read_latency_ms": 3.8,
+        "write_latency_ms": 3.4,
+        "disk_pressure_pct": 69.2,
+        "metadata_pressure_pct": 82.2
+      },
+      {
+        "time": "2025-11-18 02:00",
+        "read_write_throughput_GBps": 33.58,
+        "iops": 121100,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 73.5,
+        "metadata_pressure_pct": 88.7
+      },
+      {
+        "time": "2025-11-18 03:00",
+        "read_write_throughput_GBps": 34.52,
+        "iops": 132333,
+        "read_latency_ms": 5.0,
+        "write_latency_ms": 3.1,
+        "disk_pressure_pct": 63.0,
+        "metadata_pressure_pct": 89.4
+      },
+      {
+        "time": "2025-11-18 04:00",
+        "read_write_throughput_GBps": 41.08,
+        "iops": 145023,
+        "read_latency_ms": 5.3,
+        "write_latency_ms": 4.5,
+        "disk_pressure_pct": 63.8,
+        "metadata_pressure_pct": 80.9
+      },
+      {
+        "time": "2025-11-18 05:00",
+        "read_write_throughput_GBps": 40.9,
+        "iops": 146245,
+        "read_latency_ms": 4.4,
+        "write_latency_ms": 4.3,
+        "disk_pressure_pct": 70.4,
+        "metadata_pressure_pct": 89.9
+      },
+      {
+        "time": "2025-11-18 06:00",
+        "read_write_throughput_GBps": 37.95,
+        "iops": 146494,
+        "read_latency_ms": 4.1,
+        "write_latency_ms": 4.6,
+        "disk_pressure_pct": 64.6,
+        "metadata_pressure_pct": 81.8
+      },
+      {
+        "time": "2025-11-18 07:00",
+        "read_write_throughput_GBps": 41.08,
+        "iops": 146184,
+        "read_latency_ms": 3.9,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 73.8,
+        "metadata_pressure_pct": 84.4
+      },
+      {
+        "time": "2025-11-18 08:00",
+        "read_write_throughput_GBps": 43.9,
+        "iops": 147743,
+        "read_latency_ms": 3.3,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 72.6,
+        "metadata_pressure_pct": 89.8
+      },
+      {
+        "time": "2025-11-18 09:00",
+        "read_write_throughput_GBps": 42.42,
+        "iops": 153030,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 3.8,
+        "disk_pressure_pct": 64.1,
+        "metadata_pressure_pct": 84.0
+      },
+      {
+        "time": "2025-11-18 10:00",
+        "read_write_throughput_GBps": 32.19,
+        "iops": 131078,
+        "read_latency_ms": 5.8,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 71.9,
+        "metadata_pressure_pct": 84.5
+      },
+      {
+        "time": "2025-11-18 11:00",
+        "read_write_throughput_GBps": 64.2,
+        "iops": 338353,
+        "read_latency_ms": 33.5,
+        "write_latency_ms": 22.5,
+        "disk_pressure_pct": 64.7,
+        "metadata_pressure_pct": 71.4
+      },
+      {
+        "time": "2025-11-18 12:00",
+        "read_write_throughput_GBps": 28.54,
+        "iops": 133498,
+        "read_latency_ms": 4.7,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 71.4,
+        "metadata_pressure_pct": 80.5
+      },
+      {
+        "time": "2025-11-18 13:00",
+        "read_write_throughput_GBps": 27.44,
+        "iops": 112312,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 3.0,
+        "disk_pressure_pct": 74.3,
+        "metadata_pressure_pct": 80.7
+      },
+      {
+        "time": "2025-11-18 14:00",
+        "read_write_throughput_GBps": 45.05,
+        "iops": 109415,
+        "read_latency_ms": 3.8,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 73.3,
+        "metadata_pressure_pct": 82.4
+      },
+      {
+        "time": "2025-11-18 15:00",
+        "read_write_throughput_GBps": 49.26,
+        "iops": 96871,
+        "read_latency_ms": 4.7,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 73.9,
+        "metadata_pressure_pct": 82.0
+      },
+      {
+        "time": "2025-11-18 16:00",
+        "read_write_throughput_GBps": 45.96,
+        "iops": 91667,
+        "read_latency_ms": 5.0,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 65.5,
+        "metadata_pressure_pct": 87.6
+      },
+      {
+        "time": "2025-11-18 17:00",
+        "read_write_throughput_GBps": 16.52,
+        "iops": 90110,
+        "read_latency_ms": 5.8,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 62.2,
+        "metadata_pressure_pct": 82.1
+      },
+      {
+        "time": "2025-11-18 18:00",
+        "read_write_throughput_GBps": 16.99,
+        "iops": 99358,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 66.2,
+        "metadata_pressure_pct": 81.5
+      },
+      {
+        "time": "2025-11-18 19:00",
+        "read_write_throughput_GBps": 19.88,
+        "iops": 95468,
+        "read_latency_ms": 4.8,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 70.1,
+        "metadata_pressure_pct": 80.0
+      },
+      {
+        "time": "2025-11-18 20:00",
+        "read_write_throughput_GBps": 21.1,
+        "iops": 89492,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 4.8,
+        "disk_pressure_pct": 63.0,
+        "metadata_pressure_pct": 81.1
+      },
+      {
+        "time": "2025-11-18 21:00",
+        "read_write_throughput_GBps": 19.49,
+        "iops": 100048,
+        "read_latency_ms": 3.9,
+        "write_latency_ms": 4.0,
+        "disk_pressure_pct": 71.0,
+        "metadata_pressure_pct": 82.0
+      },
+      {
+        "time": "2025-11-18 22:00",
+        "read_write_throughput_GBps": 24.77,
+        "iops": 99052,
+        "read_latency_ms": 4.5,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 72.7,
+        "metadata_pressure_pct": 80.8
+      },
+      {
+        "time": "2025-11-18 23:00",
+        "read_write_throughput_GBps": 26.4,
+        "iops": 106219,
+        "read_latency_ms": 3.2,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 69.9,
+        "metadata_pressure_pct": 82.6
+      },
+      {
+        "time": "2025-11-19 00:00",
+        "read_write_throughput_GBps": 31.74,
+        "iops": 121488,
+        "read_latency_ms": 4.3,
+        "write_latency_ms": 2.7,
+        "disk_pressure_pct": 62.2,
+        "metadata_pressure_pct": 88.9
+      },
+      {
+        "time": "2025-11-19 01:00",
+        "read_write_throughput_GBps": 36.32,
+        "iops": 129162,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 4.0,
+        "disk_pressure_pct": 63.2,
+        "metadata_pressure_pct": 81.2
+      },
+      {
+        "time": "2025-11-19 02:00",
+        "read_write_throughput_GBps": 34.34,
+        "iops": 147927,
+        "read_latency_ms": 5.3,
+        "write_latency_ms": 4.6,
+        "disk_pressure_pct": 73.4,
+        "metadata_pressure_pct": 82.0
+      },
+      {
+        "time": "2025-11-19 03:00",
+        "read_write_throughput_GBps": 36.17,
+        "iops": 127751,
+        "read_latency_ms": 5.3,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 66.7,
+        "metadata_pressure_pct": 86.2
+      },
+      {
+        "time": "2025-11-19 04:00",
+        "read_write_throughput_GBps": 37.04,
+        "iops": 161041,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 72.2,
+        "metadata_pressure_pct": 88.9
+      },
+      {
+        "time": "2025-11-19 05:00",
+        "read_write_throughput_GBps": 36.85,
+        "iops": 157436,
+        "read_latency_ms": 4.0,
+        "write_latency_ms": 4.8,
+        "disk_pressure_pct": 72.1,
+        "metadata_pressure_pct": 88.7
+      },
+      {
+        "time": "2025-11-19 06:00",
+        "read_write_throughput_GBps": 45.13,
+        "iops": 141605,
+        "read_latency_ms": 5.3,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 73.1,
+        "metadata_pressure_pct": 88.7
+      },
+      {
+        "time": "2025-11-19 07:00",
+        "read_write_throughput_GBps": 38.82,
+        "iops": 160297,
+        "read_latency_ms": 4.4,
+        "write_latency_ms": 3.4,
+        "disk_pressure_pct": 72.0,
+        "metadata_pressure_pct": 82.2
+      },
+      {
+        "time": "2025-11-19 08:00",
+        "read_write_throughput_GBps": 35.77,
+        "iops": 135229,
+        "read_latency_ms": 4.0,
+        "write_latency_ms": 4.6,
+        "disk_pressure_pct": 74.3,
+        "metadata_pressure_pct": 82.7
+      },
+      {
+        "time": "2025-11-19 09:00",
+        "read_write_throughput_GBps": 39.79,
+        "iops": 137813,
+        "read_latency_ms": 5.8,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 74.0,
+        "metadata_pressure_pct": 81.1
+      },
+      {
+        "time": "2025-11-19 10:00",
+        "read_write_throughput_GBps": 40.06,
+        "iops": 124585,
+        "read_latency_ms": 5.7,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 62.7,
+        "metadata_pressure_pct": 84.3
+      },
+      {
+        "time": "2025-11-19 11:00",
+        "read_write_throughput_GBps": 67.38,
+        "iops": 298447,
+        "read_latency_ms": 29.2,
+        "write_latency_ms": 22.1,
+        "disk_pressure_pct": 60.6,
+        "metadata_pressure_pct": 74.6
+      },
+      {
+        "time": "2025-11-19 12:00",
+        "read_write_throughput_GBps": 28.23,
+        "iops": 126013,
+        "read_latency_ms": 3.2,
+        "write_latency_ms": 4.8,
+        "disk_pressure_pct": 68.5,
+        "metadata_pressure_pct": 87.2
+      },
+      {
+        "time": "2025-11-19 13:00",
+        "read_write_throughput_GBps": 28.46,
+        "iops": 116831,
+        "read_latency_ms": 4.1,
+        "write_latency_ms": 2.8,
+        "disk_pressure_pct": 70.2,
+        "metadata_pressure_pct": 83.3
+      },
+      {
+        "time": "2025-11-19 14:00",
+        "read_write_throughput_GBps": 49.03,
+        "iops": 110537,
+        "read_latency_ms": 4.0,
+        "write_latency_ms": 3.4,
+        "disk_pressure_pct": 66.8,
+        "metadata_pressure_pct": 84.0
+      },
+      {
+        "time": "2025-11-19 15:00",
+        "read_write_throughput_GBps": 41.05,
+        "iops": 96900,
+        "read_latency_ms": 5.7,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 73.5,
+        "metadata_pressure_pct": 86.2
+      },
+      {
+        "time": "2025-11-19 16:00",
+        "read_write_throughput_GBps": 45.65,
+        "iops": 82746,
+        "read_latency_ms": 3.9,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 69.1,
+        "metadata_pressure_pct": 86.6
+      },
+      {
+        "time": "2025-11-19 17:00",
+        "read_write_throughput_GBps": 18.25,
+        "iops": 89758,
+        "read_latency_ms": 3.7,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 73.5,
+        "metadata_pressure_pct": 88.0
+      },
+      {
+        "time": "2025-11-19 18:00",
+        "read_write_throughput_GBps": 16.57,
+        "iops": 81031,
+        "read_latency_ms": 4.5,
+        "write_latency_ms": 4.1,
+        "disk_pressure_pct": 65.8,
+        "metadata_pressure_pct": 88.2
+      },
+      {
+        "time": "2025-11-19 19:00",
+        "read_write_throughput_GBps": 19.52,
+        "iops": 94797,
+        "read_latency_ms": 3.8,
+        "write_latency_ms": 3.1,
+        "disk_pressure_pct": 61.5,
+        "metadata_pressure_pct": 82.4
+      },
+      {
+        "time": "2025-11-19 20:00",
+        "read_write_throughput_GBps": 19.49,
+        "iops": 101910,
+        "read_latency_ms": 3.3,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 69.8,
+        "metadata_pressure_pct": 81.9
+      },
+      {
+        "time": "2025-11-19 21:00",
+        "read_write_throughput_GBps": 22.53,
+        "iops": 98653,
+        "read_latency_ms": 3.8,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 61.3,
+        "metadata_pressure_pct": 87.6
+      },
+      {
+        "time": "2025-11-19 22:00",
+        "read_write_throughput_GBps": 25.56,
+        "iops": 95085,
+        "read_latency_ms": 4.3,
+        "write_latency_ms": 3.1,
+        "disk_pressure_pct": 74.2,
+        "metadata_pressure_pct": 85.2
+      },
+      {
+        "time": "2025-11-19 23:00",
+        "read_write_throughput_GBps": 23.99,
+        "iops": 105479,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 72.1,
+        "metadata_pressure_pct": 86.7
+      },
+      {
+        "time": "2025-11-20 00:00",
+        "read_write_throughput_GBps": 33.51,
+        "iops": 122749,
+        "read_latency_ms": 5.7,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 69.5,
+        "metadata_pressure_pct": 87.2
+      },
+      {
+        "time": "2025-11-20 01:00",
+        "read_write_throughput_GBps": 33.14,
+        "iops": 137900,
+        "read_latency_ms": 4.6,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 71.3,
+        "metadata_pressure_pct": 84.7
+      },
+      {
+        "time": "2025-11-20 02:00",
+        "read_write_throughput_GBps": 33.92,
+        "iops": 126810,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 68.3,
+        "metadata_pressure_pct": 86.3
+      },
+      {
+        "time": "2025-11-20 03:00",
+        "read_write_throughput_GBps": 36.4,
+        "iops": 126893,
+        "read_latency_ms": 3.9,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 65.5,
+        "metadata_pressure_pct": 85.4
+      },
+      {
+        "time": "2025-11-20 04:00",
+        "read_write_throughput_GBps": 36.89,
+        "iops": 136565,
+        "read_latency_ms": 5.0,
+        "write_latency_ms": 4.3,
+        "disk_pressure_pct": 62.1,
+        "metadata_pressure_pct": 84.1
+      },
+      {
+        "time": "2025-11-20 05:00",
+        "read_write_throughput_GBps": 42.02,
+        "iops": 145966,
+        "read_latency_ms": 3.7,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 73.5,
+        "metadata_pressure_pct": 85.9
+      },
+      {
+        "time": "2025-11-20 06:00",
+        "read_write_throughput_GBps": 43.97,
+        "iops": 162842,
+        "read_latency_ms": 5.2,
+        "write_latency_ms": 3.5,
+        "disk_pressure_pct": 61.3,
+        "metadata_pressure_pct": 83.5
+      },
+      {
+        "time": "2025-11-20 07:00",
+        "read_write_throughput_GBps": 44.12,
+        "iops": 161615,
+        "read_latency_ms": 5.7,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 71.4,
+        "metadata_pressure_pct": 85.5
+      },
+      {
+        "time": "2025-11-20 08:00",
+        "read_write_throughput_GBps": 41.39,
+        "iops": 136189,
+        "read_latency_ms": 3.7,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 61.6,
+        "metadata_pressure_pct": 83.3
+      },
+      {
+        "time": "2025-11-20 09:00",
+        "read_write_throughput_GBps": 40.14,
+        "iops": 137970,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 62.9,
+        "metadata_pressure_pct": 86.2
+      },
+      {
+        "time": "2025-11-20 10:00",
+        "read_write_throughput_GBps": 31.91,
+        "iops": 131566,
+        "read_latency_ms": 4.7,
+        "write_latency_ms": 2.7,
+        "disk_pressure_pct": 69.9,
+        "metadata_pressure_pct": 81.3
+      },
+      {
+        "time": "2025-11-20 11:00",
+        "read_write_throughput_GBps": 64.6,
+        "iops": 282117,
+        "read_latency_ms": 26.6,
+        "write_latency_ms": 19.5,
+        "disk_pressure_pct": 59.9,
+        "metadata_pressure_pct": 75.9
+      },
+      {
+        "time": "2025-11-20 12:00",
+        "read_write_throughput_GBps": 29.13,
+        "iops": 127257,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 62.3,
+        "metadata_pressure_pct": 80.1
+      },
+      {
+        "time": "2025-11-20 13:00",
+        "read_write_throughput_GBps": 27.15,
+        "iops": 125701,
+        "read_latency_ms": 4.1,
+        "write_latency_ms": 4.1,
+        "disk_pressure_pct": 71.8,
+        "metadata_pressure_pct": 86.5
+      },
+      {
+        "time": "2025-11-20 14:00",
+        "read_write_throughput_GBps": 54.72,
+        "iops": 97423,
+        "read_latency_ms": 3.2,
+        "write_latency_ms": 3.0,
+        "disk_pressure_pct": 62.9,
+        "metadata_pressure_pct": 86.7
+      },
+      {
+        "time": "2025-11-20 15:00",
+        "read_write_throughput_GBps": 44.38,
+        "iops": 103515,
+        "read_latency_ms": 5.2,
+        "write_latency_ms": 3.0,
+        "disk_pressure_pct": 69.5,
+        "metadata_pressure_pct": 87.5
+      },
+      {
+        "time": "2025-11-20 16:00",
+        "read_write_throughput_GBps": 46.7,
+        "iops": 104505,
+        "read_latency_ms": 3.4,
+        "write_latency_ms": 2.7,
+        "disk_pressure_pct": 65.4,
+        "metadata_pressure_pct": 86.8
+      },
+      {
+        "time": "2025-11-20 17:00",
+        "read_write_throughput_GBps": 20.43,
+        "iops": 88764,
+        "read_latency_ms": 5.1,
+        "write_latency_ms": 2.8,
+        "disk_pressure_pct": 70.6,
+        "metadata_pressure_pct": 86.3
+      },
+      {
+        "time": "2025-11-20 18:00",
+        "read_write_throughput_GBps": 16.28,
+        "iops": 95885,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 4.0,
+        "disk_pressure_pct": 62.8,
+        "metadata_pressure_pct": 89.9
+      },
+      {
+        "time": "2025-11-20 19:00",
+        "read_write_throughput_GBps": 19.66,
+        "iops": 87684,
+        "read_latency_ms": 4.3,
+        "write_latency_ms": 3.5,
+        "disk_pressure_pct": 68.1,
+        "metadata_pressure_pct": 83.4
+      },
+      {
+        "time": "2025-11-20 20:00",
+        "read_write_throughput_GBps": 21.25,
+        "iops": 101292,
+        "read_latency_ms": 3.4,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 69.8,
+        "metadata_pressure_pct": 88.4
+      },
+      {
+        "time": "2025-11-20 21:00",
+        "read_write_throughput_GBps": 22.59,
+        "iops": 97257,
+        "read_latency_ms": 5.1,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 64.9,
+        "metadata_pressure_pct": 88.1
+      },
+      {
+        "time": "2025-11-20 22:00",
+        "read_write_throughput_GBps": 24.22,
+        "iops": 104584,
+        "read_latency_ms": 4.3,
+        "write_latency_ms": 4.3,
+        "disk_pressure_pct": 64.9,
+        "metadata_pressure_pct": 88.6
+      },
+      {
+        "time": "2025-11-20 23:00",
+        "read_write_throughput_GBps": 29.03,
+        "iops": 101101,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 67.5,
+        "metadata_pressure_pct": 86.1
+      },
+      {
+        "time": "2025-11-21 00:00",
+        "read_write_throughput_GBps": 29.13,
+        "iops": 106426,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 3.1,
+        "disk_pressure_pct": 64.1,
+        "metadata_pressure_pct": 88.0
+      },
+      {
+        "time": "2025-11-21 01:00",
+        "read_write_throughput_GBps": 31.84,
+        "iops": 139426,
+        "read_latency_ms": 5.0,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 61.3,
+        "metadata_pressure_pct": 89.6
+      },
+      {
+        "time": "2025-11-21 02:00",
+        "read_write_throughput_GBps": 32.42,
+        "iops": 142130,
+        "read_latency_ms": 4.5,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 70.6,
+        "metadata_pressure_pct": 86.5
+      },
+      {
+        "time": "2025-11-21 03:00",
+        "read_write_throughput_GBps": 38.4,
+        "iops": 151141,
+        "read_latency_ms": 3.4,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 70.6,
+        "metadata_pressure_pct": 83.0
+      },
+      {
+        "time": "2025-11-21 04:00",
+        "read_write_throughput_GBps": 41.18,
+        "iops": 145043,
+        "read_latency_ms": 4.6,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 71.3,
+        "metadata_pressure_pct": 83.3
+      },
+      {
+        "time": "2025-11-21 05:00",
+        "read_write_throughput_GBps": 43.62,
+        "iops": 140786,
+        "read_latency_ms": 3.8,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 63.8,
+        "metadata_pressure_pct": 81.1
+      },
+      {
+        "time": "2025-11-21 06:00",
+        "read_write_throughput_GBps": 42.36,
+        "iops": 159438,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 67.8,
+        "metadata_pressure_pct": 87.3
+      },
+      {
+        "time": "2025-11-21 07:00",
+        "read_write_throughput_GBps": 46.35,
+        "iops": 149858,
+        "read_latency_ms": 3.9,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 63.8,
+        "metadata_pressure_pct": 82.2
+      },
+      {
+        "time": "2025-11-21 08:00",
+        "read_write_throughput_GBps": 37.28,
+        "iops": 128958,
+        "read_latency_ms": 4.6,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 74.5,
+        "metadata_pressure_pct": 85.5
+      },
+      {
+        "time": "2025-11-21 09:00",
+        "read_write_throughput_GBps": 40.31,
+        "iops": 128547,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 3.8,
+        "disk_pressure_pct": 73.1,
+        "metadata_pressure_pct": 85.8
+      },
+      {
+        "time": "2025-11-21 10:00",
+        "read_write_throughput_GBps": 35.74,
+        "iops": 133071,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 2.8,
+        "disk_pressure_pct": 74.0,
+        "metadata_pressure_pct": 84.8
+      },
+      {
+        "time": "2025-11-21 11:00",
+        "read_write_throughput_GBps": 68.35,
+        "iops": 303843,
+        "read_latency_ms": 23.2,
+        "write_latency_ms": 23.1,
+        "disk_pressure_pct": 56.5,
+        "metadata_pressure_pct": 71.4
+      },
+      {
+        "time": "2025-11-21 12:00",
+        "read_write_throughput_GBps": 30.45,
+        "iops": 114350,
+        "read_latency_ms": 5.8,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 71.6,
+        "metadata_pressure_pct": 86.1
+      },
+      {
+        "time": "2025-11-21 13:00",
+        "read_write_throughput_GBps": 28.77,
+        "iops": 104846,
+        "read_latency_ms": 4.6,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 67.2,
+        "metadata_pressure_pct": 88.7
+      },
+      {
+        "time": "2025-11-21 14:00",
+        "read_write_throughput_GBps": 49.2,
+        "iops": 108049,
+        "read_latency_ms": 4.8,
+        "write_latency_ms": 4.3,
+        "disk_pressure_pct": 74.1,
+        "metadata_pressure_pct": 82.0
+      },
+      {
+        "time": "2025-11-21 15:00",
+        "read_write_throughput_GBps": 45.99,
+        "iops": 90656,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 2.8,
+        "disk_pressure_pct": 61.2,
+        "metadata_pressure_pct": 84.5
+      },
+      {
+        "time": "2025-11-21 16:00",
+        "read_write_throughput_GBps": 45.48,
+        "iops": 87960,
+        "read_latency_ms": 5.1,
+        "write_latency_ms": 4.3,
+        "disk_pressure_pct": 67.4,
+        "metadata_pressure_pct": 86.9
+      },
+      {
+        "time": "2025-11-21 17:00",
+        "read_write_throughput_GBps": 20.28,
+        "iops": 97309,
+        "read_latency_ms": 4.8,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 73.9,
+        "metadata_pressure_pct": 84.2
+      },
+      {
+        "time": "2025-11-21 18:00",
+        "read_write_throughput_GBps": 18.19,
+        "iops": 93188,
+        "read_latency_ms": 5.6,
+        "write_latency_ms": 4.5,
+        "disk_pressure_pct": 62.2,
+        "metadata_pressure_pct": 81.6
+      },
+      {
+        "time": "2025-11-21 19:00",
+        "read_write_throughput_GBps": 17.56,
+        "iops": 96460,
+        "read_latency_ms": 4.7,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 62.9,
+        "metadata_pressure_pct": 86.9
+      },
+      {
+        "time": "2025-11-21 20:00",
+        "read_write_throughput_GBps": 20.55,
+        "iops": 104008,
+        "read_latency_ms": 4.5,
+        "write_latency_ms": 3.8,
+        "disk_pressure_pct": 62.3,
+        "metadata_pressure_pct": 80.3
+      },
+      {
+        "time": "2025-11-21 21:00",
+        "read_write_throughput_GBps": 21.16,
+        "iops": 94574,
+        "read_latency_ms": 3.8,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 74.3,
+        "metadata_pressure_pct": 88.4
+      },
+      {
+        "time": "2025-11-21 22:00",
+        "read_write_throughput_GBps": 24.43,
+        "iops": 116359,
+        "read_latency_ms": 5.8,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 64.9,
+        "metadata_pressure_pct": 80.3
+      },
+      {
+        "time": "2025-11-21 23:00",
+        "read_write_throughput_GBps": 28.55,
+        "iops": 111440,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 63.7,
+        "metadata_pressure_pct": 85.9
+      },
+      {
+        "time": "2025-11-22 00:00",
+        "read_write_throughput_GBps": 30.97,
+        "iops": 119761,
+        "read_latency_ms": 3.4,
+        "write_latency_ms": 3.5,
+        "disk_pressure_pct": 65.7,
+        "metadata_pressure_pct": 86.7
+      },
+      {
+        "time": "2025-11-22 01:00",
+        "read_write_throughput_GBps": 35.95,
+        "iops": 122545,
+        "read_latency_ms": 5.0,
+        "write_latency_ms": 3.3,
+        "disk_pressure_pct": 74.1,
+        "metadata_pressure_pct": 88.2
+      },
+      {
+        "time": "2025-11-22 02:00",
+        "read_write_throughput_GBps": 36.43,
+        "iops": 133536,
+        "read_latency_ms": 4.0,
+        "write_latency_ms": 3.4,
+        "disk_pressure_pct": 74.4,
+        "metadata_pressure_pct": 84.0
+      },
+      {
+        "time": "2025-11-22 03:00",
+        "read_write_throughput_GBps": 38.62,
+        "iops": 157756,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 66.8,
+        "metadata_pressure_pct": 81.8
+      },
+      {
+        "time": "2025-11-22 04:00",
+        "read_write_throughput_GBps": 39.05,
+        "iops": 154965,
+        "read_latency_ms": 4.8,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 64.0,
+        "metadata_pressure_pct": 85.5
+      },
+      {
+        "time": "2025-11-22 05:00",
+        "read_write_throughput_GBps": 45.86,
+        "iops": 146765,
+        "read_latency_ms": 5.0,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 74.4,
+        "metadata_pressure_pct": 86.1
+      },
+      {
+        "time": "2025-11-22 06:00",
+        "read_write_throughput_GBps": 39.37,
+        "iops": 137701,
+        "read_latency_ms": 4.6,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 62.5,
+        "metadata_pressure_pct": 90.0
+      },
+      {
+        "time": "2025-11-22 07:00",
+        "read_write_throughput_GBps": 45.71,
+        "iops": 147599,
+        "read_latency_ms": 3.5,
+        "write_latency_ms": 4.6,
+        "disk_pressure_pct": 68.0,
+        "metadata_pressure_pct": 87.2
+      },
+      {
+        "time": "2025-11-22 08:00",
+        "read_write_throughput_GBps": 40.48,
+        "iops": 138042,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 64.5,
+        "metadata_pressure_pct": 85.5
+      },
+      {
+        "time": "2025-11-22 09:00",
+        "read_write_throughput_GBps": 37.41,
+        "iops": 155510,
+        "read_latency_ms": 4.5,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 73.0,
+        "metadata_pressure_pct": 82.7
+      },
+      {
+        "time": "2025-11-22 10:00",
+        "read_write_throughput_GBps": 38.51,
+        "iops": 132244,
+        "read_latency_ms": 5.7,
+        "write_latency_ms": 3.8,
+        "disk_pressure_pct": 72.4,
+        "metadata_pressure_pct": 82.8
+      },
+      {
+        "time": "2025-11-22 11:00",
+        "read_write_throughput_GBps": 62.9,
+        "iops": 315390,
+        "read_latency_ms": 33.6,
+        "write_latency_ms": 21.9,
+        "disk_pressure_pct": 57.6,
+        "metadata_pressure_pct": 74.3
+      },
+      {
+        "time": "2025-11-22 12:00",
+        "read_write_throughput_GBps": 28.88,
+        "iops": 121495,
+        "read_latency_ms": 4.6,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 65.6,
+        "metadata_pressure_pct": 81.8
+      },
+      {
+        "time": "2025-11-22 13:00",
+        "read_write_throughput_GBps": 28.17,
+        "iops": 114169,
+        "read_latency_ms": 3.8,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 61.8,
+        "metadata_pressure_pct": 87.5
+      },
+      {
+        "time": "2025-11-22 14:00",
+        "read_write_throughput_GBps": 52.59,
+        "iops": 102129,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 4.5,
+        "disk_pressure_pct": 74.5,
+        "metadata_pressure_pct": 85.0
+      },
+      {
+        "time": "2025-11-22 15:00",
+        "read_write_throughput_GBps": 42.67,
+        "iops": 100924,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 4.7,
+        "disk_pressure_pct": 67.2,
+        "metadata_pressure_pct": 85.3
+      },
+      {
+        "time": "2025-11-22 16:00",
+        "read_write_throughput_GBps": 49.08,
+        "iops": 91987,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 3.0,
+        "disk_pressure_pct": 67.6,
+        "metadata_pressure_pct": 89.8
+      },
+      {
+        "time": "2025-11-22 17:00",
+        "read_write_throughput_GBps": 17.7,
+        "iops": 95231,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 4.6,
+        "disk_pressure_pct": 72.8,
+        "metadata_pressure_pct": 88.7
+      },
+      {
+        "time": "2025-11-22 18:00",
+        "read_write_throughput_GBps": 17.48,
+        "iops": 86039,
+        "read_latency_ms": 5.1,
+        "write_latency_ms": 4.4,
+        "disk_pressure_pct": 73.1,
+        "metadata_pressure_pct": 80.3
+      },
+      {
+        "time": "2025-11-22 19:00",
+        "read_write_throughput_GBps": 16.5,
+        "iops": 93887,
+        "read_latency_ms": 5.6,
+        "write_latency_ms": 4.9,
+        "disk_pressure_pct": 71.4,
+        "metadata_pressure_pct": 84.3
+      },
+      {
+        "time": "2025-11-22 20:00",
+        "read_write_throughput_GBps": 17.72,
+        "iops": 97037,
+        "read_latency_ms": 5.5,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 70.6,
+        "metadata_pressure_pct": 89.1
+      },
+      {
+        "time": "2025-11-22 21:00",
+        "read_write_throughput_GBps": 19.17,
+        "iops": 105808,
+        "read_latency_ms": 3.9,
+        "write_latency_ms": 3.5,
+        "disk_pressure_pct": 63.2,
+        "metadata_pressure_pct": 85.3
+      },
+      {
+        "time": "2025-11-22 22:00",
+        "read_write_throughput_GBps": 24.38,
+        "iops": 112371,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 2.8,
+        "disk_pressure_pct": 73.0,
+        "metadata_pressure_pct": 86.2
+      },
+      {
+        "time": "2025-11-22 23:00",
+        "read_write_throughput_GBps": 25.22,
+        "iops": 123355,
+        "read_latency_ms": 3.5,
+        "write_latency_ms": 3.7,
+        "disk_pressure_pct": 64.7,
+        "metadata_pressure_pct": 82.5
+      },
+      {
+        "time": "2025-11-23 00:00",
+        "read_write_throughput_GBps": 26.47,
+        "iops": 128773,
+        "read_latency_ms": 5.6,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 63.3,
+        "metadata_pressure_pct": 84.4
+      },
+      {
+        "time": "2025-11-23 01:00",
+        "read_write_throughput_GBps": 31.88,
+        "iops": 130449,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 64.6,
+        "metadata_pressure_pct": 88.5
+      },
+      {
+        "time": "2025-11-23 02:00",
+        "read_write_throughput_GBps": 33.4,
+        "iops": 131264,
+        "read_latency_ms": 4.5,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 69.0,
+        "metadata_pressure_pct": 85.8
+      },
+      {
+        "time": "2025-11-23 03:00",
+        "read_write_throughput_GBps": 43.04,
+        "iops": 134273,
+        "read_latency_ms": 5.8,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 64.9,
+        "metadata_pressure_pct": 85.7
+      },
+      {
+        "time": "2025-11-23 04:00",
+        "read_write_throughput_GBps": 42.19,
+        "iops": 154552,
+        "read_latency_ms": 3.3,
+        "write_latency_ms": 4.0,
+        "disk_pressure_pct": 68.0,
+        "metadata_pressure_pct": 89.1
+      },
+      {
+        "time": "2025-11-23 05:00",
+        "read_write_throughput_GBps": 39.46,
+        "iops": 159663,
+        "read_latency_ms": 4.8,
+        "write_latency_ms": 3.5,
+        "disk_pressure_pct": 69.9,
+        "metadata_pressure_pct": 86.2
+      },
+      {
+        "time": "2025-11-23 06:00",
+        "read_write_throughput_GBps": 43.79,
+        "iops": 157953,
+        "read_latency_ms": 4.9,
+        "write_latency_ms": 4.6,
+        "disk_pressure_pct": 69.7,
+        "metadata_pressure_pct": 89.1
+      },
+      {
+        "time": "2025-11-23 07:00",
+        "read_write_throughput_GBps": 43.05,
+        "iops": 142146,
+        "read_latency_ms": 4.3,
+        "write_latency_ms": 4.0,
+        "disk_pressure_pct": 71.2,
+        "metadata_pressure_pct": 80.8
+      },
+      {
+        "time": "2025-11-23 08:00",
+        "read_write_throughput_GBps": 38.41,
+        "iops": 154651,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 3.0,
+        "disk_pressure_pct": 68.5,
+        "metadata_pressure_pct": 89.8
+      },
+      {
+        "time": "2025-11-23 09:00",
+        "read_write_throughput_GBps": 38.77,
+        "iops": 155226,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 72.4,
+        "metadata_pressure_pct": 84.8
+      },
+      {
+        "time": "2025-11-23 10:00",
+        "read_write_throughput_GBps": 38.65,
+        "iops": 142988,
+        "read_latency_ms": 4.1,
+        "write_latency_ms": 2.9,
+        "disk_pressure_pct": 74.3,
+        "metadata_pressure_pct": 81.3
+      },
+      {
+        "time": "2025-11-23 11:00",
+        "read_write_throughput_GBps": 69.85,
+        "iops": 332328,
+        "read_latency_ms": 30.5,
+        "write_latency_ms": 26.2,
+        "disk_pressure_pct": 67.8,
+        "metadata_pressure_pct": 76.3
+      },
+      {
+        "time": "2025-11-23 12:00",
+        "read_write_throughput_GBps": 29.03,
+        "iops": 128371,
+        "read_latency_ms": 3.2,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 67.4,
+        "metadata_pressure_pct": 86.8
+      },
+      {
+        "time": "2025-11-23 13:00",
+        "read_write_throughput_GBps": 28.01,
+        "iops": 114513,
+        "read_latency_ms": 5.4,
+        "write_latency_ms": 4.8,
+        "disk_pressure_pct": 62.7,
+        "metadata_pressure_pct": 82.3
+      },
+      {
+        "time": "2025-11-23 14:00",
+        "read_write_throughput_GBps": 46.46,
+        "iops": 106547,
+        "read_latency_ms": 5.6,
+        "write_latency_ms": 3.2,
+        "disk_pressure_pct": 62.1,
+        "metadata_pressure_pct": 88.3
+      },
+      {
+        "time": "2025-11-23 15:00",
+        "read_write_throughput_GBps": 48.43,
+        "iops": 96612,
+        "read_latency_ms": 3.5,
+        "write_latency_ms": 4.8,
+        "disk_pressure_pct": 65.3,
+        "metadata_pressure_pct": 84.9
+      },
+      {
+        "time": "2025-11-23 16:00",
+        "read_write_throughput_GBps": 47.23,
+        "iops": 85798,
+        "read_latency_ms": 4.4,
+        "write_latency_ms": 4.2,
+        "disk_pressure_pct": 71.3,
+        "metadata_pressure_pct": 89.5
+      },
+      {
+        "time": "2025-11-23 17:00",
+        "read_write_throughput_GBps": 18.05,
+        "iops": 96314,
+        "read_latency_ms": 3.6,
+        "write_latency_ms": 3.6,
+        "disk_pressure_pct": 62.5,
+        "metadata_pressure_pct": 84.9
+      },
+      {
+        "time": "2025-11-23 18:00",
+        "read_write_throughput_GBps": 17.6,
+        "iops": 99752,
+        "read_latency_ms": 3.2,
+        "write_latency_ms": 3.5,
+        "disk_pressure_pct": 67.2,
+        "metadata_pressure_pct": 89.6
+      },
+      {
+        "time": "2025-11-23 19:00",
+        "read_write_throughput_GBps": 19.98,
+        "iops": 82269,
+        "read_latency_ms": 5.0,
+        "write_latency_ms": 3.9,
+        "disk_pressure_pct": 74.5,
+        "metadata_pressure_pct": 83.6
+      },
+      {
+        "time": "2025-11-23 20:00",
+        "read_write_throughput_GBps": 19.13,
+        "iops": 87019,
+        "read_latency_ms": 3.5,
+        "write_latency_ms": 4.6,
+        "disk_pressure_pct": 67.4,
+        "metadata_pressure_pct": 86.7
+      },
+      {
+        "time": "2025-11-23 21:00",
+        "read_write_throughput_GBps": 22.25,
+        "iops": 101090,
+        "read_latency_ms": 3.2,
+        "write_latency_ms": 4.5,
+        "disk_pressure_pct": 64.5,
+        "metadata_pressure_pct": 81.2
+      },
+      {
+        "time": "2025-11-23 22:00",
+        "read_write_throughput_GBps": 24.37,
+        "iops": 94128,
+        "read_latency_ms": 5.2,
+        "write_latency_ms": 3.1,
+        "disk_pressure_pct": 64.1,
+        "metadata_pressure_pct": 88.8
+      },
+      {
+        "time": "2025-11-23 23:00",
+        "read_write_throughput_GBps": 25.79,
+        "iops": 102741,
+        "read_latency_ms": 5.6,
+        "write_latency_ms": 2.7,
+        "disk_pressure_pct": 72.9,
+        "metadata_pressure_pct": 81.4
+      }
+    ]
+  },
+  "clusters": {
+    "cluster_a_business": {
+      "description": "Main business query cluster (most important, user-facing)",
+      "timeseries": [
+        {
+          "time": "2025-11-17 00:00",
+          "query_latency_p99_sec": 17.1,
+          "query_latency_p50_sec": 10.5,
+          "qps": 22.6,
+          "scan_volume_GBph": 6.39
+        },
+        {
+          "time": "2025-11-17 01:00",
+          "query_latency_p99_sec": 15.7,
+          "query_latency_p50_sec": 9.1,
+          "qps": 27.2,
+          "scan_volume_GBph": 5.37
+        },
+        {
+          "time": "2025-11-17 02:00",
+          "query_latency_p99_sec": 19.7,
+          "query_latency_p50_sec": 10.0,
+          "qps": 21.6,
+          "scan_volume_GBph": 6.58
+        },
+        {
+          "time": "2025-11-17 03:00",
+          "query_latency_p99_sec": 22.3,
+          "query_latency_p50_sec": 13.5,
+          "qps": 24.8,
+          "scan_volume_GBph": 6.67
+        },
+        {
+          "time": "2025-11-17 04:00",
+          "query_latency_p99_sec": 22.2,
+          "query_latency_p50_sec": 9.7,
+          "qps": 25.0,
+          "scan_volume_GBph": 7.07
+        },
+        {
+          "time": "2025-11-17 05:00",
+          "query_latency_p99_sec": 16.0,
+          "query_latency_p50_sec": 13.7,
+          "qps": 27.8,
+          "scan_volume_GBph": 6.05
+        },
+        {
+          "time": "2025-11-17 06:00",
+          "query_latency_p99_sec": 21.4,
+          "query_latency_p50_sec": 14.8,
+          "qps": 21.7,
+          "scan_volume_GBph": 5.95
+        },
+        {
+          "time": "2025-11-17 07:00",
+          "query_latency_p99_sec": 20.7,
+          "query_latency_p50_sec": 13.1,
+          "qps": 24.9,
+          "scan_volume_GBph": 6.98
+        },
+        {
+          "time": "2025-11-17 08:00",
+          "query_latency_p99_sec": 16.4,
+          "query_latency_p50_sec": 9.5,
+          "qps": 25.8,
+          "scan_volume_GBph": 4.96
+        },
+        {
+          "time": "2025-11-17 09:00",
+          "query_latency_p99_sec": 19.0,
+          "query_latency_p50_sec": 12.8,
+          "qps": 25.4,
+          "scan_volume_GBph": 5.58
+        },
+        {
+          "time": "2025-11-17 10:00",
+          "query_latency_p99_sec": 28.5,
+          "query_latency_p50_sec": 12.2,
+          "qps": 24.7,
+          "scan_volume_GBph": 6.25
+        },
+        {
+          "time": "2025-11-17 11:00",
+          "query_latency_p99_sec": 84.0,
+          "query_latency_p50_sec": 77.8,
+          "qps": 20.5,
+          "scan_volume_GBph": 8.48
+        },
+        {
+          "time": "2025-11-17 12:00",
+          "query_latency_p99_sec": 25.6,
+          "query_latency_p50_sec": 13.3,
+          "qps": 22.9,
+          "scan_volume_GBph": 5.88
+        },
+        {
+          "time": "2025-11-17 13:00",
+          "query_latency_p99_sec": 18.4,
+          "query_latency_p50_sec": 11.0,
+          "qps": 24.7,
+          "scan_volume_GBph": 5.8
+        },
+        {
+          "time": "2025-11-17 14:00",
+          "query_latency_p99_sec": 16.7,
+          "query_latency_p50_sec": 11.6,
+          "qps": 26.2,
+          "scan_volume_GBph": 5.7
+        },
+        {
+          "time": "2025-11-17 15:00",
+          "query_latency_p99_sec": 17.4,
+          "query_latency_p50_sec": 14.5,
+          "qps": 21.8,
+          "scan_volume_GBph": 6.8
+        },
+        {
+          "time": "2025-11-17 16:00",
+          "query_latency_p99_sec": 16.6,
+          "query_latency_p50_sec": 9.6,
+          "qps": 26.8,
+          "scan_volume_GBph": 6.75
+        },
+        {
+          "time": "2025-11-17 17:00",
+          "query_latency_p99_sec": 22.7,
+          "query_latency_p50_sec": 12.5,
+          "qps": 25.5,
+          "scan_volume_GBph": 5.59
+        },
+        {
+          "time": "2025-11-17 18:00",
+          "query_latency_p99_sec": 17.0,
+          "query_latency_p50_sec": 11.1,
+          "qps": 26.2,
+          "scan_volume_GBph": 6.6
+        },
+        {
+          "time": "2025-11-17 19:00",
+          "query_latency_p99_sec": 26.9,
+          "query_latency_p50_sec": 13.3,
+          "qps": 28.5,
+          "scan_volume_GBph": 6.24
+        },
+        {
+          "time": "2025-11-17 20:00",
+          "query_latency_p99_sec": 20.0,
+          "query_latency_p50_sec": 12.5,
+          "qps": 22.8,
+          "scan_volume_GBph": 6.38
+        },
+        {
+          "time": "2025-11-17 21:00",
+          "query_latency_p99_sec": 18.4,
+          "query_latency_p50_sec": 9.6,
+          "qps": 27.6,
+          "scan_volume_GBph": 5.68
+        },
+        {
+          "time": "2025-11-17 22:00",
+          "query_latency_p99_sec": 25.5,
+          "query_latency_p50_sec": 12.4,
+          "qps": 27.3,
+          "scan_volume_GBph": 6.83
+        },
+        {
+          "time": "2025-11-17 23:00",
+          "query_latency_p99_sec": 28.3,
+          "query_latency_p50_sec": 13.9,
+          "qps": 25.9,
+          "scan_volume_GBph": 6.34
+        },
+        {
+          "time": "2025-11-18 00:00",
+          "query_latency_p99_sec": 15.7,
+          "query_latency_p50_sec": 14.6,
+          "qps": 27.5,
+          "scan_volume_GBph": 5.44
+        },
+        {
+          "time": "2025-11-18 01:00",
+          "query_latency_p99_sec": 17.8,
+          "query_latency_p50_sec": 13.2,
+          "qps": 23.6,
+          "scan_volume_GBph": 5.62
+        },
+        {
+          "time": "2025-11-18 02:00",
+          "query_latency_p99_sec": 15.5,
+          "query_latency_p50_sec": 14.2,
+          "qps": 25.5,
+          "scan_volume_GBph": 5.76
+        },
+        {
+          "time": "2025-11-18 03:00",
+          "query_latency_p99_sec": 17.3,
+          "query_latency_p50_sec": 12.8,
+          "qps": 21.5,
+          "scan_volume_GBph": 6.59
+        },
+        {
+          "time": "2025-11-18 04:00",
+          "query_latency_p99_sec": 18.2,
+          "query_latency_p50_sec": 11.5,
+          "qps": 23.8,
+          "scan_volume_GBph": 5.69
+        },
+        {
+          "time": "2025-11-18 05:00",
+          "query_latency_p99_sec": 24.9,
+          "query_latency_p50_sec": 13.7,
+          "qps": 25.5,
+          "scan_volume_GBph": 5.0
+        },
+        {
+          "time": "2025-11-18 06:00",
+          "query_latency_p99_sec": 16.1,
+          "query_latency_p50_sec": 9.9,
+          "qps": 25.9,
+          "scan_volume_GBph": 6.42
+        },
+        {
+          "time": "2025-11-18 07:00",
+          "query_latency_p99_sec": 19.0,
+          "query_latency_p50_sec": 13.0,
+          "qps": 24.9,
+          "scan_volume_GBph": 5.86
+        },
+        {
+          "time": "2025-11-18 08:00",
+          "query_latency_p99_sec": 19.0,
+          "query_latency_p50_sec": 13.5,
+          "qps": 22.1,
+          "scan_volume_GBph": 5.83
+        },
+        {
+          "time": "2025-11-18 09:00",
+          "query_latency_p99_sec": 19.1,
+          "query_latency_p50_sec": 13.1,
+          "qps": 24.9,
+          "scan_volume_GBph": 6.4
+        },
+        {
+          "time": "2025-11-18 10:00",
+          "query_latency_p99_sec": 16.0,
+          "query_latency_p50_sec": 11.4,
+          "qps": 25.7,
+          "scan_volume_GBph": 4.82
+        },
+        {
+          "time": "2025-11-18 11:00",
+          "query_latency_p99_sec": 94.6,
+          "query_latency_p50_sec": 63.7,
+          "qps": 15.4,
+          "scan_volume_GBph": 7.22
+        },
+        {
+          "time": "2025-11-18 12:00",
+          "query_latency_p99_sec": 19.7,
+          "query_latency_p50_sec": 9.0,
+          "qps": 26.9,
+          "scan_volume_GBph": 5.22
+        },
+        {
+          "time": "2025-11-18 13:00",
+          "query_latency_p99_sec": 20.4,
+          "query_latency_p50_sec": 13.2,
+          "qps": 25.0,
+          "scan_volume_GBph": 6.8
+        },
+        {
+          "time": "2025-11-18 14:00",
+          "query_latency_p99_sec": 26.0,
+          "query_latency_p50_sec": 9.4,
+          "qps": 27.7,
+          "scan_volume_GBph": 4.9
+        },
+        {
+          "time": "2025-11-18 15:00",
+          "query_latency_p99_sec": 15.6,
+          "query_latency_p50_sec": 14.5,
+          "qps": 27.7,
+          "scan_volume_GBph": 6.18
+        },
+        {
+          "time": "2025-11-18 16:00",
+          "query_latency_p99_sec": 23.0,
+          "query_latency_p50_sec": 13.3,
+          "qps": 24.4,
+          "scan_volume_GBph": 5.08
+        },
+        {
+          "time": "2025-11-18 17:00",
+          "query_latency_p99_sec": 15.7,
+          "query_latency_p50_sec": 10.9,
+          "qps": 27.3,
+          "scan_volume_GBph": 6.28
+        },
+        {
+          "time": "2025-11-18 18:00",
+          "query_latency_p99_sec": 26.4,
+          "query_latency_p50_sec": 14.5,
+          "qps": 21.9,
+          "scan_volume_GBph": 6.83
+        },
+        {
+          "time": "2025-11-18 19:00",
+          "query_latency_p99_sec": 18.6,
+          "query_latency_p50_sec": 12.5,
+          "qps": 25.2,
+          "scan_volume_GBph": 5.75
+        },
+        {
+          "time": "2025-11-18 20:00",
+          "query_latency_p99_sec": 19.5,
+          "query_latency_p50_sec": 11.0,
+          "qps": 23.7,
+          "scan_volume_GBph": 5.2
+        },
+        {
+          "time": "2025-11-18 21:00",
+          "query_latency_p99_sec": 22.1,
+          "query_latency_p50_sec": 9.7,
+          "qps": 25.1,
+          "scan_volume_GBph": 6.97
+        },
+        {
+          "time": "2025-11-18 22:00",
+          "query_latency_p99_sec": 20.0,
+          "query_latency_p50_sec": 13.4,
+          "qps": 27.4,
+          "scan_volume_GBph": 6.76
+        },
+        {
+          "time": "2025-11-18 23:00",
+          "query_latency_p99_sec": 18.5,
+          "query_latency_p50_sec": 9.9,
+          "qps": 22.7,
+          "scan_volume_GBph": 6.25
+        },
+        {
+          "time": "2025-11-19 00:00",
+          "query_latency_p99_sec": 25.4,
+          "query_latency_p50_sec": 12.9,
+          "qps": 22.6,
+          "scan_volume_GBph": 6.65
+        },
+        {
+          "time": "2025-11-19 01:00",
+          "query_latency_p99_sec": 21.9,
+          "query_latency_p50_sec": 13.5,
+          "qps": 26.9,
+          "scan_volume_GBph": 5.88
+        },
+        {
+          "time": "2025-11-19 02:00",
+          "query_latency_p99_sec": 27.6,
+          "query_latency_p50_sec": 12.4,
+          "qps": 26.0,
+          "scan_volume_GBph": 6.3
+        },
+        {
+          "time": "2025-11-19 03:00",
+          "query_latency_p99_sec": 26.8,
+          "query_latency_p50_sec": 12.8,
+          "qps": 22.4,
+          "scan_volume_GBph": 4.96
+        },
+        {
+          "time": "2025-11-19 04:00",
+          "query_latency_p99_sec": 21.2,
+          "query_latency_p50_sec": 10.8,
+          "qps": 23.3,
+          "scan_volume_GBph": 4.93
+        },
+        {
+          "time": "2025-11-19 05:00",
+          "query_latency_p99_sec": 22.1,
+          "query_latency_p50_sec": 10.9,
+          "qps": 24.6,
+          "scan_volume_GBph": 4.94
+        },
+        {
+          "time": "2025-11-19 06:00",
+          "query_latency_p99_sec": 26.4,
+          "query_latency_p50_sec": 9.5,
+          "qps": 27.7,
+          "scan_volume_GBph": 6.85
+        },
+        {
+          "time": "2025-11-19 07:00",
+          "query_latency_p99_sec": 23.5,
+          "query_latency_p50_sec": 12.0,
+          "qps": 24.7,
+          "scan_volume_GBph": 6.13
+        },
+        {
+          "time": "2025-11-19 08:00",
+          "query_latency_p99_sec": 25.9,
+          "query_latency_p50_sec": 14.4,
+          "qps": 24.6,
+          "scan_volume_GBph": 6.74
+        },
+        {
+          "time": "2025-11-19 09:00",
+          "query_latency_p99_sec": 24.0,
+          "query_latency_p50_sec": 10.9,
+          "qps": 24.8,
+          "scan_volume_GBph": 5.16
+        },
+        {
+          "time": "2025-11-19 10:00",
+          "query_latency_p99_sec": 16.2,
+          "query_latency_p50_sec": 9.6,
+          "qps": 28.0,
+          "scan_volume_GBph": 5.62
+        },
+        {
+          "time": "2025-11-19 11:00",
+          "query_latency_p99_sec": 116.3,
+          "query_latency_p50_sec": 72.1,
+          "qps": 15.6,
+          "scan_volume_GBph": 7.19
+        },
+        {
+          "time": "2025-11-19 12:00",
+          "query_latency_p99_sec": 21.2,
+          "query_latency_p50_sec": 11.6,
+          "qps": 25.2,
+          "scan_volume_GBph": 5.18
+        },
+        {
+          "time": "2025-11-19 13:00",
+          "query_latency_p99_sec": 20.3,
+          "query_latency_p50_sec": 10.7,
+          "qps": 24.3,
+          "scan_volume_GBph": 5.61
+        },
+        {
+          "time": "2025-11-19 14:00",
+          "query_latency_p99_sec": 23.3,
+          "query_latency_p50_sec": 13.7,
+          "qps": 26.1,
+          "scan_volume_GBph": 4.96
+        },
+        {
+          "time": "2025-11-19 15:00",
+          "query_latency_p99_sec": 16.6,
+          "query_latency_p50_sec": 13.1,
+          "qps": 23.4,
+          "scan_volume_GBph": 6.54
+        },
+        {
+          "time": "2025-11-19 16:00",
+          "query_latency_p99_sec": 24.1,
+          "query_latency_p50_sec": 14.4,
+          "qps": 27.8,
+          "scan_volume_GBph": 5.6
+        },
+        {
+          "time": "2025-11-19 17:00",
+          "query_latency_p99_sec": 23.1,
+          "query_latency_p50_sec": 9.8,
+          "qps": 23.9,
+          "scan_volume_GBph": 7.12
+        },
+        {
+          "time": "2025-11-19 18:00",
+          "query_latency_p99_sec": 24.6,
+          "query_latency_p50_sec": 11.4,
+          "qps": 25.7,
+          "scan_volume_GBph": 7.05
+        },
+        {
+          "time": "2025-11-19 19:00",
+          "query_latency_p99_sec": 19.5,
+          "query_latency_p50_sec": 11.3,
+          "qps": 27.2,
+          "scan_volume_GBph": 6.75
+        },
+        {
+          "time": "2025-11-19 20:00",
+          "query_latency_p99_sec": 24.2,
+          "query_latency_p50_sec": 14.0,
+          "qps": 26.8,
+          "scan_volume_GBph": 6.44
+        },
+        {
+          "time": "2025-11-19 21:00",
+          "query_latency_p99_sec": 22.3,
+          "query_latency_p50_sec": 12.9,
+          "qps": 24.4,
+          "scan_volume_GBph": 5.67
+        },
+        {
+          "time": "2025-11-19 22:00",
+          "query_latency_p99_sec": 20.2,
+          "query_latency_p50_sec": 10.1,
+          "qps": 22.9,
+          "scan_volume_GBph": 7.07
+        },
+        {
+          "time": "2025-11-19 23:00",
+          "query_latency_p99_sec": 21.8,
+          "query_latency_p50_sec": 10.4,
+          "qps": 22.3,
+          "scan_volume_GBph": 4.99
+        },
+        {
+          "time": "2025-11-20 00:00",
+          "query_latency_p99_sec": 26.5,
+          "query_latency_p50_sec": 9.6,
+          "qps": 27.0,
+          "scan_volume_GBph": 6.8
+        },
+        {
+          "time": "2025-11-20 01:00",
+          "query_latency_p99_sec": 27.1,
+          "query_latency_p50_sec": 9.2,
+          "qps": 23.8,
+          "scan_volume_GBph": 6.64
+        },
+        {
+          "time": "2025-11-20 02:00",
+          "query_latency_p99_sec": 17.1,
+          "query_latency_p50_sec": 11.3,
+          "qps": 22.5,
+          "scan_volume_GBph": 6.8
+        },
+        {
+          "time": "2025-11-20 03:00",
+          "query_latency_p99_sec": 25.6,
+          "query_latency_p50_sec": 13.9,
+          "qps": 22.5,
+          "scan_volume_GBph": 5.85
+        },
+        {
+          "time": "2025-11-20 04:00",
+          "query_latency_p99_sec": 20.8,
+          "query_latency_p50_sec": 13.1,
+          "qps": 23.0,
+          "scan_volume_GBph": 5.87
+        },
+        {
+          "time": "2025-11-20 05:00",
+          "query_latency_p99_sec": 19.2,
+          "query_latency_p50_sec": 13.5,
+          "qps": 24.6,
+          "scan_volume_GBph": 6.08
+        },
+        {
+          "time": "2025-11-20 06:00",
+          "query_latency_p99_sec": 19.5,
+          "query_latency_p50_sec": 13.9,
+          "qps": 24.8,
+          "scan_volume_GBph": 6.8
+        },
+        {
+          "time": "2025-11-20 07:00",
+          "query_latency_p99_sec": 20.3,
+          "query_latency_p50_sec": 14.7,
+          "qps": 28.6,
+          "scan_volume_GBph": 5.91
+        },
+        {
+          "time": "2025-11-20 08:00",
+          "query_latency_p99_sec": 19.1,
+          "query_latency_p50_sec": 11.3,
+          "qps": 25.2,
+          "scan_volume_GBph": 7.12
+        },
+        {
+          "time": "2025-11-20 09:00",
+          "query_latency_p99_sec": 26.2,
+          "query_latency_p50_sec": 13.8,
+          "qps": 22.3,
+          "scan_volume_GBph": 5.4
+        },
+        {
+          "time": "2025-11-20 10:00",
+          "query_latency_p99_sec": 23.9,
+          "query_latency_p50_sec": 14.2,
+          "qps": 25.4,
+          "scan_volume_GBph": 5.05
+        },
+        {
+          "time": "2025-11-20 11:00",
+          "query_latency_p99_sec": 123.2,
+          "query_latency_p50_sec": 82.1,
+          "qps": 16.5,
+          "scan_volume_GBph": 8.84
+        },
+        {
+          "time": "2025-11-20 12:00",
+          "query_latency_p99_sec": 19.0,
+          "query_latency_p50_sec": 14.4,
+          "qps": 22.4,
+          "scan_volume_GBph": 5.85
+        },
+        {
+          "time": "2025-11-20 13:00",
+          "query_latency_p99_sec": 27.9,
+          "query_latency_p50_sec": 10.3,
+          "qps": 24.6,
+          "scan_volume_GBph": 5.64
+        },
+        {
+          "time": "2025-11-20 14:00",
+          "query_latency_p99_sec": 15.8,
+          "query_latency_p50_sec": 9.3,
+          "qps": 25.0,
+          "scan_volume_GBph": 5.37
+        },
+        {
+          "time": "2025-11-20 15:00",
+          "query_latency_p99_sec": 28.5,
+          "query_latency_p50_sec": 11.2,
+          "qps": 21.5,
+          "scan_volume_GBph": 7.03
+        },
+        {
+          "time": "2025-11-20 16:00",
+          "query_latency_p99_sec": 26.5,
+          "query_latency_p50_sec": 12.9,
+          "qps": 27.2,
+          "scan_volume_GBph": 5.13
+        },
+        {
+          "time": "2025-11-20 17:00",
+          "query_latency_p99_sec": 19.2,
+          "query_latency_p50_sec": 14.0,
+          "qps": 26.5,
+          "scan_volume_GBph": 5.13
+        },
+        {
+          "time": "2025-11-20 18:00",
+          "query_latency_p99_sec": 24.7,
+          "query_latency_p50_sec": 11.7,
+          "qps": 21.3,
+          "scan_volume_GBph": 4.99
+        },
+        {
+          "time": "2025-11-20 19:00",
+          "query_latency_p99_sec": 18.8,
+          "query_latency_p50_sec": 14.0,
+          "qps": 25.4,
+          "scan_volume_GBph": 6.55
+        },
+        {
+          "time": "2025-11-20 20:00",
+          "query_latency_p99_sec": 22.4,
+          "query_latency_p50_sec": 9.7,
+          "qps": 23.4,
+          "scan_volume_GBph": 5.52
+        },
+        {
+          "time": "2025-11-20 21:00",
+          "query_latency_p99_sec": 16.0,
+          "query_latency_p50_sec": 11.5,
+          "qps": 27.2,
+          "scan_volume_GBph": 5.9
+        },
+        {
+          "time": "2025-11-20 22:00",
+          "query_latency_p99_sec": 16.9,
+          "query_latency_p50_sec": 14.4,
+          "qps": 25.7,
+          "scan_volume_GBph": 4.84
+        },
+        {
+          "time": "2025-11-20 23:00",
+          "query_latency_p99_sec": 22.2,
+          "query_latency_p50_sec": 10.5,
+          "qps": 22.3,
+          "scan_volume_GBph": 5.83
+        },
+        {
+          "time": "2025-11-21 00:00",
+          "query_latency_p99_sec": 23.5,
+          "query_latency_p50_sec": 10.4,
+          "qps": 24.4,
+          "scan_volume_GBph": 6.39
+        },
+        {
+          "time": "2025-11-21 01:00",
+          "query_latency_p99_sec": 16.5,
+          "query_latency_p50_sec": 14.8,
+          "qps": 21.8,
+          "scan_volume_GBph": 6.06
+        },
+        {
+          "time": "2025-11-21 02:00",
+          "query_latency_p99_sec": 22.1,
+          "query_latency_p50_sec": 14.9,
+          "qps": 25.4,
+          "scan_volume_GBph": 5.74
+        },
+        {
+          "time": "2025-11-21 03:00",
+          "query_latency_p99_sec": 21.6,
+          "query_latency_p50_sec": 12.8,
+          "qps": 28.6,
+          "scan_volume_GBph": 5.41
+        },
+        {
+          "time": "2025-11-21 04:00",
+          "query_latency_p99_sec": 15.6,
+          "query_latency_p50_sec": 13.7,
+          "qps": 23.8,
+          "scan_volume_GBph": 6.56
+        },
+        {
+          "time": "2025-11-21 05:00",
+          "query_latency_p99_sec": 23.7,
+          "query_latency_p50_sec": 13.6,
+          "qps": 26.8,
+          "scan_volume_GBph": 5.6
+        },
+        {
+          "time": "2025-11-21 06:00",
+          "query_latency_p99_sec": 16.0,
+          "query_latency_p50_sec": 12.3,
+          "qps": 27.4,
+          "scan_volume_GBph": 5.22
+        },
+        {
+          "time": "2025-11-21 07:00",
+          "query_latency_p99_sec": 25.7,
+          "query_latency_p50_sec": 11.8,
+          "qps": 26.5,
+          "scan_volume_GBph": 6.32
+        },
+        {
+          "time": "2025-11-21 08:00",
+          "query_latency_p99_sec": 26.1,
+          "query_latency_p50_sec": 9.4,
+          "qps": 27.1,
+          "scan_volume_GBph": 5.9
+        },
+        {
+          "time": "2025-11-21 09:00",
+          "query_latency_p99_sec": 19.3,
+          "query_latency_p50_sec": 9.3,
+          "qps": 22.7,
+          "scan_volume_GBph": 4.9
+        },
+        {
+          "time": "2025-11-21 10:00",
+          "query_latency_p99_sec": 27.7,
+          "query_latency_p50_sec": 12.1,
+          "qps": 28.7,
+          "scan_volume_GBph": 6.1
+        },
+        {
+          "time": "2025-11-21 11:00",
+          "query_latency_p99_sec": 92.0,
+          "query_latency_p50_sec": 79.3,
+          "qps": 15.8,
+          "scan_volume_GBph": 7.54
+        },
+        {
+          "time": "2025-11-21 12:00",
+          "query_latency_p99_sec": 25.7,
+          "query_latency_p50_sec": 14.2,
+          "qps": 23.7,
+          "scan_volume_GBph": 5.1
+        },
+        {
+          "time": "2025-11-21 13:00",
+          "query_latency_p99_sec": 20.3,
+          "query_latency_p50_sec": 14.3,
+          "qps": 26.8,
+          "scan_volume_GBph": 6.95
+        },
+        {
+          "time": "2025-11-21 14:00",
+          "query_latency_p99_sec": 20.5,
+          "query_latency_p50_sec": 14.8,
+          "qps": 25.0,
+          "scan_volume_GBph": 5.99
+        },
+        {
+          "time": "2025-11-21 15:00",
+          "query_latency_p99_sec": 27.6,
+          "query_latency_p50_sec": 12.1,
+          "qps": 27.3,
+          "scan_volume_GBph": 6.54
+        },
+        {
+          "time": "2025-11-21 16:00",
+          "query_latency_p99_sec": 16.4,
+          "query_latency_p50_sec": 12.6,
+          "qps": 27.4,
+          "scan_volume_GBph": 6.11
+        },
+        {
+          "time": "2025-11-21 17:00",
+          "query_latency_p99_sec": 19.6,
+          "query_latency_p50_sec": 9.5,
+          "qps": 26.2,
+          "scan_volume_GBph": 5.54
+        },
+        {
+          "time": "2025-11-21 18:00",
+          "query_latency_p99_sec": 23.4,
+          "query_latency_p50_sec": 11.6,
+          "qps": 26.4,
+          "scan_volume_GBph": 5.64
+        },
+        {
+          "time": "2025-11-21 19:00",
+          "query_latency_p99_sec": 16.0,
+          "query_latency_p50_sec": 14.2,
+          "qps": 23.9,
+          "scan_volume_GBph": 7.2
+        },
+        {
+          "time": "2025-11-21 20:00",
+          "query_latency_p99_sec": 19.0,
+          "query_latency_p50_sec": 14.9,
+          "qps": 28.4,
+          "scan_volume_GBph": 4.98
+        },
+        {
+          "time": "2025-11-21 21:00",
+          "query_latency_p99_sec": 23.8,
+          "query_latency_p50_sec": 11.2,
+          "qps": 27.3,
+          "scan_volume_GBph": 6.43
+        },
+        {
+          "time": "2025-11-21 22:00",
+          "query_latency_p99_sec": 28.0,
+          "query_latency_p50_sec": 9.9,
+          "qps": 25.8,
+          "scan_volume_GBph": 6.68
+        },
+        {
+          "time": "2025-11-21 23:00",
+          "query_latency_p99_sec": 15.9,
+          "query_latency_p50_sec": 9.4,
+          "qps": 27.1,
+          "scan_volume_GBph": 5.68
+        },
+        {
+          "time": "2025-11-22 00:00",
+          "query_latency_p99_sec": 20.5,
+          "query_latency_p50_sec": 12.4,
+          "qps": 25.8,
+          "scan_volume_GBph": 6.43
+        },
+        {
+          "time": "2025-11-22 01:00",
+          "query_latency_p99_sec": 27.9,
+          "query_latency_p50_sec": 11.2,
+          "qps": 27.0,
+          "scan_volume_GBph": 6.18
+        },
+        {
+          "time": "2025-11-22 02:00",
+          "query_latency_p99_sec": 22.4,
+          "query_latency_p50_sec": 11.4,
+          "qps": 26.1,
+          "scan_volume_GBph": 5.4
+        },
+        {
+          "time": "2025-11-22 03:00",
+          "query_latency_p99_sec": 16.9,
+          "query_latency_p50_sec": 13.4,
+          "qps": 25.0,
+          "scan_volume_GBph": 5.73
+        },
+        {
+          "time": "2025-11-22 04:00",
+          "query_latency_p99_sec": 22.8,
+          "query_latency_p50_sec": 10.6,
+          "qps": 23.2,
+          "scan_volume_GBph": 5.87
+        },
+        {
+          "time": "2025-11-22 05:00",
+          "query_latency_p99_sec": 28.6,
+          "query_latency_p50_sec": 10.7,
+          "qps": 28.1,
+          "scan_volume_GBph": 5.98
+        },
+        {
+          "time": "2025-11-22 06:00",
+          "query_latency_p99_sec": 17.0,
+          "query_latency_p50_sec": 14.1,
+          "qps": 24.6,
+          "scan_volume_GBph": 6.96
+        },
+        {
+          "time": "2025-11-22 07:00",
+          "query_latency_p99_sec": 21.3,
+          "query_latency_p50_sec": 9.5,
+          "qps": 26.4,
+          "scan_volume_GBph": 6.83
+        },
+        {
+          "time": "2025-11-22 08:00",
+          "query_latency_p99_sec": 19.6,
+          "query_latency_p50_sec": 11.1,
+          "qps": 21.7,
+          "scan_volume_GBph": 6.1
+        },
+        {
+          "time": "2025-11-22 09:00",
+          "query_latency_p99_sec": 27.2,
+          "query_latency_p50_sec": 14.1,
+          "qps": 26.6,
+          "scan_volume_GBph": 7.03
+        },
+        {
+          "time": "2025-11-22 10:00",
+          "query_latency_p99_sec": 23.8,
+          "query_latency_p50_sec": 13.8,
+          "qps": 25.1,
+          "scan_volume_GBph": 5.09
+        },
+        {
+          "time": "2025-11-22 11:00",
+          "query_latency_p99_sec": 89.3,
+          "query_latency_p50_sec": 61.6,
+          "qps": 20.1,
+          "scan_volume_GBph": 6.48
+        },
+        {
+          "time": "2025-11-22 12:00",
+          "query_latency_p99_sec": 22.7,
+          "query_latency_p50_sec": 11.2,
+          "qps": 27.3,
+          "scan_volume_GBph": 6.12
+        },
+        {
+          "time": "2025-11-22 13:00",
+          "query_latency_p99_sec": 23.5,
+          "query_latency_p50_sec": 9.5,
+          "qps": 23.6,
+          "scan_volume_GBph": 7.2
+        },
+        {
+          "time": "2025-11-22 14:00",
+          "query_latency_p99_sec": 24.9,
+          "query_latency_p50_sec": 12.2,
+          "qps": 27.0,
+          "scan_volume_GBph": 6.78
+        },
+        {
+          "time": "2025-11-22 15:00",
+          "query_latency_p99_sec": 16.4,
+          "query_latency_p50_sec": 14.8,
+          "qps": 26.1,
+          "scan_volume_GBph": 5.88
+        },
+        {
+          "time": "2025-11-22 16:00",
+          "query_latency_p99_sec": 24.4,
+          "query_latency_p50_sec": 11.1,
+          "qps": 27.8,
+          "scan_volume_GBph": 6.67
+        },
+        {
+          "time": "2025-11-22 17:00",
+          "query_latency_p99_sec": 23.8,
+          "query_latency_p50_sec": 10.1,
+          "qps": 28.5,
+          "scan_volume_GBph": 5.84
+        },
+        {
+          "time": "2025-11-22 18:00",
+          "query_latency_p99_sec": 27.4,
+          "query_latency_p50_sec": 9.3,
+          "qps": 22.2,
+          "scan_volume_GBph": 5.17
+        },
+        {
+          "time": "2025-11-22 19:00",
+          "query_latency_p99_sec": 17.6,
+          "query_latency_p50_sec": 10.9,
+          "qps": 26.6,
+          "scan_volume_GBph": 5.63
+        },
+        {
+          "time": "2025-11-22 20:00",
+          "query_latency_p99_sec": 27.8,
+          "query_latency_p50_sec": 14.4,
+          "qps": 27.6,
+          "scan_volume_GBph": 5.4
+        },
+        {
+          "time": "2025-11-22 21:00",
+          "query_latency_p99_sec": 23.8,
+          "query_latency_p50_sec": 12.3,
+          "qps": 22.2,
+          "scan_volume_GBph": 5.53
+        },
+        {
+          "time": "2025-11-22 22:00",
+          "query_latency_p99_sec": 22.4,
+          "query_latency_p50_sec": 12.0,
+          "qps": 22.5,
+          "scan_volume_GBph": 7.06
+        },
+        {
+          "time": "2025-11-22 23:00",
+          "query_latency_p99_sec": 17.4,
+          "query_latency_p50_sec": 13.0,
+          "qps": 26.7,
+          "scan_volume_GBph": 6.25
+        },
+        {
+          "time": "2025-11-23 00:00",
+          "query_latency_p99_sec": 26.5,
+          "query_latency_p50_sec": 12.4,
+          "qps": 27.4,
+          "scan_volume_GBph": 4.87
+        },
+        {
+          "time": "2025-11-23 01:00",
+          "query_latency_p99_sec": 16.0,
+          "query_latency_p50_sec": 12.8,
+          "qps": 25.6,
+          "scan_volume_GBph": 6.36
+        },
+        {
+          "time": "2025-11-23 02:00",
+          "query_latency_p99_sec": 25.5,
+          "query_latency_p50_sec": 11.5,
+          "qps": 26.0,
+          "scan_volume_GBph": 6.0
+        },
+        {
+          "time": "2025-11-23 03:00",
+          "query_latency_p99_sec": 23.7,
+          "query_latency_p50_sec": 10.7,
+          "qps": 28.4,
+          "scan_volume_GBph": 5.96
+        },
+        {
+          "time": "2025-11-23 04:00",
+          "query_latency_p99_sec": 26.0,
+          "query_latency_p50_sec": 13.1,
+          "qps": 23.5,
+          "scan_volume_GBph": 4.98
+        },
+        {
+          "time": "2025-11-23 05:00",
+          "query_latency_p99_sec": 16.2,
+          "query_latency_p50_sec": 11.6,
+          "qps": 24.9,
+          "scan_volume_GBph": 5.29
+        },
+        {
+          "time": "2025-11-23 06:00",
+          "query_latency_p99_sec": 23.4,
+          "query_latency_p50_sec": 10.9,
+          "qps": 26.6,
+          "scan_volume_GBph": 6.56
+        },
+        {
+          "time": "2025-11-23 07:00",
+          "query_latency_p99_sec": 26.8,
+          "query_latency_p50_sec": 14.9,
+          "qps": 22.2,
+          "scan_volume_GBph": 5.69
+        },
+        {
+          "time": "2025-11-23 08:00",
+          "query_latency_p99_sec": 22.8,
+          "query_latency_p50_sec": 10.9,
+          "qps": 24.7,
+          "scan_volume_GBph": 5.44
+        },
+        {
+          "time": "2025-11-23 09:00",
+          "query_latency_p99_sec": 18.7,
+          "query_latency_p50_sec": 9.6,
+          "qps": 23.4,
+          "scan_volume_GBph": 5.72
+        },
+        {
+          "time": "2025-11-23 10:00",
+          "query_latency_p99_sec": 23.5,
+          "query_latency_p50_sec": 10.5,
+          "qps": 27.7,
+          "scan_volume_GBph": 5.18
+        },
+        {
+          "time": "2025-11-23 11:00",
+          "query_latency_p99_sec": 95.9,
+          "query_latency_p50_sec": 74.2,
+          "qps": 16.7,
+          "scan_volume_GBph": 8.84
+        },
+        {
+          "time": "2025-11-23 12:00",
+          "query_latency_p99_sec": 22.0,
+          "query_latency_p50_sec": 12.1,
+          "qps": 25.0,
+          "scan_volume_GBph": 5.54
+        },
+        {
+          "time": "2025-11-23 13:00",
+          "query_latency_p99_sec": 15.7,
+          "query_latency_p50_sec": 14.7,
+          "qps": 25.0,
+          "scan_volume_GBph": 7.12
+        },
+        {
+          "time": "2025-11-23 14:00",
+          "query_latency_p99_sec": 18.2,
+          "query_latency_p50_sec": 11.1,
+          "qps": 21.6,
+          "scan_volume_GBph": 5.99
+        },
+        {
+          "time": "2025-11-23 15:00",
+          "query_latency_p99_sec": 27.0,
+          "query_latency_p50_sec": 12.9,
+          "qps": 24.8,
+          "scan_volume_GBph": 6.09
+        },
+        {
+          "time": "2025-11-23 16:00",
+          "query_latency_p99_sec": 26.6,
+          "query_latency_p50_sec": 11.6,
+          "qps": 27.9,
+          "scan_volume_GBph": 6.55
+        },
+        {
+          "time": "2025-11-23 17:00",
+          "query_latency_p99_sec": 25.5,
+          "query_latency_p50_sec": 11.2,
+          "qps": 24.3,
+          "scan_volume_GBph": 6.17
+        },
+        {
+          "time": "2025-11-23 18:00",
+          "query_latency_p99_sec": 18.0,
+          "query_latency_p50_sec": 12.3,
+          "qps": 21.8,
+          "scan_volume_GBph": 6.01
+        },
+        {
+          "time": "2025-11-23 19:00",
+          "query_latency_p99_sec": 25.5,
+          "query_latency_p50_sec": 10.7,
+          "qps": 28.7,
+          "scan_volume_GBph": 6.43
+        },
+        {
+          "time": "2025-11-23 20:00",
+          "query_latency_p99_sec": 17.0,
+          "query_latency_p50_sec": 14.9,
+          "qps": 24.2,
+          "scan_volume_GBph": 6.71
+        },
+        {
+          "time": "2025-11-23 21:00",
+          "query_latency_p99_sec": 19.9,
+          "query_latency_p50_sec": 14.6,
+          "qps": 26.9,
+          "scan_volume_GBph": 5.28
+        },
+        {
+          "time": "2025-11-23 22:00",
+          "query_latency_p99_sec": 22.1,
+          "query_latency_p50_sec": 12.0,
+          "qps": 21.6,
+          "scan_volume_GBph": 5.13
+        },
+        {
+          "time": "2025-11-23 23:00",
+          "query_latency_p99_sec": 19.8,
+          "query_latency_p50_sec": 11.8,
+          "qps": 24.7,
+          "scan_volume_GBph": 6.26
+        }
+      ]
+    },
+    "cluster_b_analytics": {
+      "description": "Analytics/batch cluster (runs scheduled jobs, 11:00 scan job)",
+      "timeseries": [
+        {
+          "time": "2025-11-17 00:00",
+          "query_latency_p99_sec": 16.0,
+          "qps": 37.9,
+          "scan_volume_GBph": 10.08
+        },
+        {
+          "time": "2025-11-17 01:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 45.9,
+          "scan_volume_GBph": 8.31
+        },
+        {
+          "time": "2025-11-17 02:00",
+          "query_latency_p99_sec": 18.0,
+          "qps": 38.0,
+          "scan_volume_GBph": 9.0
+        },
+        {
+          "time": "2025-11-17 03:00",
+          "query_latency_p99_sec": 13.2,
+          "qps": 42.5,
+          "scan_volume_GBph": 10.16
+        },
+        {
+          "time": "2025-11-17 04:00",
+          "query_latency_p99_sec": 16.6,
+          "qps": 38.4,
+          "scan_volume_GBph": 11.58
+        },
+        {
+          "time": "2025-11-17 05:00",
+          "query_latency_p99_sec": 17.7,
+          "qps": 41.0,
+          "scan_volume_GBph": 12.4
+        },
+        {
+          "time": "2025-11-17 06:00",
+          "query_latency_p99_sec": 10.7,
+          "qps": 42.3,
+          "scan_volume_GBph": 11.13
+        },
+        {
+          "time": "2025-11-17 07:00",
+          "query_latency_p99_sec": 17.5,
+          "qps": 45.6,
+          "scan_volume_GBph": 9.87
+        },
+        {
+          "time": "2025-11-17 08:00",
+          "query_latency_p99_sec": 17.0,
+          "qps": 40.9,
+          "scan_volume_GBph": 11.38
+        },
+        {
+          "time": "2025-11-17 09:00",
+          "query_latency_p99_sec": 16.2,
+          "qps": 36.0,
+          "scan_volume_GBph": 10.42
+        },
+        {
+          "time": "2025-11-17 10:00",
+          "query_latency_p99_sec": 11.8,
+          "qps": 44.1,
+          "scan_volume_GBph": 10.6
+        },
+        {
+          "time": "2025-11-17 11:00",
+          "query_latency_p99_sec": 19.0,
+          "qps": 34.4,
+          "scan_volume_GBph": 30.02
+        },
+        {
+          "time": "2025-11-17 12:00",
+          "query_latency_p99_sec": 13.3,
+          "qps": 34.2,
+          "scan_volume_GBph": 8.05
+        },
+        {
+          "time": "2025-11-17 13:00",
+          "query_latency_p99_sec": 14.2,
+          "qps": 42.3,
+          "scan_volume_GBph": 8.26
+        },
+        {
+          "time": "2025-11-17 14:00",
+          "query_latency_p99_sec": 18.4,
+          "qps": 45.0,
+          "scan_volume_GBph": 11.37
+        },
+        {
+          "time": "2025-11-17 15:00",
+          "query_latency_p99_sec": 11.7,
+          "qps": 34.7,
+          "scan_volume_GBph": 11.18
+        },
+        {
+          "time": "2025-11-17 16:00",
+          "query_latency_p99_sec": 16.5,
+          "qps": 37.9,
+          "scan_volume_GBph": 8.54
+        },
+        {
+          "time": "2025-11-17 17:00",
+          "query_latency_p99_sec": 12.1,
+          "qps": 37.8,
+          "scan_volume_GBph": 10.13
+        },
+        {
+          "time": "2025-11-17 18:00",
+          "query_latency_p99_sec": 13.7,
+          "qps": 38.1,
+          "scan_volume_GBph": 12.06
+        },
+        {
+          "time": "2025-11-17 19:00",
+          "query_latency_p99_sec": 16.3,
+          "qps": 42.7,
+          "scan_volume_GBph": 11.36
+        },
+        {
+          "time": "2025-11-17 20:00",
+          "query_latency_p99_sec": 12.2,
+          "qps": 41.3,
+          "scan_volume_GBph": 10.97
+        },
+        {
+          "time": "2025-11-17 21:00",
+          "query_latency_p99_sec": 12.5,
+          "qps": 40.7,
+          "scan_volume_GBph": 8.73
+        },
+        {
+          "time": "2025-11-17 22:00",
+          "query_latency_p99_sec": 13.1,
+          "qps": 37.6,
+          "scan_volume_GBph": 12.36
+        },
+        {
+          "time": "2025-11-17 23:00",
+          "query_latency_p99_sec": 13.4,
+          "qps": 42.5,
+          "scan_volume_GBph": 8.54
+        },
+        {
+          "time": "2025-11-18 00:00",
+          "query_latency_p99_sec": 17.7,
+          "qps": 45.2,
+          "scan_volume_GBph": 9.24
+        },
+        {
+          "time": "2025-11-18 01:00",
+          "query_latency_p99_sec": 16.6,
+          "qps": 35.5,
+          "scan_volume_GBph": 8.87
+        },
+        {
+          "time": "2025-11-18 02:00",
+          "query_latency_p99_sec": 17.9,
+          "qps": 45.8,
+          "scan_volume_GBph": 9.4
+        },
+        {
+          "time": "2025-11-18 03:00",
+          "query_latency_p99_sec": 13.1,
+          "qps": 43.7,
+          "scan_volume_GBph": 12.27
+        },
+        {
+          "time": "2025-11-18 04:00",
+          "query_latency_p99_sec": 13.6,
+          "qps": 42.6,
+          "scan_volume_GBph": 8.94
+        },
+        {
+          "time": "2025-11-18 05:00",
+          "query_latency_p99_sec": 14.8,
+          "qps": 37.1,
+          "scan_volume_GBph": 9.71
+        },
+        {
+          "time": "2025-11-18 06:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 40.5,
+          "scan_volume_GBph": 8.51
+        },
+        {
+          "time": "2025-11-18 07:00",
+          "query_latency_p99_sec": 16.0,
+          "qps": 35.6,
+          "scan_volume_GBph": 10.98
+        },
+        {
+          "time": "2025-11-18 08:00",
+          "query_latency_p99_sec": 16.5,
+          "qps": 36.9,
+          "scan_volume_GBph": 10.43
+        },
+        {
+          "time": "2025-11-18 09:00",
+          "query_latency_p99_sec": 11.0,
+          "qps": 41.7,
+          "scan_volume_GBph": 10.16
+        },
+        {
+          "time": "2025-11-18 10:00",
+          "query_latency_p99_sec": 11.4,
+          "qps": 42.6,
+          "scan_volume_GBph": 9.57
+        },
+        {
+          "time": "2025-11-18 11:00",
+          "query_latency_p99_sec": 15.5,
+          "qps": 34.1,
+          "scan_volume_GBph": 31.03
+        },
+        {
+          "time": "2025-11-18 12:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 38.9,
+          "scan_volume_GBph": 12.15
+        },
+        {
+          "time": "2025-11-18 13:00",
+          "query_latency_p99_sec": 12.3,
+          "qps": 39.7,
+          "scan_volume_GBph": 11.89
+        },
+        {
+          "time": "2025-11-18 14:00",
+          "query_latency_p99_sec": 16.3,
+          "qps": 37.9,
+          "scan_volume_GBph": 12.32
+        },
+        {
+          "time": "2025-11-18 15:00",
+          "query_latency_p99_sec": 15.7,
+          "qps": 35.1,
+          "scan_volume_GBph": 12.04
+        },
+        {
+          "time": "2025-11-18 16:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 42.7,
+          "scan_volume_GBph": 10.18
+        },
+        {
+          "time": "2025-11-18 17:00",
+          "query_latency_p99_sec": 18.4,
+          "qps": 36.1,
+          "scan_volume_GBph": 12.07
+        },
+        {
+          "time": "2025-11-18 18:00",
+          "query_latency_p99_sec": 19.5,
+          "qps": 45.0,
+          "scan_volume_GBph": 8.38
+        },
+        {
+          "time": "2025-11-18 19:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 39.9,
+          "scan_volume_GBph": 9.48
+        },
+        {
+          "time": "2025-11-18 20:00",
+          "query_latency_p99_sec": 18.4,
+          "qps": 45.1,
+          "scan_volume_GBph": 12.31
+        },
+        {
+          "time": "2025-11-18 21:00",
+          "query_latency_p99_sec": 11.5,
+          "qps": 40.8,
+          "scan_volume_GBph": 7.55
+        },
+        {
+          "time": "2025-11-18 22:00",
+          "query_latency_p99_sec": 19.4,
+          "qps": 37.4,
+          "scan_volume_GBph": 12.41
+        },
+        {
+          "time": "2025-11-18 23:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 39.9,
+          "scan_volume_GBph": 10.22
+        },
+        {
+          "time": "2025-11-19 00:00",
+          "query_latency_p99_sec": 12.2,
+          "qps": 39.6,
+          "scan_volume_GBph": 11.76
+        },
+        {
+          "time": "2025-11-19 01:00",
+          "query_latency_p99_sec": 14.6,
+          "qps": 35.9,
+          "scan_volume_GBph": 8.06
+        },
+        {
+          "time": "2025-11-19 02:00",
+          "query_latency_p99_sec": 17.1,
+          "qps": 36.2,
+          "scan_volume_GBph": 8.79
+        },
+        {
+          "time": "2025-11-19 03:00",
+          "query_latency_p99_sec": 17.3,
+          "qps": 40.8,
+          "scan_volume_GBph": 11.45
+        },
+        {
+          "time": "2025-11-19 04:00",
+          "query_latency_p99_sec": 18.6,
+          "qps": 44.3,
+          "scan_volume_GBph": 8.38
+        },
+        {
+          "time": "2025-11-19 05:00",
+          "query_latency_p99_sec": 11.3,
+          "qps": 40.2,
+          "scan_volume_GBph": 11.63
+        },
+        {
+          "time": "2025-11-19 06:00",
+          "query_latency_p99_sec": 11.8,
+          "qps": 36.2,
+          "scan_volume_GBph": 10.85
+        },
+        {
+          "time": "2025-11-19 07:00",
+          "query_latency_p99_sec": 12.8,
+          "qps": 37.0,
+          "scan_volume_GBph": 9.12
+        },
+        {
+          "time": "2025-11-19 08:00",
+          "query_latency_p99_sec": 19.1,
+          "qps": 43.0,
+          "scan_volume_GBph": 8.68
+        },
+        {
+          "time": "2025-11-19 09:00",
+          "query_latency_p99_sec": 10.6,
+          "qps": 42.7,
+          "scan_volume_GBph": 9.01
+        },
+        {
+          "time": "2025-11-19 10:00",
+          "query_latency_p99_sec": 11.1,
+          "qps": 42.3,
+          "scan_volume_GBph": 10.77
+        },
+        {
+          "time": "2025-11-19 11:00",
+          "query_latency_p99_sec": 14.1,
+          "qps": 37.7,
+          "scan_volume_GBph": 23.72
+        },
+        {
+          "time": "2025-11-19 12:00",
+          "query_latency_p99_sec": 16.8,
+          "qps": 44.7,
+          "scan_volume_GBph": 10.01
+        },
+        {
+          "time": "2025-11-19 13:00",
+          "query_latency_p99_sec": 18.7,
+          "qps": 35.4,
+          "scan_volume_GBph": 9.05
+        },
+        {
+          "time": "2025-11-19 14:00",
+          "query_latency_p99_sec": 12.5,
+          "qps": 41.4,
+          "scan_volume_GBph": 8.98
+        },
+        {
+          "time": "2025-11-19 15:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 35.8,
+          "scan_volume_GBph": 8.17
+        },
+        {
+          "time": "2025-11-19 16:00",
+          "query_latency_p99_sec": 15.4,
+          "qps": 39.0,
+          "scan_volume_GBph": 10.53
+        },
+        {
+          "time": "2025-11-19 17:00",
+          "query_latency_p99_sec": 16.5,
+          "qps": 40.5,
+          "scan_volume_GBph": 9.85
+        },
+        {
+          "time": "2025-11-19 18:00",
+          "query_latency_p99_sec": 17.3,
+          "qps": 37.0,
+          "scan_volume_GBph": 8.59
+        },
+        {
+          "time": "2025-11-19 19:00",
+          "query_latency_p99_sec": 14.5,
+          "qps": 35.0,
+          "scan_volume_GBph": 11.87
+        },
+        {
+          "time": "2025-11-19 20:00",
+          "query_latency_p99_sec": 15.6,
+          "qps": 34.9,
+          "scan_volume_GBph": 11.02
+        },
+        {
+          "time": "2025-11-19 21:00",
+          "query_latency_p99_sec": 15.0,
+          "qps": 40.6,
+          "scan_volume_GBph": 7.81
+        },
+        {
+          "time": "2025-11-19 22:00",
+          "query_latency_p99_sec": 13.5,
+          "qps": 35.8,
+          "scan_volume_GBph": 10.36
+        },
+        {
+          "time": "2025-11-19 23:00",
+          "query_latency_p99_sec": 12.3,
+          "qps": 35.4,
+          "scan_volume_GBph": 10.1
+        },
+        {
+          "time": "2025-11-20 00:00",
+          "query_latency_p99_sec": 15.1,
+          "qps": 35.1,
+          "scan_volume_GBph": 10.42
+        },
+        {
+          "time": "2025-11-20 01:00",
+          "query_latency_p99_sec": 15.1,
+          "qps": 39.4,
+          "scan_volume_GBph": 11.54
+        },
+        {
+          "time": "2025-11-20 02:00",
+          "query_latency_p99_sec": 14.7,
+          "qps": 34.7,
+          "scan_volume_GBph": 9.78
+        },
+        {
+          "time": "2025-11-20 03:00",
+          "query_latency_p99_sec": 14.1,
+          "qps": 42.7,
+          "scan_volume_GBph": 11.53
+        },
+        {
+          "time": "2025-11-20 04:00",
+          "query_latency_p99_sec": 15.7,
+          "qps": 42.9,
+          "scan_volume_GBph": 11.58
+        },
+        {
+          "time": "2025-11-20 05:00",
+          "query_latency_p99_sec": 11.1,
+          "qps": 38.1,
+          "scan_volume_GBph": 7.73
+        },
+        {
+          "time": "2025-11-20 06:00",
+          "query_latency_p99_sec": 11.1,
+          "qps": 45.2,
+          "scan_volume_GBph": 12.47
+        },
+        {
+          "time": "2025-11-20 07:00",
+          "query_latency_p99_sec": 14.2,
+          "qps": 34.4,
+          "scan_volume_GBph": 12.17
+        },
+        {
+          "time": "2025-11-20 08:00",
+          "query_latency_p99_sec": 19.3,
+          "qps": 43.2,
+          "scan_volume_GBph": 11.34
+        },
+        {
+          "time": "2025-11-20 09:00",
+          "query_latency_p99_sec": 19.4,
+          "qps": 39.0,
+          "scan_volume_GBph": 10.73
+        },
+        {
+          "time": "2025-11-20 10:00",
+          "query_latency_p99_sec": 18.7,
+          "qps": 44.4,
+          "scan_volume_GBph": 9.41
+        },
+        {
+          "time": "2025-11-20 11:00",
+          "query_latency_p99_sec": 16.5,
+          "qps": 42.2,
+          "scan_volume_GBph": 26.61
+        },
+        {
+          "time": "2025-11-20 12:00",
+          "query_latency_p99_sec": 13.6,
+          "qps": 41.8,
+          "scan_volume_GBph": 10.2
+        },
+        {
+          "time": "2025-11-20 13:00",
+          "query_latency_p99_sec": 15.3,
+          "qps": 40.4,
+          "scan_volume_GBph": 8.39
+        },
+        {
+          "time": "2025-11-20 14:00",
+          "query_latency_p99_sec": 10.5,
+          "qps": 36.7,
+          "scan_volume_GBph": 11.14
+        },
+        {
+          "time": "2025-11-20 15:00",
+          "query_latency_p99_sec": 16.6,
+          "qps": 37.6,
+          "scan_volume_GBph": 7.61
+        },
+        {
+          "time": "2025-11-20 16:00",
+          "query_latency_p99_sec": 17.9,
+          "qps": 40.4,
+          "scan_volume_GBph": 10.22
+        },
+        {
+          "time": "2025-11-20 17:00",
+          "query_latency_p99_sec": 13.0,
+          "qps": 38.2,
+          "scan_volume_GBph": 8.74
+        },
+        {
+          "time": "2025-11-20 18:00",
+          "query_latency_p99_sec": 11.5,
+          "qps": 42.7,
+          "scan_volume_GBph": 12.19
+        },
+        {
+          "time": "2025-11-20 19:00",
+          "query_latency_p99_sec": 17.4,
+          "qps": 39.0,
+          "scan_volume_GBph": 11.55
+        },
+        {
+          "time": "2025-11-20 20:00",
+          "query_latency_p99_sec": 12.4,
+          "qps": 34.2,
+          "scan_volume_GBph": 11.92
+        },
+        {
+          "time": "2025-11-20 21:00",
+          "query_latency_p99_sec": 15.9,
+          "qps": 34.4,
+          "scan_volume_GBph": 8.0
+        },
+        {
+          "time": "2025-11-20 22:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 34.6,
+          "scan_volume_GBph": 11.02
+        },
+        {
+          "time": "2025-11-20 23:00",
+          "query_latency_p99_sec": 12.5,
+          "qps": 36.8,
+          "scan_volume_GBph": 9.51
+        },
+        {
+          "time": "2025-11-21 00:00",
+          "query_latency_p99_sec": 15.0,
+          "qps": 34.7,
+          "scan_volume_GBph": 11.82
+        },
+        {
+          "time": "2025-11-21 01:00",
+          "query_latency_p99_sec": 17.1,
+          "qps": 43.8,
+          "scan_volume_GBph": 8.95
+        },
+        {
+          "time": "2025-11-21 02:00",
+          "query_latency_p99_sec": 16.6,
+          "qps": 41.2,
+          "scan_volume_GBph": 9.09
+        },
+        {
+          "time": "2025-11-21 03:00",
+          "query_latency_p99_sec": 11.8,
+          "qps": 37.6,
+          "scan_volume_GBph": 9.1
+        },
+        {
+          "time": "2025-11-21 04:00",
+          "query_latency_p99_sec": 13.2,
+          "qps": 36.7,
+          "scan_volume_GBph": 10.8
+        },
+        {
+          "time": "2025-11-21 05:00",
+          "query_latency_p99_sec": 18.4,
+          "qps": 45.4,
+          "scan_volume_GBph": 7.8
+        },
+        {
+          "time": "2025-11-21 06:00",
+          "query_latency_p99_sec": 14.3,
+          "qps": 41.5,
+          "scan_volume_GBph": 12.06
+        },
+        {
+          "time": "2025-11-21 07:00",
+          "query_latency_p99_sec": 19.0,
+          "qps": 45.7,
+          "scan_volume_GBph": 9.98
+        },
+        {
+          "time": "2025-11-21 08:00",
+          "query_latency_p99_sec": 13.4,
+          "qps": 43.4,
+          "scan_volume_GBph": 10.86
+        },
+        {
+          "time": "2025-11-21 09:00",
+          "query_latency_p99_sec": 13.9,
+          "qps": 35.8,
+          "scan_volume_GBph": 9.58
+        },
+        {
+          "time": "2025-11-21 10:00",
+          "query_latency_p99_sec": 18.1,
+          "qps": 39.7,
+          "scan_volume_GBph": 11.27
+        },
+        {
+          "time": "2025-11-21 11:00",
+          "query_latency_p99_sec": 17.8,
+          "qps": 42.5,
+          "scan_volume_GBph": 25.77
+        },
+        {
+          "time": "2025-11-21 12:00",
+          "query_latency_p99_sec": 19.2,
+          "qps": 40.7,
+          "scan_volume_GBph": 12.07
+        },
+        {
+          "time": "2025-11-21 13:00",
+          "query_latency_p99_sec": 12.7,
+          "qps": 35.6,
+          "scan_volume_GBph": 10.29
+        },
+        {
+          "time": "2025-11-21 14:00",
+          "query_latency_p99_sec": 18.8,
+          "qps": 41.8,
+          "scan_volume_GBph": 8.52
+        },
+        {
+          "time": "2025-11-21 15:00",
+          "query_latency_p99_sec": 17.0,
+          "qps": 35.1,
+          "scan_volume_GBph": 11.74
+        },
+        {
+          "time": "2025-11-21 16:00",
+          "query_latency_p99_sec": 16.6,
+          "qps": 37.2,
+          "scan_volume_GBph": 8.45
+        },
+        {
+          "time": "2025-11-21 17:00",
+          "query_latency_p99_sec": 12.2,
+          "qps": 44.5,
+          "scan_volume_GBph": 10.51
+        },
+        {
+          "time": "2025-11-21 18:00",
+          "query_latency_p99_sec": 15.5,
+          "qps": 42.7,
+          "scan_volume_GBph": 11.31
+        },
+        {
+          "time": "2025-11-21 19:00",
+          "query_latency_p99_sec": 13.5,
+          "qps": 44.4,
+          "scan_volume_GBph": 9.9
+        },
+        {
+          "time": "2025-11-21 20:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 34.2,
+          "scan_volume_GBph": 12.29
+        },
+        {
+          "time": "2025-11-21 21:00",
+          "query_latency_p99_sec": 19.5,
+          "qps": 35.4,
+          "scan_volume_GBph": 12.31
+        },
+        {
+          "time": "2025-11-21 22:00",
+          "query_latency_p99_sec": 15.9,
+          "qps": 36.9,
+          "scan_volume_GBph": 9.89
+        },
+        {
+          "time": "2025-11-21 23:00",
+          "query_latency_p99_sec": 15.5,
+          "qps": 45.0,
+          "scan_volume_GBph": 8.52
+        },
+        {
+          "time": "2025-11-22 00:00",
+          "query_latency_p99_sec": 15.3,
+          "qps": 38.6,
+          "scan_volume_GBph": 11.38
+        },
+        {
+          "time": "2025-11-22 01:00",
+          "query_latency_p99_sec": 15.1,
+          "qps": 37.1,
+          "scan_volume_GBph": 9.3
+        },
+        {
+          "time": "2025-11-22 02:00",
+          "query_latency_p99_sec": 19.3,
+          "qps": 35.2,
+          "scan_volume_GBph": 9.99
+        },
+        {
+          "time": "2025-11-22 03:00",
+          "query_latency_p99_sec": 18.7,
+          "qps": 44.1,
+          "scan_volume_GBph": 9.85
+        },
+        {
+          "time": "2025-11-22 04:00",
+          "query_latency_p99_sec": 15.6,
+          "qps": 39.0,
+          "scan_volume_GBph": 9.35
+        },
+        {
+          "time": "2025-11-22 05:00",
+          "query_latency_p99_sec": 12.8,
+          "qps": 35.8,
+          "scan_volume_GBph": 8.61
+        },
+        {
+          "time": "2025-11-22 06:00",
+          "query_latency_p99_sec": 14.3,
+          "qps": 40.9,
+          "scan_volume_GBph": 12.17
+        },
+        {
+          "time": "2025-11-22 07:00",
+          "query_latency_p99_sec": 13.9,
+          "qps": 38.0,
+          "scan_volume_GBph": 8.26
+        },
+        {
+          "time": "2025-11-22 08:00",
+          "query_latency_p99_sec": 16.4,
+          "qps": 40.0,
+          "scan_volume_GBph": 11.67
+        },
+        {
+          "time": "2025-11-22 09:00",
+          "query_latency_p99_sec": 17.9,
+          "qps": 37.1,
+          "scan_volume_GBph": 10.92
+        },
+        {
+          "time": "2025-11-22 10:00",
+          "query_latency_p99_sec": 14.9,
+          "qps": 41.7,
+          "scan_volume_GBph": 12.33
+        },
+        {
+          "time": "2025-11-22 11:00",
+          "query_latency_p99_sec": 12.0,
+          "qps": 43.5,
+          "scan_volume_GBph": 24.28
+        },
+        {
+          "time": "2025-11-22 12:00",
+          "query_latency_p99_sec": 18.8,
+          "qps": 39.9,
+          "scan_volume_GBph": 11.1
+        },
+        {
+          "time": "2025-11-22 13:00",
+          "query_latency_p99_sec": 11.0,
+          "qps": 41.7,
+          "scan_volume_GBph": 10.21
+        },
+        {
+          "time": "2025-11-22 14:00",
+          "query_latency_p99_sec": 19.0,
+          "qps": 44.2,
+          "scan_volume_GBph": 7.67
+        },
+        {
+          "time": "2025-11-22 15:00",
+          "query_latency_p99_sec": 14.2,
+          "qps": 43.2,
+          "scan_volume_GBph": 10.84
+        },
+        {
+          "time": "2025-11-22 16:00",
+          "query_latency_p99_sec": 16.9,
+          "qps": 36.8,
+          "scan_volume_GBph": 11.71
+        },
+        {
+          "time": "2025-11-22 17:00",
+          "query_latency_p99_sec": 13.9,
+          "qps": 40.1,
+          "scan_volume_GBph": 7.55
+        },
+        {
+          "time": "2025-11-22 18:00",
+          "query_latency_p99_sec": 16.0,
+          "qps": 42.0,
+          "scan_volume_GBph": 10.59
+        },
+        {
+          "time": "2025-11-22 19:00",
+          "query_latency_p99_sec": 10.6,
+          "qps": 39.9,
+          "scan_volume_GBph": 9.92
+        },
+        {
+          "time": "2025-11-22 20:00",
+          "query_latency_p99_sec": 15.3,
+          "qps": 34.1,
+          "scan_volume_GBph": 10.26
+        },
+        {
+          "time": "2025-11-22 21:00",
+          "query_latency_p99_sec": 10.7,
+          "qps": 45.7,
+          "scan_volume_GBph": 8.87
+        },
+        {
+          "time": "2025-11-22 22:00",
+          "query_latency_p99_sec": 17.8,
+          "qps": 42.1,
+          "scan_volume_GBph": 11.57
+        },
+        {
+          "time": "2025-11-22 23:00",
+          "query_latency_p99_sec": 11.4,
+          "qps": 35.3,
+          "scan_volume_GBph": 12.05
+        },
+        {
+          "time": "2025-11-23 00:00",
+          "query_latency_p99_sec": 15.2,
+          "qps": 36.3,
+          "scan_volume_GBph": 8.24
+        },
+        {
+          "time": "2025-11-23 01:00",
+          "query_latency_p99_sec": 14.1,
+          "qps": 37.2,
+          "scan_volume_GBph": 11.58
+        },
+        {
+          "time": "2025-11-23 02:00",
+          "query_latency_p99_sec": 15.6,
+          "qps": 38.9,
+          "scan_volume_GBph": 9.37
+        },
+        {
+          "time": "2025-11-23 03:00",
+          "query_latency_p99_sec": 16.7,
+          "qps": 36.7,
+          "scan_volume_GBph": 12.45
+        },
+        {
+          "time": "2025-11-23 04:00",
+          "query_latency_p99_sec": 18.2,
+          "qps": 41.8,
+          "scan_volume_GBph": 11.74
+        },
+        {
+          "time": "2025-11-23 05:00",
+          "query_latency_p99_sec": 13.9,
+          "qps": 35.1,
+          "scan_volume_GBph": 11.3
+        },
+        {
+          "time": "2025-11-23 06:00",
+          "query_latency_p99_sec": 10.6,
+          "qps": 34.7,
+          "scan_volume_GBph": 10.26
+        },
+        {
+          "time": "2025-11-23 07:00",
+          "query_latency_p99_sec": 14.4,
+          "qps": 40.0,
+          "scan_volume_GBph": 8.36
+        },
+        {
+          "time": "2025-11-23 08:00",
+          "query_latency_p99_sec": 18.2,
+          "qps": 40.8,
+          "scan_volume_GBph": 11.42
+        },
+        {
+          "time": "2025-11-23 09:00",
+          "query_latency_p99_sec": 10.9,
+          "qps": 40.3,
+          "scan_volume_GBph": 7.98
+        },
+        {
+          "time": "2025-11-23 10:00",
+          "query_latency_p99_sec": 18.5,
+          "qps": 44.4,
+          "scan_volume_GBph": 8.56
+        },
+        {
+          "time": "2025-11-23 11:00",
+          "query_latency_p99_sec": 11.2,
+          "qps": 34.6,
+          "scan_volume_GBph": 27.73
+        },
+        {
+          "time": "2025-11-23 12:00",
+          "query_latency_p99_sec": 15.6,
+          "qps": 44.8,
+          "scan_volume_GBph": 12.13
+        },
+        {
+          "time": "2025-11-23 13:00",
+          "query_latency_p99_sec": 13.3,
+          "qps": 45.1,
+          "scan_volume_GBph": 7.66
+        },
+        {
+          "time": "2025-11-23 14:00",
+          "query_latency_p99_sec": 17.3,
+          "qps": 41.0,
+          "scan_volume_GBph": 12.31
+        },
+        {
+          "time": "2025-11-23 15:00",
+          "query_latency_p99_sec": 11.2,
+          "qps": 38.8,
+          "scan_volume_GBph": 11.06
+        },
+        {
+          "time": "2025-11-23 16:00",
+          "query_latency_p99_sec": 18.0,
+          "qps": 36.9,
+          "scan_volume_GBph": 8.31
+        },
+        {
+          "time": "2025-11-23 17:00",
+          "query_latency_p99_sec": 13.5,
+          "qps": 44.8,
+          "scan_volume_GBph": 9.45
+        },
+        {
+          "time": "2025-11-23 18:00",
+          "query_latency_p99_sec": 19.4,
+          "qps": 35.7,
+          "scan_volume_GBph": 11.28
+        },
+        {
+          "time": "2025-11-23 19:00",
+          "query_latency_p99_sec": 19.3,
+          "qps": 40.0,
+          "scan_volume_GBph": 11.12
+        },
+        {
+          "time": "2025-11-23 20:00",
+          "query_latency_p99_sec": 18.0,
+          "qps": 39.2,
+          "scan_volume_GBph": 7.77
+        },
+        {
+          "time": "2025-11-23 21:00",
+          "query_latency_p99_sec": 19.1,
+          "qps": 43.2,
+          "scan_volume_GBph": 9.2
+        },
+        {
+          "time": "2025-11-23 22:00",
+          "query_latency_p99_sec": 10.8,
+          "qps": 43.3,
+          "scan_volume_GBph": 9.48
+        },
+        {
+          "time": "2025-11-23 23:00",
+          "query_latency_p99_sec": 14.9,
+          "qps": 45.9,
+          "scan_volume_GBph": 8.87
+        }
+      ]
+    },
+    "cluster_c_internal": {
+      "description": "Internal tools cluster (lightweight usage)",
+      "timeseries": [
+        {
+          "time": "2025-11-17 00:00",
+          "query_latency_p99_sec": 16.7,
+          "qps": 17.6,
+          "scan_volume_GBph": 3.84
+        },
+        {
+          "time": "2025-11-17 01:00",
+          "query_latency_p99_sec": 19.6,
+          "qps": 16.0,
+          "scan_volume_GBph": 3.01
+        },
+        {
+          "time": "2025-11-17 02:00",
+          "query_latency_p99_sec": 19.1,
+          "qps": 16.8,
+          "scan_volume_GBph": 4.51
+        },
+        {
+          "time": "2025-11-17 03:00",
+          "query_latency_p99_sec": 14.2,
+          "qps": 12.9,
+          "scan_volume_GBph": 4.51
+        },
+        {
+          "time": "2025-11-17 04:00",
+          "query_latency_p99_sec": 19.2,
+          "qps": 16.4,
+          "scan_volume_GBph": 3.56
+        },
+        {
+          "time": "2025-11-17 05:00",
+          "query_latency_p99_sec": 14.5,
+          "qps": 12.0,
+          "scan_volume_GBph": 3.54
+        },
+        {
+          "time": "2025-11-17 06:00",
+          "query_latency_p99_sec": 16.7,
+          "qps": 13.6,
+          "scan_volume_GBph": 3.12
+        },
+        {
+          "time": "2025-11-17 07:00",
+          "query_latency_p99_sec": 15.2,
+          "qps": 14.7,
+          "scan_volume_GBph": 4.13
+        },
+        {
+          "time": "2025-11-17 08:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 12.2,
+          "scan_volume_GBph": 3.65
+        },
+        {
+          "time": "2025-11-17 09:00",
+          "query_latency_p99_sec": 14.3,
+          "qps": 15.6,
+          "scan_volume_GBph": 3.58
+        },
+        {
+          "time": "2025-11-17 10:00",
+          "query_latency_p99_sec": 17.0,
+          "qps": 13.8,
+          "scan_volume_GBph": 3.73
+        },
+        {
+          "time": "2025-11-17 11:00",
+          "query_latency_p99_sec": 14.3,
+          "qps": 17.4,
+          "scan_volume_GBph": 4.97
+        },
+        {
+          "time": "2025-11-17 12:00",
+          "query_latency_p99_sec": 22.3,
+          "qps": 15.4,
+          "scan_volume_GBph": 3.21
+        },
+        {
+          "time": "2025-11-17 13:00",
+          "query_latency_p99_sec": 16.9,
+          "qps": 12.8,
+          "scan_volume_GBph": 3.52
+        },
+        {
+          "time": "2025-11-17 14:00",
+          "query_latency_p99_sec": 17.9,
+          "qps": 12.4,
+          "scan_volume_GBph": 3.84
+        },
+        {
+          "time": "2025-11-17 15:00",
+          "query_latency_p99_sec": 17.3,
+          "qps": 14.9,
+          "scan_volume_GBph": 2.98
+        },
+        {
+          "time": "2025-11-17 16:00",
+          "query_latency_p99_sec": 15.8,
+          "qps": 13.5,
+          "scan_volume_GBph": 4.3
+        },
+        {
+          "time": "2025-11-17 17:00",
+          "query_latency_p99_sec": 18.8,
+          "qps": 13.2,
+          "scan_volume_GBph": 3.06
+        },
+        {
+          "time": "2025-11-17 18:00",
+          "query_latency_p99_sec": 16.2,
+          "qps": 17.7,
+          "scan_volume_GBph": 3.6
+        },
+        {
+          "time": "2025-11-17 19:00",
+          "query_latency_p99_sec": 19.1,
+          "qps": 16.8,
+          "scan_volume_GBph": 3.59
+        },
+        {
+          "time": "2025-11-17 20:00",
+          "query_latency_p99_sec": 16.5,
+          "qps": 16.9,
+          "scan_volume_GBph": 4.86
+        },
+        {
+          "time": "2025-11-17 21:00",
+          "query_latency_p99_sec": 22.3,
+          "qps": 12.8,
+          "scan_volume_GBph": 3.57
+        },
+        {
+          "time": "2025-11-17 22:00",
+          "query_latency_p99_sec": 22.0,
+          "qps": 13.2,
+          "scan_volume_GBph": 3.55
+        },
+        {
+          "time": "2025-11-17 23:00",
+          "query_latency_p99_sec": 22.2,
+          "qps": 17.8,
+          "scan_volume_GBph": 3.5
+        },
+        {
+          "time": "2025-11-18 00:00",
+          "query_latency_p99_sec": 19.8,
+          "qps": 14.9,
+          "scan_volume_GBph": 4.18
+        },
+        {
+          "time": "2025-11-18 01:00",
+          "query_latency_p99_sec": 15.7,
+          "qps": 14.3,
+          "scan_volume_GBph": 4.76
+        },
+        {
+          "time": "2025-11-18 02:00",
+          "query_latency_p99_sec": 17.0,
+          "qps": 12.7,
+          "scan_volume_GBph": 4.15
+        },
+        {
+          "time": "2025-11-18 03:00",
+          "query_latency_p99_sec": 18.8,
+          "qps": 15.3,
+          "scan_volume_GBph": 4.44
+        },
+        {
+          "time": "2025-11-18 04:00",
+          "query_latency_p99_sec": 18.5,
+          "qps": 17.7,
+          "scan_volume_GBph": 3.91
+        },
+        {
+          "time": "2025-11-18 05:00",
+          "query_latency_p99_sec": 19.9,
+          "qps": 14.6,
+          "scan_volume_GBph": 3.5
+        },
+        {
+          "time": "2025-11-18 06:00",
+          "query_latency_p99_sec": 19.7,
+          "qps": 16.9,
+          "scan_volume_GBph": 4.71
+        },
+        {
+          "time": "2025-11-18 07:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 15.0,
+          "scan_volume_GBph": 4.32
+        },
+        {
+          "time": "2025-11-18 08:00",
+          "query_latency_p99_sec": 15.7,
+          "qps": 16.0,
+          "scan_volume_GBph": 4.52
+        },
+        {
+          "time": "2025-11-18 09:00",
+          "query_latency_p99_sec": 20.6,
+          "qps": 12.4,
+          "scan_volume_GBph": 5.18
+        },
+        {
+          "time": "2025-11-18 10:00",
+          "query_latency_p99_sec": 17.8,
+          "qps": 14.4,
+          "scan_volume_GBph": 4.02
+        },
+        {
+          "time": "2025-11-18 11:00",
+          "query_latency_p99_sec": 21.8,
+          "qps": 16.2,
+          "scan_volume_GBph": 4.1
+        },
+        {
+          "time": "2025-11-18 12:00",
+          "query_latency_p99_sec": 20.6,
+          "qps": 14.2,
+          "scan_volume_GBph": 4.95
+        },
+        {
+          "time": "2025-11-18 13:00",
+          "query_latency_p99_sec": 18.3,
+          "qps": 15.8,
+          "scan_volume_GBph": 3.0
+        },
+        {
+          "time": "2025-11-18 14:00",
+          "query_latency_p99_sec": 20.4,
+          "qps": 15.9,
+          "scan_volume_GBph": 3.65
+        },
+        {
+          "time": "2025-11-18 15:00",
+          "query_latency_p99_sec": 19.3,
+          "qps": 12.3,
+          "scan_volume_GBph": 5.16
+        },
+        {
+          "time": "2025-11-18 16:00",
+          "query_latency_p99_sec": 19.6,
+          "qps": 14.4,
+          "scan_volume_GBph": 4.61
+        },
+        {
+          "time": "2025-11-18 17:00",
+          "query_latency_p99_sec": 22.2,
+          "qps": 14.6,
+          "scan_volume_GBph": 2.83
+        },
+        {
+          "time": "2025-11-18 18:00",
+          "query_latency_p99_sec": 15.8,
+          "qps": 15.1,
+          "scan_volume_GBph": 4.05
+        },
+        {
+          "time": "2025-11-18 19:00",
+          "query_latency_p99_sec": 18.7,
+          "qps": 15.5,
+          "scan_volume_GBph": 3.87
+        },
+        {
+          "time": "2025-11-18 20:00",
+          "query_latency_p99_sec": 17.0,
+          "qps": 16.6,
+          "scan_volume_GBph": 4.21
+        },
+        {
+          "time": "2025-11-18 21:00",
+          "query_latency_p99_sec": 18.0,
+          "qps": 14.1,
+          "scan_volume_GBph": 2.86
+        },
+        {
+          "time": "2025-11-18 22:00",
+          "query_latency_p99_sec": 14.4,
+          "qps": 14.5,
+          "scan_volume_GBph": 5.11
+        },
+        {
+          "time": "2025-11-18 23:00",
+          "query_latency_p99_sec": 14.5,
+          "qps": 17.6,
+          "scan_volume_GBph": 3.14
+        },
+        {
+          "time": "2025-11-19 00:00",
+          "query_latency_p99_sec": 16.3,
+          "qps": 14.7,
+          "scan_volume_GBph": 3.3
+        },
+        {
+          "time": "2025-11-19 01:00",
+          "query_latency_p99_sec": 17.8,
+          "qps": 14.9,
+          "scan_volume_GBph": 3.85
+        },
+        {
+          "time": "2025-11-19 02:00",
+          "query_latency_p99_sec": 19.8,
+          "qps": 13.9,
+          "scan_volume_GBph": 3.52
+        },
+        {
+          "time": "2025-11-19 03:00",
+          "query_latency_p99_sec": 20.8,
+          "qps": 12.7,
+          "scan_volume_GBph": 4.84
+        },
+        {
+          "time": "2025-11-19 04:00",
+          "query_latency_p99_sec": 19.3,
+          "qps": 16.1,
+          "scan_volume_GBph": 3.19
+        },
+        {
+          "time": "2025-11-19 05:00",
+          "query_latency_p99_sec": 22.4,
+          "qps": 13.5,
+          "scan_volume_GBph": 3.22
+        },
+        {
+          "time": "2025-11-19 06:00",
+          "query_latency_p99_sec": 14.9,
+          "qps": 15.4,
+          "scan_volume_GBph": 5.1
+        },
+        {
+          "time": "2025-11-19 07:00",
+          "query_latency_p99_sec": 15.6,
+          "qps": 14.4,
+          "scan_volume_GBph": 3.24
+        },
+        {
+          "time": "2025-11-19 08:00",
+          "query_latency_p99_sec": 19.3,
+          "qps": 14.6,
+          "scan_volume_GBph": 2.87
+        },
+        {
+          "time": "2025-11-19 09:00",
+          "query_latency_p99_sec": 19.0,
+          "qps": 13.2,
+          "scan_volume_GBph": 4.22
+        },
+        {
+          "time": "2025-11-19 10:00",
+          "query_latency_p99_sec": 17.0,
+          "qps": 16.2,
+          "scan_volume_GBph": 3.29
+        },
+        {
+          "time": "2025-11-19 11:00",
+          "query_latency_p99_sec": 20.3,
+          "qps": 16.9,
+          "scan_volume_GBph": 2.95
+        },
+        {
+          "time": "2025-11-19 12:00",
+          "query_latency_p99_sec": 14.4,
+          "qps": 17.2,
+          "scan_volume_GBph": 3.25
+        },
+        {
+          "time": "2025-11-19 13:00",
+          "query_latency_p99_sec": 16.4,
+          "qps": 14.7,
+          "scan_volume_GBph": 3.43
+        },
+        {
+          "time": "2025-11-19 14:00",
+          "query_latency_p99_sec": 21.3,
+          "qps": 15.2,
+          "scan_volume_GBph": 4.33
+        },
+        {
+          "time": "2025-11-19 15:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 15.7,
+          "scan_volume_GBph": 4.21
+        },
+        {
+          "time": "2025-11-19 16:00",
+          "query_latency_p99_sec": 16.6,
+          "qps": 17.1,
+          "scan_volume_GBph": 4.28
+        },
+        {
+          "time": "2025-11-19 17:00",
+          "query_latency_p99_sec": 20.8,
+          "qps": 16.2,
+          "scan_volume_GBph": 3.51
+        },
+        {
+          "time": "2025-11-19 18:00",
+          "query_latency_p99_sec": 19.0,
+          "qps": 12.5,
+          "scan_volume_GBph": 3.12
+        },
+        {
+          "time": "2025-11-19 19:00",
+          "query_latency_p99_sec": 14.6,
+          "qps": 13.8,
+          "scan_volume_GBph": 3.24
+        },
+        {
+          "time": "2025-11-19 20:00",
+          "query_latency_p99_sec": 19.7,
+          "qps": 15.1,
+          "scan_volume_GBph": 3.8
+        },
+        {
+          "time": "2025-11-19 21:00",
+          "query_latency_p99_sec": 14.7,
+          "qps": 14.3,
+          "scan_volume_GBph": 3.25
+        },
+        {
+          "time": "2025-11-19 22:00",
+          "query_latency_p99_sec": 19.2,
+          "qps": 16.2,
+          "scan_volume_GBph": 4.35
+        },
+        {
+          "time": "2025-11-19 23:00",
+          "query_latency_p99_sec": 22.5,
+          "qps": 15.3,
+          "scan_volume_GBph": 3.98
+        },
+        {
+          "time": "2025-11-20 00:00",
+          "query_latency_p99_sec": 14.8,
+          "qps": 13.9,
+          "scan_volume_GBph": 3.88
+        },
+        {
+          "time": "2025-11-20 01:00",
+          "query_latency_p99_sec": 14.0,
+          "qps": 14.2,
+          "scan_volume_GBph": 2.82
+        },
+        {
+          "time": "2025-11-20 02:00",
+          "query_latency_p99_sec": 14.7,
+          "qps": 16.9,
+          "scan_volume_GBph": 5.11
+        },
+        {
+          "time": "2025-11-20 03:00",
+          "query_latency_p99_sec": 18.0,
+          "qps": 15.0,
+          "scan_volume_GBph": 4.44
+        },
+        {
+          "time": "2025-11-20 04:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 17.0,
+          "scan_volume_GBph": 3.97
+        },
+        {
+          "time": "2025-11-20 05:00",
+          "query_latency_p99_sec": 14.2,
+          "qps": 12.2,
+          "scan_volume_GBph": 4.63
+        },
+        {
+          "time": "2025-11-20 06:00",
+          "query_latency_p99_sec": 16.1,
+          "qps": 13.6,
+          "scan_volume_GBph": 4.09
+        },
+        {
+          "time": "2025-11-20 07:00",
+          "query_latency_p99_sec": 15.0,
+          "qps": 14.7,
+          "scan_volume_GBph": 4.58
+        },
+        {
+          "time": "2025-11-20 08:00",
+          "query_latency_p99_sec": 20.4,
+          "qps": 15.3,
+          "scan_volume_GBph": 3.07
+        },
+        {
+          "time": "2025-11-20 09:00",
+          "query_latency_p99_sec": 14.5,
+          "qps": 16.7,
+          "scan_volume_GBph": 4.78
+        },
+        {
+          "time": "2025-11-20 10:00",
+          "query_latency_p99_sec": 16.8,
+          "qps": 16.9,
+          "scan_volume_GBph": 2.9
+        },
+        {
+          "time": "2025-11-20 11:00",
+          "query_latency_p99_sec": 20.0,
+          "qps": 15.3,
+          "scan_volume_GBph": 5.18
+        },
+        {
+          "time": "2025-11-20 12:00",
+          "query_latency_p99_sec": 14.4,
+          "qps": 17.0,
+          "scan_volume_GBph": 4.6
+        },
+        {
+          "time": "2025-11-20 13:00",
+          "query_latency_p99_sec": 16.2,
+          "qps": 18.0,
+          "scan_volume_GBph": 3.88
+        },
+        {
+          "time": "2025-11-20 14:00",
+          "query_latency_p99_sec": 16.6,
+          "qps": 16.9,
+          "scan_volume_GBph": 3.85
+        },
+        {
+          "time": "2025-11-20 15:00",
+          "query_latency_p99_sec": 22.4,
+          "qps": 16.7,
+          "scan_volume_GBph": 3.37
+        },
+        {
+          "time": "2025-11-20 16:00",
+          "query_latency_p99_sec": 20.8,
+          "qps": 15.5,
+          "scan_volume_GBph": 3.64
+        },
+        {
+          "time": "2025-11-20 17:00",
+          "query_latency_p99_sec": 19.9,
+          "qps": 15.8,
+          "scan_volume_GBph": 3.2
+        },
+        {
+          "time": "2025-11-20 18:00",
+          "query_latency_p99_sec": 14.8,
+          "qps": 13.2,
+          "scan_volume_GBph": 3.3
+        },
+        {
+          "time": "2025-11-20 19:00",
+          "query_latency_p99_sec": 14.0,
+          "qps": 14.1,
+          "scan_volume_GBph": 3.47
+        },
+        {
+          "time": "2025-11-20 20:00",
+          "query_latency_p99_sec": 18.3,
+          "qps": 13.9,
+          "scan_volume_GBph": 4.49
+        },
+        {
+          "time": "2025-11-20 21:00",
+          "query_latency_p99_sec": 16.1,
+          "qps": 13.6,
+          "scan_volume_GBph": 4.86
+        },
+        {
+          "time": "2025-11-20 22:00",
+          "query_latency_p99_sec": 22.4,
+          "qps": 16.1,
+          "scan_volume_GBph": 3.03
+        },
+        {
+          "time": "2025-11-20 23:00",
+          "query_latency_p99_sec": 22.2,
+          "qps": 16.7,
+          "scan_volume_GBph": 5.01
+        },
+        {
+          "time": "2025-11-21 00:00",
+          "query_latency_p99_sec": 22.4,
+          "qps": 17.2,
+          "scan_volume_GBph": 3.1
+        },
+        {
+          "time": "2025-11-21 01:00",
+          "query_latency_p99_sec": 21.3,
+          "qps": 13.5,
+          "scan_volume_GBph": 4.51
+        },
+        {
+          "time": "2025-11-21 02:00",
+          "query_latency_p99_sec": 21.0,
+          "qps": 16.6,
+          "scan_volume_GBph": 4.42
+        },
+        {
+          "time": "2025-11-21 03:00",
+          "query_latency_p99_sec": 17.9,
+          "qps": 15.5,
+          "scan_volume_GBph": 3.44
+        },
+        {
+          "time": "2025-11-21 04:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 14.7,
+          "scan_volume_GBph": 4.32
+        },
+        {
+          "time": "2025-11-21 05:00",
+          "query_latency_p99_sec": 21.4,
+          "qps": 12.6,
+          "scan_volume_GBph": 4.04
+        },
+        {
+          "time": "2025-11-21 06:00",
+          "query_latency_p99_sec": 16.0,
+          "qps": 17.6,
+          "scan_volume_GBph": 3.69
+        },
+        {
+          "time": "2025-11-21 07:00",
+          "query_latency_p99_sec": 22.1,
+          "qps": 14.0,
+          "scan_volume_GBph": 2.81
+        },
+        {
+          "time": "2025-11-21 08:00",
+          "query_latency_p99_sec": 20.5,
+          "qps": 16.4,
+          "scan_volume_GBph": 4.55
+        },
+        {
+          "time": "2025-11-21 09:00",
+          "query_latency_p99_sec": 17.6,
+          "qps": 16.0,
+          "scan_volume_GBph": 3.66
+        },
+        {
+          "time": "2025-11-21 10:00",
+          "query_latency_p99_sec": 14.1,
+          "qps": 15.2,
+          "scan_volume_GBph": 3.32
+        },
+        {
+          "time": "2025-11-21 11:00",
+          "query_latency_p99_sec": 17.4,
+          "qps": 13.3,
+          "scan_volume_GBph": 3.44
+        },
+        {
+          "time": "2025-11-21 12:00",
+          "query_latency_p99_sec": 21.0,
+          "qps": 14.0,
+          "scan_volume_GBph": 4.19
+        },
+        {
+          "time": "2025-11-21 13:00",
+          "query_latency_p99_sec": 18.6,
+          "qps": 14.9,
+          "scan_volume_GBph": 3.62
+        },
+        {
+          "time": "2025-11-21 14:00",
+          "query_latency_p99_sec": 19.6,
+          "qps": 12.3,
+          "scan_volume_GBph": 3.04
+        },
+        {
+          "time": "2025-11-21 15:00",
+          "query_latency_p99_sec": 20.6,
+          "qps": 14.8,
+          "scan_volume_GBph": 3.1
+        },
+        {
+          "time": "2025-11-21 16:00",
+          "query_latency_p99_sec": 21.2,
+          "qps": 14.6,
+          "scan_volume_GBph": 2.8
+        },
+        {
+          "time": "2025-11-21 17:00",
+          "query_latency_p99_sec": 22.1,
+          "qps": 13.2,
+          "scan_volume_GBph": 4.45
+        },
+        {
+          "time": "2025-11-21 18:00",
+          "query_latency_p99_sec": 14.7,
+          "qps": 15.9,
+          "scan_volume_GBph": 3.18
+        },
+        {
+          "time": "2025-11-21 19:00",
+          "query_latency_p99_sec": 21.9,
+          "qps": 13.6,
+          "scan_volume_GBph": 4.37
+        },
+        {
+          "time": "2025-11-21 20:00",
+          "query_latency_p99_sec": 15.8,
+          "qps": 14.2,
+          "scan_volume_GBph": 4.97
+        },
+        {
+          "time": "2025-11-21 21:00",
+          "query_latency_p99_sec": 15.0,
+          "qps": 14.4,
+          "scan_volume_GBph": 3.53
+        },
+        {
+          "time": "2025-11-21 22:00",
+          "query_latency_p99_sec": 19.8,
+          "qps": 13.4,
+          "scan_volume_GBph": 4.37
+        },
+        {
+          "time": "2025-11-21 23:00",
+          "query_latency_p99_sec": 19.8,
+          "qps": 12.0,
+          "scan_volume_GBph": 3.94
+        },
+        {
+          "time": "2025-11-22 00:00",
+          "query_latency_p99_sec": 14.7,
+          "qps": 13.4,
+          "scan_volume_GBph": 4.43
+        },
+        {
+          "time": "2025-11-22 01:00",
+          "query_latency_p99_sec": 13.6,
+          "qps": 16.2,
+          "scan_volume_GBph": 4.76
+        },
+        {
+          "time": "2025-11-22 02:00",
+          "query_latency_p99_sec": 22.4,
+          "qps": 14.5,
+          "scan_volume_GBph": 3.12
+        },
+        {
+          "time": "2025-11-22 03:00",
+          "query_latency_p99_sec": 14.1,
+          "qps": 14.3,
+          "scan_volume_GBph": 4.55
+        },
+        {
+          "time": "2025-11-22 04:00",
+          "query_latency_p99_sec": 14.4,
+          "qps": 13.9,
+          "scan_volume_GBph": 4.91
+        },
+        {
+          "time": "2025-11-22 05:00",
+          "query_latency_p99_sec": 14.7,
+          "qps": 16.6,
+          "scan_volume_GBph": 4.61
+        },
+        {
+          "time": "2025-11-22 06:00",
+          "query_latency_p99_sec": 14.7,
+          "qps": 18.0,
+          "scan_volume_GBph": 3.14
+        },
+        {
+          "time": "2025-11-22 07:00",
+          "query_latency_p99_sec": 18.3,
+          "qps": 12.1,
+          "scan_volume_GBph": 4.36
+        },
+        {
+          "time": "2025-11-22 08:00",
+          "query_latency_p99_sec": 17.5,
+          "qps": 16.3,
+          "scan_volume_GBph": 4.31
+        },
+        {
+          "time": "2025-11-22 09:00",
+          "query_latency_p99_sec": 14.9,
+          "qps": 14.5,
+          "scan_volume_GBph": 4.45
+        },
+        {
+          "time": "2025-11-22 10:00",
+          "query_latency_p99_sec": 21.2,
+          "qps": 12.5,
+          "scan_volume_GBph": 3.04
+        },
+        {
+          "time": "2025-11-22 11:00",
+          "query_latency_p99_sec": 20.3,
+          "qps": 15.5,
+          "scan_volume_GBph": 3.72
+        },
+        {
+          "time": "2025-11-22 12:00",
+          "query_latency_p99_sec": 22.2,
+          "qps": 13.9,
+          "scan_volume_GBph": 3.14
+        },
+        {
+          "time": "2025-11-22 13:00",
+          "query_latency_p99_sec": 16.0,
+          "qps": 12.5,
+          "scan_volume_GBph": 4.13
+        },
+        {
+          "time": "2025-11-22 14:00",
+          "query_latency_p99_sec": 18.9,
+          "qps": 15.6,
+          "scan_volume_GBph": 4.67
+        },
+        {
+          "time": "2025-11-22 15:00",
+          "query_latency_p99_sec": 19.7,
+          "qps": 17.1,
+          "scan_volume_GBph": 4.38
+        },
+        {
+          "time": "2025-11-22 16:00",
+          "query_latency_p99_sec": 16.2,
+          "qps": 15.1,
+          "scan_volume_GBph": 4.02
+        },
+        {
+          "time": "2025-11-22 17:00",
+          "query_latency_p99_sec": 20.2,
+          "qps": 13.8,
+          "scan_volume_GBph": 2.93
+        },
+        {
+          "time": "2025-11-22 18:00",
+          "query_latency_p99_sec": 21.6,
+          "qps": 17.7,
+          "scan_volume_GBph": 3.99
+        },
+        {
+          "time": "2025-11-22 19:00",
+          "query_latency_p99_sec": 14.5,
+          "qps": 15.0,
+          "scan_volume_GBph": 4.23
+        },
+        {
+          "time": "2025-11-22 20:00",
+          "query_latency_p99_sec": 18.3,
+          "qps": 17.9,
+          "scan_volume_GBph": 5.17
+        },
+        {
+          "time": "2025-11-22 21:00",
+          "query_latency_p99_sec": 21.9,
+          "qps": 12.8,
+          "scan_volume_GBph": 4.87
+        },
+        {
+          "time": "2025-11-22 22:00",
+          "query_latency_p99_sec": 18.6,
+          "qps": 14.2,
+          "scan_volume_GBph": 4.44
+        },
+        {
+          "time": "2025-11-22 23:00",
+          "query_latency_p99_sec": 20.4,
+          "qps": 17.7,
+          "scan_volume_GBph": 4.65
+        },
+        {
+          "time": "2025-11-23 00:00",
+          "query_latency_p99_sec": 13.7,
+          "qps": 12.4,
+          "scan_volume_GBph": 3.43
+        },
+        {
+          "time": "2025-11-23 01:00",
+          "query_latency_p99_sec": 13.9,
+          "qps": 12.4,
+          "scan_volume_GBph": 4.69
+        },
+        {
+          "time": "2025-11-23 02:00",
+          "query_latency_p99_sec": 18.1,
+          "qps": 15.8,
+          "scan_volume_GBph": 4.0
+        },
+        {
+          "time": "2025-11-23 03:00",
+          "query_latency_p99_sec": 17.2,
+          "qps": 16.2,
+          "scan_volume_GBph": 3.0
+        },
+        {
+          "time": "2025-11-23 04:00",
+          "query_latency_p99_sec": 18.3,
+          "qps": 15.7,
+          "scan_volume_GBph": 3.47
+        },
+        {
+          "time": "2025-11-23 05:00",
+          "query_latency_p99_sec": 16.3,
+          "qps": 15.1,
+          "scan_volume_GBph": 3.29
+        },
+        {
+          "time": "2025-11-23 06:00",
+          "query_latency_p99_sec": 20.8,
+          "qps": 15.2,
+          "scan_volume_GBph": 3.74
+        },
+        {
+          "time": "2025-11-23 07:00",
+          "query_latency_p99_sec": 19.2,
+          "qps": 17.0,
+          "scan_volume_GBph": 4.43
+        },
+        {
+          "time": "2025-11-23 08:00",
+          "query_latency_p99_sec": 14.1,
+          "qps": 16.2,
+          "scan_volume_GBph": 4.55
+        },
+        {
+          "time": "2025-11-23 09:00",
+          "query_latency_p99_sec": 21.1,
+          "qps": 12.3,
+          "scan_volume_GBph": 3.01
+        },
+        {
+          "time": "2025-11-23 10:00",
+          "query_latency_p99_sec": 17.4,
+          "qps": 14.7,
+          "scan_volume_GBph": 4.26
+        },
+        {
+          "time": "2025-11-23 11:00",
+          "query_latency_p99_sec": 16.3,
+          "qps": 16.5,
+          "scan_volume_GBph": 4.58
+        },
+        {
+          "time": "2025-11-23 12:00",
+          "query_latency_p99_sec": 14.6,
+          "qps": 16.2,
+          "scan_volume_GBph": 4.48
+        },
+        {
+          "time": "2025-11-23 13:00",
+          "query_latency_p99_sec": 15.0,
+          "qps": 17.7,
+          "scan_volume_GBph": 4.06
+        },
+        {
+          "time": "2025-11-23 14:00",
+          "query_latency_p99_sec": 20.5,
+          "qps": 16.3,
+          "scan_volume_GBph": 3.2
+        },
+        {
+          "time": "2025-11-23 15:00",
+          "query_latency_p99_sec": 14.6,
+          "qps": 16.7,
+          "scan_volume_GBph": 3.45
+        },
+        {
+          "time": "2025-11-23 16:00",
+          "query_latency_p99_sec": 21.5,
+          "qps": 16.6,
+          "scan_volume_GBph": 2.87
+        },
+        {
+          "time": "2025-11-23 17:00",
+          "query_latency_p99_sec": 20.8,
+          "qps": 13.6,
+          "scan_volume_GBph": 2.95
+        },
+        {
+          "time": "2025-11-23 18:00",
+          "query_latency_p99_sec": 19.9,
+          "qps": 15.5,
+          "scan_volume_GBph": 2.98
+        },
+        {
+          "time": "2025-11-23 19:00",
+          "query_latency_p99_sec": 17.6,
+          "qps": 14.2,
+          "scan_volume_GBph": 4.0
+        },
+        {
+          "time": "2025-11-23 20:00",
+          "query_latency_p99_sec": 18.6,
+          "qps": 14.2,
+          "scan_volume_GBph": 3.41
+        },
+        {
+          "time": "2025-11-23 21:00",
+          "query_latency_p99_sec": 14.4,
+          "qps": 15.4,
+          "scan_volume_GBph": 4.53
+        },
+        {
+          "time": "2025-11-23 22:00",
+          "query_latency_p99_sec": 15.6,
+          "qps": 15.1,
+          "scan_volume_GBph": 2.91
+        },
+        {
+          "time": "2025-11-23 23:00",
+          "query_latency_p99_sec": 21.3,
+          "qps": 13.5,
+          "scan_volume_GBph": 3.93
+        }
+      ]
+    }
+  },
+  "disk_fault_events": [
+    {
+      "time": "2025-11-17 11:15",
+      "node": "storage-node-07",
+      "action": "removed from pool, recovery 12min"
+    },
+    {
+      "time": "2025-11-19 11:08",
+      "node": "storage-node-12",
+      "action": "removed from pool, recovery 9min"
+    },
+    {
+      "time": "2025-11-21 11:22",
+      "node": "storage-node-03",
+      "action": "removed from pool, recovery 15min"
+    },
+    {
+      "time": "2025-11-22 11:05",
+      "node": "storage-node-19",
+      "action": "removed from pool, recovery 8min"
+    }
+  ],
+  "cluster_a_incidents": [
+    {
+      "date": "2025-11-17",
+      "start": "10:57",
+      "end": "12:14",
+      "p99_peak_sec": 118,
+      "recovery": "manually throttled qps"
+    },
+    {
+      "date": "2025-11-18",
+      "start": "11:02",
+      "end": "12:30",
+      "p99_peak_sec": 143,
+      "recovery": "manually throttled qps + scan limit"
+    },
+    {
+      "date": "2025-11-19",
+      "start": "11:08",
+      "end": "12:05",
+      "p99_peak_sec": 97,
+      "recovery": "removed faulty disk + throttled qps"
+    },
+    {
+      "date": "2025-11-20",
+      "start": "11:01",
+      "end": "12:44",
+      "p99_peak_sec": 162,
+      "recovery": "manually throttled qps"
+    },
+    {
+      "date": "2025-11-21",
+      "start": "10:58",
+      "end": "11:52",
+      "p99_peak_sec": 88,
+      "recovery": "removed faulty disk + throttled qps"
+    },
+    {
+      "date": "2025-11-22",
+      "start": "11:03",
+      "end": "12:21",
+      "p99_peak_sec": 131,
+      "recovery": "manually throttled qps + scan limit"
+    },
+    {
+      "date": "2025-11-23",
+      "start": "11:06",
+      "end": "12:58",
+      "p99_peak_sec": 177,
+      "recovery": "manually throttled qps"
+    }
+  ],
+  "notes": {
+    "no_incident_but_scan_spike": [
+      "2025-11-18 at 11:00 cluster_b scan was 31.2 GB/h, but cluster_a p99 only reached 26s (normal)",
+      "2025-11-23 at 11:00 cluster_b scan was 27.8 GB/h, yet cluster_a p99 reached 177s"
+    ],
+    "storage_team_feedback": "Storage team reports this shared storage cluster is consistently running at 80-90% metadata pressure. Any spike causes cascading delays.",
+    "engine_team_feedback": "Cluster A engine team reports the cluster has been running 'hot' for months, needing capacity expansion or business splitting.",
+    "mitigation_works": "Each incident resolved within 10-15 min after throttling query qps/scan on Cluster A. Cluster B throttling has no effect."
+  }
+}

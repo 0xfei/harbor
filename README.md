@@ -17,6 +17,7 @@
 | distributed-chaos-system | Extreme | > 50% | ✅ 条件触发 |
 | clickhouse-to-doris | Medium | **100%** | ✅ schema 迁移能力强 |
 | clickhouse-mergetree-debug | Medium | **100%** | ✅ 精准定位 crash bug（15.6s） |
+| storage-performance-analysis | Hard | **100%** | ✅ 准确识别系统性容量瓶颈，排除迷惑项（37.4s） |
 | vector-search-optimization | Hard | **0%** | ❌ 算法正确但性能不达标（6s vs 1.5s） |
 
 ---
@@ -29,19 +30,25 @@
 - **自我诊断能力**：通过编译错误反向推理，发现文档错误
 - **生产 Bug 诊断**：静态代码分析识别生产环境隐藏 bug（52s vs 人工 15-30min）
 - **并发问题修复**：正确识别死锁、锁嵌套等并发问题
+- **系统性问题分析**：从海量监控数据中排除迷惑项，识别容量瓶颈根因（37.4s）
 
 ### 🔍 关键发现
 
 **1. 静态代码分析能力**
 - Kafka rebalance bug 定位准确（Line 395，`waited_for_assignment = 0;`）
-- 完整解释 rebalance 对攒批的影响
-- 展现工程师级别的自我质疑过程
+- ClickHouse MergeTree crash 精准命中（Line 182，15.6s）
 
 **2. 错误诊断能力**
 - 提供不完整文档 → 编译失败 → 模型识别文档错误并修正
 - 区分"文档错误" vs "代码错误"
 
-**结论：kimi-k2.5 具备生产环境代码诊断能力，可替代人工进行复杂 bug 分析**
+**3. 系统性性能分析能力（新发现）**
+- 面对 168 个监控数据点 + 多路迷惑信息，37.4s 完成根因推断
+- 成功排除：Cluster B 批处理干扰、坏盘假说、吞吐峰值假说
+- 正确识别 metadata 压力 80-90% 的"无裕量"状态才是根因
+- 指出 metadata 压力在故障时反而下降是 IO stall 的经典特征
+
+**结论：kimi-k2.5 具备生产环境代码诊断与系统性能分析能力，可辅助工程师完成复杂故障分析**
 
 ### ❌ 存在弱点
 - **提示词敏感**：不完整的结构体定义容易遗漏字段
@@ -69,7 +76,8 @@
 | 5 | [distributed-chaos-system](./examples/tasks/distributed-chaos-system/) | Extreme | 分布式系统、非确定性行为 |
 | 6 | [clickhouse-to-doris](./examples/tasks/clickhouse-to-doris/) | Medium | 数据库 schema 迁移、索引优化 |
 | 7 | [clickhouse-mergetree-debug](./examples/tasks/clickhouse-mergetree-debug/) | Medium | ClickHouse crash 分析、vector 边界检查 |
-| 8 | [vector-search-optimization](./examples/tasks/vector-search-optimization/) | Hard | C++ 向量检索优化、ANN 算法、标准库约束 |
+| 8 | [storage-performance-analysis](./examples/tasks/storage-performance-analysis/) | Hard | 分布式存储性能分析、根因推断、容量治理 |
+| 9 | [vector-search-optimization](./examples/tasks/vector-search-optimization/) | Hard | C++ 向量检索优化、ANN 算法、标准库约束 |
 
 ---
 
