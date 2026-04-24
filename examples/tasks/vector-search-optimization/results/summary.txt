@@ -1,0 +1,2 @@
+✅ Oracle: Recall=1.0, Score=1.0
+✅ Nop: Recall=0.0, Score=0.0

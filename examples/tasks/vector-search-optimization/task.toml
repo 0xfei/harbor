@@ -1,0 +1,35 @@
+schema_version = "1.1"
+
+[task]
+name = "harbor/vector-search-optimization"
+description = "Optimize million-scale vector search from Python baseline to high-performance implementation"
+authors = [
+  { name = "0x01f", email = "hhxlovety@gmail.com" }
+]
+keywords = ["vector-search", "optimization", "faiss", "ann", "performance"]
+
+[metadata]
+difficulty = "hard"
+category = "performance-optimization"
+tags = ["vector-search", "optimization", "cpp", "faiss", "milvus", "recall", "latency"]
+
+[verifier]
+timeout_sec = 120.0
+
+[agent]
+# 允许多轮迭代优化
+timeout_sec = 1800.0
+max_attempts = 5
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 4
+memory_mb = 8192  # 8GB for vector operations
+storage_mb = 20480  # 20GB for data and indices
+gpus = 0
+allow_internet = true  # Allow installing faiss/milvus
+mcp_servers = []
+
+[verifier.env]
+[environment.env]
+[solution.env]
