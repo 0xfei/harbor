@@ -1,0 +1,259 @@
+Kimi-k2.5 Bug Analysis Response
+============================================================
+
+I'll analyze this Kafka-to-ClickHouse ingestion bug step by step.
+
+## Analysis
+
+### Understanding the Problem
+
+The issue is:
+- Daily ingestion is stable with controlled small file counts
+- **After rebalance**: small file count suddenly increases
+- **Does NOT auto-recover** - requires restart
+- After restart, works normally until next rebalance
+
+### Key Variable: `waited_for_assignment`
+
+This variable controls the poll timeout strategy:
+- `< 15000ms`: use long timeout (500ms) for better batching
+- `>= 15000ms`: use short timeout (50ms) to avoid blocking
+
+### Tracing `waited_for_assignment` Lifecycle
+
+1. **Initialization**: `waited_for_assignment = 0` (member initializer, line 68 in .h)
+2. **On rebalance (revocation)**: `waited_for_assignment = 0` (line 75 in .cpp)
+3. **When no assignment**: `waited_for_assignment += poll_timeout` (line 373 in .cpp)
+
+### The Critical Path
+
+Looking at the `poll()` function (lines 317-414):
+
+**Line 342-344**: Timeout calculation
+```cpp
+auto actual_poll_timeout_ms = (waited_for_assignment >= MAX_TIME_TO_WAIT_FOR_ASSIGNMENT_MS)
+                ? std::min(POLL_TIMEOUT_WO_ASSIGNMENT_MS,poll_timeout)
+                : poll_timeout;
+```
+
+**Line 367-373**: When no messages and no assignment
+```cpp
+if (assignment.empty())
+{
+    waited_for_assignment += poll_timeout; // INCREMENTS HERE
+    ...
+}
+```
+
+**Line 395-400**: When messages ARE successfully polled
+```cpp
+else
+{
+    messages = std::move(new_messages);
+    current = messages.begin();
+    LOG_TRACE(log, "Polled batch of {} messages...");
+    break;
+}
+```
+
+### The Bug!
+
+After a **rebalance**, the flow is:
+1. Revocation callback resets `waited_for_assignment = 0` ✓
+2. Eventually assignment happens via assignment callback
+3. Messages get polled successfully
+4. **BUT `waited_for_assignment` is NEVER reset after successful poll!**
+
+Wait - let me re-check. After rebalance, `waited_for_assignment = 0`. Then if we get assignment and poll successfully, we break out with messages. The next time we poll, `waited_for_assignment` is still 0, so we use long timeout. That seems correct...
+
+Let me re-read more carefully. The problem says "file count suddenly increases" - this means **small files**, i.e., **worse batching** = **shorter poll timeouts**.
+
+Actually, re-reading: After rebalance, `waited_for_assignment = 0`. But what if after rebalance, the consumer **immediately** gets assignment (from the assignment callback) and polls messages? Then `waited_for_assignment` stays 0, which is correct.
+
+But wait - what about **after** successfully polling? The variable keeps accumulating! Look at line 373: `waited_for_assignment += poll_timeout`
+
+If we have assignment and poll successfully once, then next time we enter poll(), if we have no messages, we skip the `if (assignment.empty())` block (line 367) because we HAVE assignment. So `waited_for_assignment` doesn't increment there.
+
+Hmm, let me trace again more carefully...
+
+Actually, looking at lines 367-373 again:
+```cpp
+if (new_messages.empty())
+{
+    if (assignment.empty())  // Only increments when NO assignment
+    {
+        waited_for_assignment += poll_timeout;
+        ...
+    }
+    ...
+}
+```
+
+So `waited_for_assignment` only increments when `assignment.empty()`. After a successful poll with assignment, `assignment` is not empty, so we don't increment.
+
+But wait - after rebalance, when does `assignment` get set? In the **assignment callback** (lines 58-62):
+```cpp
+consumer->set_assignment_callback([this](const cppkafka::TopicPartitionList & topic_partitions)
+{
+    LOG_TRACE(log, "Topics/partitions assigned: {}", topic_partitions);
+    assignment = topic_partitions;
+});
+```
+
+This is called **synchronously during poll**. So the flow after rebalance is:
+1. `poll()` called
+2. `consumer->poll_batch()` triggers rebalance callbacks
+3. Revocation callback: `stalled_status = REBALANCE_HAPPENED`, `waited_for_assignment = 0`, `assignment.clear()`
+4. Assignment callback: `assignment = topic_partitions` (if new assignment given)
+5. Back in `poll()`, check `stalled_status == REBALANCE_HAPPENED` (line 355)
+6. If we got messages but rebalance happened, we return false (line 364)
+7. Next `poll()` call: `waited_for_assignment` is still 0, `assignment` is set
+
+So after rebalance completes and we poll again, we should have `assignment` set and `waited_for_assignment = 0`, giving us long timeout. This seems correct...
+
+Unless... the issue is that **after rebalance, if we successfully poll messages, we never reset `waited_for_assignment`**. But it's already 0 from the revocation!
+
+Let me re-read the problem: "The problem does NOT auto-recover". This suggests `waited_for_assignment` gets into a "bad state" and stays there.
+
+OH! I think I see it now. Look at line 373 again:
+```cpp
+waited_for_assignment += poll_timeout; // slightly innaccurate, but rough calculation is ok.
+```
+
+This says "slightly inaccurate" - they're adding `poll_timeout` (500ms) regardless of what `actual_poll_timeout_ms` was used!
+
+But more importantly: **After we successfully poll with assignment, we never reset `waited_for_assignment` to 0.**
+
+Wait, but if we have assignment, we don't use `waited_for_assignment` for anything except the timeout check, and we don't increment it when we have assignment...
+
+UNLESS - what if after some successful polls, we lose assignment again? Or what if the issue is:
+
+After rebalance:
+1. `waited_for_assignment = 0`
+2. We poll, get assignment, get messages - success!
+3. But `waited_for_assignment` was never reset... it was already 0 from step 1
+
+Hmm, that's fine. But what about the **next** rebalance? Or what if there's a scenario where:
+
+Actually, I think I finally see it. The problem description says "when Kafka topic rebalance happens". Let me trace what happens DURING a rebalance vs AFTER.
+
+During rebalance (in the callbacks):
+- Revocation: `waited_for_assignment = 0`, `assignment.clear()`
+- Assignment: `assignment = new_partitions`
+
+After the rebalance completes and we poll again:
+- `waited_for_assignment = 0` (still)
+- `assignment` is set (from callback)
+- So we use long timeout (500ms) - GOOD
+
+But what if we **successfully poll messages** after rebalance? We need to ensure `waited_for_assignment` stays 0 or gets reset.
+
+Actually, I think I found it! Look at this scenario:
+
+1. Normal operation: `waited_for_assignment` is some large value (let's say 20000) from previous waiting
+2. Rebalance happens
+3. Revocation callback: `waited_for_assignment = 0` ✓
+4. But wait - does the revocation callback ALWAYS happen before the assignment callback?
+
+Actually yes, that's how Kafka works - revoke then assign.
+
+Hmm, let me re-read the code one more time. The key insight from the hint: "what happens after messages are successfully polled?"
+
+Looking at lines 395-400:
+```cpp
+else
+{
+    messages = std::move(new_messages);
+    current = messages.begin();
+    LOG_TRACE(log, "Polled batch of {} messages. Offsets position: {}",
+        messages.size(), consumer->get_offsets_position(consumer->get_assignment()));
+    break;
+}
+```
+
+After this, we exit the while loop, filter errors, and return true.
+
+**There is NO reset of `waited_for_assignment` here!**
+
+But we got messages with assignment, so `waited_for_assignment` shouldn't matter... unless...
+
+OH! I think I finally understand. The scenario is:
+
+1. Consumer starts, no assignment yet
+2. `waited_for_assignment` accumulates: 500, 1000, 1500... eventually >= 15000
+3. Timeout becomes short (50ms)
+4. Eventually gets assignment
+5. Polls messages successfully with short timeout (because `waited_for_assignment` was already >= 15000)
+6. **BUT `waited_for_assignment` is NEVER reset after successful poll!**
+7. Next poll: still >= 15000, still short timeout!
+8. Forever stuck with short timeout = small batches = many small files!
+
+The fix is to reset `waited_for_assignment = 0` when we successfully poll messages with assignment!
+
+## Answer
+
+**Bug Location:**
+- File: `ReadBufferFromKafkaConsumer.cpp`
+- Line: 400 (after `break;` in the successful poll branch, or more precisely, after line 399 where we log the successful poll, before the `break`)
+
+Actually, looking more carefully, the right place is after we successfully get messages, before breaking out of the loop. Line 399 is the LOG_TRACE, line 400 is the `break;`. We need to add it before the break, or right after getting messages.
+
+Looking at lines 395-400:
+```cpp
+else
+{
+    messages = std::move(new_messages);
+    current = messages.begin();
+    LOG_TRACE(log, "Polled batch of {} messages. Offsets position: {}",
+        messages.size(), consumer->get_offsets_position(consumer->get_assignment()));
+    break;
+}
+```
+
+The fix should be added at line 400 (before `break;`):
+
+**Fix:**
+```cpp
+waited_for_assignment = 0;
+```
+
+Or to be more precise, after line 399 (the LOG_TRACE), before line 400 (the `break`).
+
+Actually, let me double-check the line numbers by counting from line 317...
+
+Line 317: `bool ReadBufferFromKafkaConsumer::poll()`
+...
+Line 395: `else`
+Line 396: `{`
+Line 397: `messages = std::move(new_messages);`
+Line 398: `current = messages.begin();`
+Line 399: `LOG_TRACE(log, "Polled batch of {} messages. Offsets position: {}",`
+Line 400: `messages.size(), consumer->get_offsets_position(consumer->get_assignment()));`
+Line 401: `break;`
+Line 402: `}`
+
+So the fix should be at line 400 (before `break;`), or we could say after line 400 (the LOG_TRACE spans 399-400). Let me say line 400, adding before `break;`:
+
+**Fix:**
+```cpp
+            waited_for_assignment = 0;
+```
+
+**Explanation:**
+After successfully polling messages with partition assignment, `waited_for_assignment` must be reset to 0 to restore the long poll timeout (500ms) for subsequent batches. Without this reset, the accumulated wait time from initial connection persists indefinitely, causing permanently short poll timeouts (50ms) after any rebalance, which fragments writes into many small files that never recover until restart.
+
+---
+
+## Final Answer
+
+**Bug Location:**
+- File: `ReadBufferFromKafkaConsumer.cpp`
+- Line: 400 (before `break;`)
+
+**Fix:**
+```cpp
+            waited_for_assignment = 0;
+```
+
+**Explanation:**
+After successfully polling messages with partition assignment, `waited_for_assignment` must be reset to 0 to restore the long poll timeout (500ms) for subsequent batches. Without this reset, the accumulated wait time from initial connection persists indefinitely, causing permanently short poll timeouts (50ms) after any rebalance, which fragments writes into many small files that never recover until restart.

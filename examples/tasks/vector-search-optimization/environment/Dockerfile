@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 
-LABEL maintainer="liuyufei05@kuaishou.com"
+LABEL maintainer="hhxlovety@gmail.com"
 LABEL description="C++ vector search optimization environment"
 
 # Prevent interactive prompts
