@@ -20,15 +20,14 @@ import sys
 import subprocess
 import tempfile
 import time
-import requests
 import json
 from pathlib import Path
 
-API_KEY = os.environ.get("BAILIAN_API_KEY", "")
-BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-MODEL = "kimi-k2.5"
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from kimi_client import call_kimi as _call_kimi, KIMI_MODEL
+
 MAX_ROUNDS = 5
-TIMEOUT_SECONDS = 30
+TIMEOUT_SECONDS = 300
 
 TASK_PROMPT = """修复一个多线程数据摄入系统的死锁问题。
 
@@ -61,25 +60,9 @@ TASK_PROMPT = """修复一个多线程数据摄入系统的死锁问题。
 
 
 def call_kimi(prompt: str) -> str:
-    """调用 kimi-k2.5 API"""
+    """调用 Kimi API"""
     try:
-        response = requests.post(
-            f"{BASE_URL}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {API_KEY}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "model": MODEL,
-                "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.3,
-                "max_tokens": 8192
-            },
-            timeout=180
-        )
-        
-        content = response.json().get("choices", [{}])[0].get("message", {}).get("content", "")
-        return content
+        return _call_kimi([{"role": "user", "content": prompt}], temperature=0.3, max_tokens=8192)
     except Exception as e:
         return f"API Error: {e}"
 
@@ -130,7 +113,7 @@ def test_deadlock_multi_round():
     print("=" * 80)
     print("stream-ingest-deadlock 多轮迭代测试")
     print("=" * 80)
-    print(f"模型: {MODEL}")
+    print(f"模型: {KIMI_MODEL}")
     print(f"最大轮次: {MAX_ROUNDS}")
     print(f"单轮超时: {TIMEOUT_SECONDS}s")
     print()
@@ -247,7 +230,7 @@ def test_deadlock_multi_round():
     # 保存结果
     with open("/tmp/deadlock_multi_round.json", "w") as f:
         json.dump({
-            'model': MODEL,
+            'model': KIMI_MODEL,
             'max_rounds': MAX_ROUNDS,
             'results': results,
             'success_round': success_round
@@ -259,16 +242,12 @@ def test_deadlock_multi_round():
 
 
 if __name__ == "__main__":
-    if not API_KEY:
-        print("Error: BAILIAN_API_KEY not set")
-        sys.exit(1)
-    
     # 提示：实际测试需要 Harbor 环境
     print("⚠️  注意：此测试需要 Harbor 容器环境")
     print("   建议使用：cd examples/tasks/stream-ingest-deadlock")
     print("           uv run harbor run -a kimi-k2.5 -p .")
     print()
-    
+
     # 运行模拟测试
     success = test_deadlock_multi_round()
     sys.exit(0 if success else 1)

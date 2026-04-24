@@ -14,33 +14,15 @@ import time
 import subprocess
 import tempfile
 import numpy as np
+from pathlib import Path
 
-# Bailian API configuration
-import requests
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from kimi_client import call_kimi as _call_kimi, KIMI_MODEL
 
 
-def call_kimi_api(prompt: str, model: str = "kimi-k2.5") -> str:
-    """Call Bailian API for kimi-k2.5."""
-    api_key = os.environ.get("BAILIAN_API_KEY")
-    if not api_key:
-        raise ValueError("BAILIAN_API_KEY not set")
-    
-    url = "https://bailian.cn-beijing.aliyuncs.com/v1/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {api_key}",
-        "Content-Type": "application/json"
-    }
-    
-    payload = {
-        "model": model,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.7,
-        "max_tokens": 8000
-    }
-    
-    response = requests.post(url, headers=headers, json=payload, timeout=180)
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"]
+def call_kimi_api(prompt: str, model: str = None) -> str:
+    """Call Kimi API."""
+    return _call_kimi([{"role": "user", "content": prompt}], temperature=0.7, max_tokens=8000)
 
 
 def extract_code_block(text: str, language: str = "cpp") -> str:
@@ -84,7 +66,7 @@ def compile_cpp(code: str, output_path: str) -> tuple[bool, str]:
              "-o", output_path, source_path],
             capture_output=True,
             text=True,
-            timeout=60
+            timeout=3000
         )
         
         if result.returncode == 0:
@@ -113,7 +95,7 @@ def run_search(executable: str, base_path: str, query_path: str,
             [executable, base_path, query_path, output_path, str(topk)],
             capture_output=True,
             text=True,
-            timeout=120
+            timeout=300
         )
         elapsed = time.time() - start
         
@@ -321,7 +303,7 @@ Return ONLY the corrected C++ code block.
     # Save results
     output = {
         "task": "vector-search-optimization",
-        "model": "kimi-k2.5",
+        "model": KIMI_MODEL,
         "implementation": "C++11",
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
         "results": results

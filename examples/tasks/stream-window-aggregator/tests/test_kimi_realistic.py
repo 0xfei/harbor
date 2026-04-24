@@ -19,15 +19,13 @@ import os
 import sys
 import subprocess
 import tempfile
-import requests
 import json
 import time
 from pathlib import Path
 
-# 配置
-API_KEY = os.environ.get("BAILIAN_API_KEY", "")
-BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-MODEL = "kimi-k2.5"
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from kimi_client import call_kimi as _call_kimi, KIMI_MODEL
+
 MAX_ROUNDS = 5
 
 # 原始的（有问题的）instruction.md 内容
@@ -90,25 +88,9 @@ g++ -O2 -std=c++17 -pthread -o /app/aggregator /app/aggregator.cpp
 
 
 def call_kimi(prompt: str) -> str:
-    """调用 kimi-k2.5 API"""
+    """调用 Kimi API"""
     try:
-        response = requests.post(
-            f"{BASE_URL}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {API_KEY}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "model": MODEL,
-                "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.3,
-                "max_tokens": 8192
-            },
-            timeout=180
-        )
-        
-        content = response.json().get("choices", [{}])[0].get("message", {}).get("content", "")
-        return content
+        return _call_kimi([{"role": "user", "content": prompt}], temperature=0.3, max_tokens=8192)
     except Exception as e:
         return f"API Error: {e}"
 
@@ -143,7 +125,7 @@ def compile_code(code: str) -> tuple:
             ["g++", "-std=c++17", "-O2", "-pthread", "-o", str(out_file), str(src_file)],
             capture_output=True,
             text=True,
-            timeout=30
+            timeout=300
         )
         
         if result.returncode == 0:
@@ -290,10 +272,6 @@ Then provide a corrected implementation."""
 
 
 def main():
-    if not API_KEY:
-        print("Error: BAILIAN_API_KEY not set")
-        sys.exit(1)
-    
     result = test_realistic_scenario()
     
     # 输出最终结论

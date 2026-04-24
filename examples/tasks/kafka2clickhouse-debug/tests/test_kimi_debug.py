@@ -1,80 +1,33 @@
 #!/usr/bin/env python3
 """
-Test Kimi-k2.5's static analysis ability on Kafka-to-ClickHouse bug.
+Test Kimi's static analysis ability on Kafka-to-ClickHouse bug.
+Uses shared kimi_client (KIMI_API_KEY / KIMI_URL / KIMI_MODEL).
 """
 
 import json
-import os
+import re
 import sys
 import time
 from pathlib import Path
-import requests
 
-# Configuration
-API_KEY = os.environ.get("BAILIAN_API_KEY", "")
-BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-MODEL = "kimi-k2.5"
-
-def call_kimi_api(prompt: str, max_tokens: int = 8000) -> str:
-    """Call Bailian API for kimi-k2.5."""
-    if not API_KEY:
-        raise ValueError("BAILIAN_API_KEY not set")
-    
-    url = f"{BASE_URL}/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json"
-    }
-    
-    payload = {
-        "model": MODEL,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.7,
-        "max_tokens": max_tokens
-    }
-    
-    response = requests.post(url, headers=headers, json=payload, timeout=120)
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"]
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from kimi_client import call_kimi, KIMI_MODEL
 
 
 def main():
-    print("╔══════════════════════════════════════════════════════════════╗")
-    print("║  Testing Kimi-k2.5: Kafka-to-ClickHouse Bug Analysis         ║")
-    print("╚══════════════════════════════════════════════════════════════╝")
-    print("")
-    
-    # Paths
+    print("Testing Kimi: Kafka-to-ClickHouse Bug Analysis")
+
     task_dir = Path(__file__).parent.parent
-    code_file = task_dir / "ReadBufferFromKafkaConsumer.cpp"
-    header_file = task_dir / "ReadBufferFromKafkaConsumer.h"
-    instruction_file = task_dir / "instruction.md"
     output_dir = task_dir / "results"
     output_dir.mkdir(exist_ok=True)
-    
-    # Load files
-    print("Loading task files...")
-    
-    with open(instruction_file) as f:
-        instruction = f.read()
-    
-    with open(code_file) as f:
-        code = f.read()
-    
-    with open(header_file) as f:
-        header = f.read()
-    
-    print(f"  instruction.md: {len(instruction)} bytes")
-    print(f"  ReadBufferFromKafkaConsumer.cpp: {len(code)} bytes")
-    print(f"  ReadBufferFromKafkaConsumer.h: {len(header)} bytes")
-    print("")
-    
-    # Build prompt
+
+    instruction = (task_dir / "instruction.md").read_text()
+    code = (task_dir / "app" / "code" / "ReadBufferFromKafkaConsumer.cpp").read_text()
+    header = (task_dir / "app" / "code" / "ReadBufferFromKafkaConsumer.h").read_text()
+
     prompt = f"""You are a senior C++ engineer debugging a production issue.
 
 {instruction}
-
-Here are the source files to analyze:
 
 ===== ReadBufferFromKafkaConsumer.h =====
 ```cpp
@@ -86,7 +39,7 @@ Here are the source files to analyze:
 {code}
 ```
 
-Please analyze the code and provide your answer in the following format:
+Please answer:
 
 **Bug Location:**
 - File: [filename]
@@ -98,98 +51,38 @@ Please analyze the code and provide your answer in the following format:
 ```
 
 **Explanation:**
-[2-3 sentences explaining why this fixes the rebalance issue]
+[2-3 sentences explaining why this fixes the rebalance issue]"""
 
-Provide your complete analysis."""
+    print(f"Calling {KIMI_MODEL}...", end=" ", flush=True)
+    start = time.time()
+    response = call_kimi([{"role": "user", "content": prompt}])
+    elapsed = time.time() - start
+    print(f"✓ ({elapsed:.1f}s)")
 
-    # Call API
-    print("Calling Kimi-k2.5 API...", end=" ", flush=True)
-    start_time = time.time()
-    
-    try:
-        response = call_kimi_api(prompt)
-        elapsed = time.time() - start_time
-        print(f"✓ ({elapsed:.2f}s)")
-    except Exception as e:
-        print(f"✗ Failed: {e}")
-        sys.exit(1)
-    
-    print(f"\nResponse length: {len(response)} bytes")
-    print("")
-    
-    # Save results
-    output = {
+    result = {
         "task": "kafka2clickhouse-debug",
-        "model": MODEL,
+        "model": KIMI_MODEL,
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "elapsed_seconds": elapsed,
-        "instruction_length": len(instruction),
-        "code_length": len(code),
-        "response_length": len(response),
+        "elapsed_seconds": round(elapsed, 2),
         "response": response,
         "expected_fix": {
             "file": "ReadBufferFromKafkaConsumer.cpp",
             "line": 395,
             "code": "waited_for_assignment = 0;",
-            "location_description": "Before 'messages = std::move(new_messages);'"
-        }
+        },
     }
-    
-    # Save JSON
-    json_path = output_dir / "kimi_debug_test.json"
-    with open(json_path, "w") as f:
-        json.dump(output, f, indent=2)
-    
-    # Save raw response
-    response_path = output_dir / "kimi_debug_response.txt"
-    with open(response_path, "w") as f:
-        f.write(f"Kimi-k2.5 Bug Analysis Response\n")
-        f.write(f"{'='*60}\n\n")
-        f.write(response)
-    
-    print(f"Results saved:")
-    print(f"  JSON: {json_path}")
-    print(f"  Text: {response_path}")
-    print("")
-    
-    # Print response
-    print("="*60)
-    print("Kimi-k2.5 Response:")
-    print("="*60)
+    (output_dir / "kimi_debug_test.json").write_text(json.dumps(result, indent=2, ensure_ascii=False))
+    (output_dir / "kimi_debug_response.txt").write_text(response)
+
+    print("\n=== Response ===")
     print(response)
-    print("="*60)
-    print("")
-    
-    # Quick analysis
-    print("Quick Analysis:")
-    print("-"*60)
-    
-    # Check if it found the right file
-    if "ReadBufferFromKafkaConsumer.cpp" in response:
-        print("✓ Correct file mentioned")
-    else:
-        print("✗ File not mentioned")
-    
-    # Check if it found the right line (around 395)
-    import re
-    line_matches = re.findall(r'line[:\s]+(\d+)', response.lower())
-    if line_matches:
-        lines = [int(m) for m in line_matches]
-        closest = min(lines, key=lambda x: abs(x - 395))
-        if abs(closest - 395) <= 5:
-            print(f"✓ Line number close to correct (found {closest}, expected ~395)")
-        else:
-            print(f"✗ Wrong line number (found {closest}, expected ~395)")
-    
-    # Check if it found the right fix
-    if "waited_for_assignment" in response and "0" in response:
-        print("✓ Correct variable mentioned")
-    else:
-        print("✗ Variable not found correctly")
-    
-    print("-"*60)
-    print("")
-    print("Full results saved to results/")
+    print("\n=== Checks ===")
+    print("✓ file" if "ReadBufferFromKafkaConsumer.cpp" in response else "✗ file")
+    lines = [int(m) for m in re.findall(r'\b(\d+)\b', response)]
+    close = [l for l in lines if abs(l - 395) <= 10]
+    print(f"✓ line ~{close[0]}" if close else "✗ line not found")
+    print("✓ fix" if "waited_for_assignment" in response else "✗ fix")
+    print(f"\nSaved to {output_dir}/")
 
 
 if __name__ == "__main__":

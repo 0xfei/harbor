@@ -17,43 +17,22 @@ import time
 import subprocess
 import tempfile
 import numpy as np
-import requests
 from pathlib import Path
 from typing import Dict, List, Optional
 
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from kimi_client import call_kimi as _call_kimi, KIMI_MODEL
+
 # Configuration
 MAX_ROUNDS = 30
-API_TIMEOUT = 180
+API_TIMEOUT = 300
 TARGET_LATENCY = 1.5
 TARGET_RECALL = 0.95
 
-# API Configuration
-API_KEY = os.environ.get("BAILIAN_API_KEY", "")
-BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-MODEL = "kimi-k2.5"
-
 
 def call_kimi_api(prompt: str) -> str:
-    """Call Bailian API for kimi-k2.5."""
-    if not API_KEY:
-        raise ValueError("BAILIAN_API_KEY not set")
-    
-    url = f"{BASE_URL}/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {API_KEY}",
-        "Content-Type": "application/json"
-    }
-    
-    payload = {
-        "model": MODEL,
-        "messages": [{"role": "user", "content": prompt}],
-        "temperature": 0.7,
-        "max_tokens": 8000
-    }
-    
-    response = requests.post(url, headers=headers, json=payload, timeout=API_TIMEOUT)
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"]
+    """Call Kimi API."""
+    return _call_kimi([{"role": "user", "content": prompt}], temperature=0.7, max_tokens=8000, timeout=API_TIMEOUT)
 
 
 def extract_code(response: str) -> Optional[str]:
@@ -370,7 +349,7 @@ Return ONLY the corrected C++ code block.
     # Save results
     output = {
         "task": "vector-search-optimization",
-        "model": "kimi-k2.5",
+        "model": KIMI_MODEL,
         "max_rounds": MAX_ROUNDS,
         "history": history,
         "best_score": best_score

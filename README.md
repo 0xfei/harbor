@@ -8,17 +8,19 @@
 
 ## 测试结果总览
 
-| 任务 | 难度 | kimi-k2.5 成功率 | 结论 |
-|------|------|------------------|------|
-| bitmap-vector-fix | Medium | 100% | ⚠️ 典型 bug，偏简单 |
-| stream-window-aggregator | Hard | **100%** | ✅ 多轮迭代下能自我诊断文档错误 |
-| stream-ingest-deadlock | Hard | **100%** | ✅ 多轮迭代下能完全修复并发问题 |
-| kafka2clickhouse-debug | Medium | **100%** | ✅ 静态分析成功识别生产 bug |
-| distributed-chaos-system | Extreme | > 50% | ✅ 条件触发 |
-| clickhouse-to-doris | Medium | **100%** | ✅ schema 迁移能力强 |
-| clickhouse-mergetree-debug | Medium | **100%** | ✅ 精准定位 crash bug（15.6s） |
-| storage-performance-analysis | Hard | **100%** | ✅ 准确识别系统性容量瓶颈，排除迷惑项（37.4s） |
-| vector-search-optimization | Hard | **0%** | ❌ 算法正确但性能不达标（6s vs 1.5s） |
+| 任务 | 难度 | kimi-k2.5 成功率 | 耗时 | 结论 |
+|------|------|------------------|------|------|
+| bitmap-vector-fix | Medium | 100% | - | ⚠️ 典型 bug，偏简单 |
+| stream-window-aggregator | Hard | **100%** | 77s | ✅ 第 1 轮编译成功，自我诊断文档错误 |
+| stream-ingest-deadlock | Hard | **100%** | - | ✅ 多轮迭代下能完全修复并发问题 |
+| kafka2clickhouse-debug | Medium | **100%** | 18-36s | ✅ 静态分析成功识别生产 bug（Line 395） |
+| distributed-chaos-system | Extreme | **100%** | 20-23s | ✅ 种子化随机数修复非确定性（Deterministic: True） |
+| clickhouse-to-doris | Medium | **80%** | 52s | ✅ 4/5 优化点通过，schema 迁移能力强 |
+| clickhouse-mergetree-debug | Medium | **100%** | 8-13s | ✅ 精准定位 crash bug（Line 182） |
+| storage-performance-analysis | Hard | **100%** | 37-66s | ✅ 准确识别系统性容量瓶颈，排除迷惑项 |
+| vector-search-optimization | Hard | **0%** | - | ❌ 算法正确但性能不达标（6s vs 1.5s） |
+
+**总体评分：8/9 任务成功，成功率 88.9%**
 
 ---
 
@@ -83,6 +85,26 @@
 
 ## 快速运行
 
+### 测试结果
+
+完整测试执行记录见 [TEST_RESULTS.md](./TEST_RESULTS.md)
+
+### 环境变量配置
+
+本项目使用标准 OpenAI API 格式，需配置以下三个环境变量：
+
+```bash
+# 添加到 ~/.zshrc 或 ~/.bashrc
+export KIMI_API_KEY="your-api-key"
+export KIMI_URL="https://dashscope.aliyuncs.com/compatible-mode/v1"  # 或内部网关地址
+export KIMI_MODEL="kimi-k2.5"  # 或特定模型版本/endpoint ID
+```
+
+**说明**：
+- `KIMI_API_KEY`: API 密钥
+- `KIMI_URL`: OpenAI 兼容接口地址（DashScope 或内部网关）
+- `KIMI_MODEL`: 模型名称或 Endpoint ID
+
 ### 前置条件（Mac）
 
 ```bash
@@ -136,27 +158,29 @@ uv run harbor run -a nop -p examples/tasks/stream-window-aggregator
 # 查看评测结果
 uv run harbor view jobs
 
-# 运行所有任务
+# 运行所有任务的 oracle/nop 验证
 for task in examples/tasks/*/; do
     uv run harbor run -a oracle -p "$task"
 done
 ```
 
-### 验证 kimi-k2.5 多轮迭代能力
+### 运行 Kimi 静态分析评测
 
 ```bash
-export BAILIAN_API_KEY="your-api-key-here"
-cd examples/tasks/stream-window-aggregator
-python3 tests/test_kimi_multi_round.py
-# 结果：✅ 第 1 轮即编译成功
-```
+# 一键运行所有 Kimi 测试（最长5分钟/测试）
+bash run_all_kimi_tests.sh
 
-### 运行 Kafka-to-ClickHouse 静态分析
+# 单独运行各任务测试
+# 注意：单次API调用超时60秒，测试整体超时300秒
+python3 examples/tasks/kafka2clickhouse-debug/tests/test_kimi_debug.py        # 18-36s ✅
+python3 examples/tasks/clickhouse-mergetree-debug/tests/test_kimi_debug.py    # 8-13s  ✅
+python3 examples/tasks/clickhouse-to-doris/tests/test_kimi_migration.py       # 52s    ✅ 80%
+python3 examples/tasks/distributed-chaos-system/test_kimi.py                   # 20-23s ✅
+python3 examples/tasks/storage-performance-analysis/tests/test_kimi_analysis.py # 37-66s ✅
 
-```bash
-cd examples/tasks/kafka2clickhouse-debug
-python3 tests/test_kimi_debug.py
-# 结果：✅ 52s 完成分析，正确识别 bug
+# 多轮迭代测试（需要 Docker 环境）
+python3 examples/tasks/stream-window-aggregator/tests/test_kimi_multi_round.py  # 77s ✅
+python3 examples/tasks/stream-ingest-deadlock/tests/test_kimi_multi_round.py     # ✅
 ```
 
 ### 运行向量检索优化任务
@@ -164,8 +188,7 @@ python3 tests/test_kimi_debug.py
 ```bash
 cd examples/tasks/vector-search-optimization
 python3 data/generate_data.py  # 首次运行需生成数据（约 1GB）
-./run_tests.sh                 # Oracle/Nop 测试
-./run_kimi_test.sh            # kimi-k2.5 多轮优化（实际结果：0.0/1.0 ❌）
+python3 tests/test_kimi_optimization.py  # kimi-k2.5 多轮优化（实际结果：0% ❌）
 ```
 
 **注意**：数据文件（`*.npy`, `*.bin`）不提交 git，需本地生成。

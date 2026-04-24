@@ -15,10 +15,10 @@ examples/tasks/**/app/search
 *.o
 *.out
 
-# ClickHouse MergeTree debug task - 临时测试文件
-examples/tasks/clickhouse-mergetree-debug/results/*.json
-examples/tasks/clickhouse-mergetree-debug/results/*.txt
-examples/tasks/clickhouse-mergetree-debug/results/*.md
+# Kimi API results (临时测试产物)
+examples/tasks/**/results/*.json
+examples/tasks/**/results/*.txt
+examples/tasks/**/results/*.md
 
 # Python virtual environments
 .venv/
@@ -58,3 +58,6 @@ CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
 Makefile
+
+
+TEST_RESULTS.md

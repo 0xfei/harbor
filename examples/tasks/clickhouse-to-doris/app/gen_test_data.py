@@ -345,18 +345,17 @@ def run_queries(ck, doris):
 # kimi-k2.5 测试
 # ============================================================
 def test_kimi_sql_generation():
-    """测试 kimi-k2.5 的 SQL 生成能力"""
-    import os
-    
-    api_key = os.environ.get("BAILIAN_API_KEY", "")
-    if not api_key:
-        print("Warning: BAILIAN_API_KEY not set, skipping kimi test")
-        return None
-    
+    """测试 Kimi 的 SQL 生成能力"""
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).parent.parent.parent))
     try:
-        import requests
-        
-        prompt = f"""Given the ClickHouse table:
+        from kimi_client import call_kimi, KIMI_MODEL
+    except ImportError:
+        print("Warning: kimi_client not available, skipping kimi test")
+        return None
+
+    prompt = f"""Given the ClickHouse table:
 
 ```sql
 {CK_DDL.format(tbl=TABLE)}
@@ -373,39 +372,23 @@ Generate an optimized Doris table that:
 
 Output only the CREATE TABLE statement:"""
 
-        response = requests.post(
-            "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
-            headers={
-                "Authorization": f"Bearer {api_key}",
-                "Content-Type": "application/json"
-            },
-            json={
-                "model": "kimi-k2.5",
-                "messages": [{"role": "user", "content": prompt}],
-                "temperature": 0.3,
-                "max_tokens": 2048
-            },
-            timeout=120
-        )
-        
-        content = response.json().get("choices", [{}])[0].get("message", {}).get("content", "")
-        
-        # 检查关键优化点
+    try:
+        content = call_kimi([{"role": "user", "content": prompt}], temperature=0.3, max_tokens=2048)
+
         checks = {
             "DUPLICATE KEY": "DUPLICATE KEY" in content.upper(),
             "seller_id first": content.find("seller_id") < content.find("item_id") if "seller_id" in content and "item_id" in content else False,
             "INVERTED INDEX for item_id": "INVERTED" in content.upper() and "item_id" in content.lower(),
             "INVERTED INDEX for category": "INVERTED" in content.upper() and "category" in content.lower(),
         }
-        
+
         score = sum(checks.values()) / len(checks) * 100
-        print(f"\n[kimi-k2.5 SQL Generation Score: {score:.0f}%]")
+        print(f"\n[{KIMI_MODEL} SQL Generation Score: {score:.0f}%]")
         for check, passed in checks.items():
-            status = "✓" if passed else "✗"
-            print(f"  {status} {check}")
-        
+            print(f"  {'✓' if passed else '✗'} {check}")
+
         return {'score': score, 'checks': checks, 'sql': content[:500]}
-        
+
     except Exception as e:
         print(f"Error testing kimi: {e}")
         return {'error': str(e)}
