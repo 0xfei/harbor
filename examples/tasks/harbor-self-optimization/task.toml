@@ -1,0 +1,23 @@
+[task]
+name = "harbor-self-optimization"
+description = "使用 kimi-k2.5 对本项目进行自动化改造和优化"
+
+[task.difficulty]
+level = "Hard"
+tags = ["meta-evaluation", "code-generation", "iteration", "docker"]
+
+[task.metadata]
+authors = [
+    { name = "0x01f", email = "hhxlovety@gmail.com" }
+]
+estimated_time = "60 minutes"
+verifier = "manual"
+
+[task.evaluation]
+# 评测要点：
+# 1. 能否识别循环依赖（本项目调用自己的测试）
+# 2. 能否正确处理 API 超时和配置错误
+# 3. 能否记录每次运行的时间和结果
+# 4. 能否多轮迭代直到收敛
+# 5. 最终脚本是否使用了环境变量而非硬编码
+# 6. Docker 环境下的 Oracle/Nop/模型测试是否都能运行

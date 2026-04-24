@@ -11,14 +11,17 @@
 | 任务 | 难度 | kimi-k2.5 成功率 | 结论 |
 |------|------|------------------|------|
 | bitmap-vector-fix | Medium | 100% | ⚠️ 典型 bug，偏简单 |
-| stream-window-aggregator | Hard | **100%** | ✅ 多轮迭代下能自我诊断文档错误 |
+| stream-window-aggregator | Hard | **100%** | ✅ 第 1 轮编译成功，自我诊断文档错误 |
 | stream-ingest-deadlock | Hard | **100%** | ✅ 多轮迭代下能完全修复并发问题 |
-| kafka2clickhouse-debug | Medium | **100%** | ✅ 静态分析成功识别生产 bug |
-| distributed-chaos-system | Extreme | > 50% | ✅ 条件触发 |
-| clickhouse-to-doris | Medium | **100%** | ✅ schema 迁移能力强 |
-| clickhouse-mergetree-debug | Medium | **100%** | ✅ 精准定位 crash bug（15.6s） |
-| storage-performance-analysis | Hard | **100%** | ✅ 准确识别系统性容量瓶颈，排除迷惑项（37.4s） |
+| kafka2clickhouse-debug | Medium | **100%** | ✅ 静态分析成功识别生产 bug（Line 395） |
+| distributed-chaos-system | Extreme | **100%** | ✅ 种子化随机数修复非确定性（Deterministic: True） |
+| clickhouse-to-doris | Medium | **80%** | ✅ 4/5 优化点通过，schema 迁移能力强 |
+| clickhouse-mergetree-debug | Medium | **100%** | ✅ 精准定位 crash bug（Line 182） |
+| storage-performance-analysis | Hard | **100%** | ✅ 准确识别系统性容量瓶颈，排除迷惑项 |
 | vector-search-optimization | Hard | **0%** | ❌ 算法正确但性能不达标（6s vs 1.5s） |
+| harbor-self-optimization | Hard | 待测 | 🔄 元评测：kimi-k2.5 优化本项目 |
+
+**总体评分：8/9 任务成功，成功率 88.9%**
 
 ---
 
@@ -78,6 +81,7 @@
 | 7 | [clickhouse-mergetree-debug](./examples/tasks/clickhouse-mergetree-debug/) | Medium | ClickHouse crash 分析、vector 边界检查 |
 | 8 | [storage-performance-analysis](./examples/tasks/storage-performance-analysis/) | Hard | 分布式存储性能分析、根因推断、容量治理 |
 | 9 | [vector-search-optimization](./examples/tasks/vector-search-optimization/) | Hard | C++ 向量检索优化、ANN 算法、标准库约束 |
+| 10 | [harbor-self-optimization](./examples/tasks/harbor-self-optimization/) | Hard | 元评测、循环依赖识别、多轮迭代收敛 |
 
 ---
 
@@ -210,3 +214,21 @@ examples/tasks/<task-name>/
 ---
 
 *最后更新：2026-04-24*
+
+---
+
+## 自动优化测试结果
+
+> **执行时间**: 2026-04-24 15:29:08
+> **模型**: ep-
+> **API**: https://
+
+| 指标 | 数值 |
+|------|------|
+| 总测试数 |      119 |
+| 通过数 | 5 |
+| 失败数 | 114 |
+| 成功率 | 4% |
+
+详细日志: `optimization_log_20260424_152853.jsonl`
+
