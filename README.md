@@ -10,13 +10,14 @@
 
 | 任务 | 难度 | kimi-k2.5 成功率 | 结论 |
 |------|------|------------------|------|
-| stream-window-aggregator | Hard | **100%** | ✅ 多轮迭代下能自我诊断文档错误 |
 | bitmap-vector-fix | Medium | 100% | ⚠️ 典型 bug，偏简单 |
+| stream-window-aggregator | Hard | **100%** | ✅ 多轮迭代下能自我诊断文档错误 |
 | stream-ingest-deadlock | Hard | **100%** | ✅ 多轮迭代下能完全修复并发问题 |
+| kafka2clickhouse-debug | Medium | **100%** | ✅ 静态分析成功识别生产 bug |
 | distributed-chaos-system | Extreme | > 50% | ✅ 条件触发 |
 | clickhouse-to-doris | Medium | **100%** | ✅ schema 迁移能力强 |
+| clickhouse-mergetree-debug | Medium | **100%** | ✅ 精准定位 crash bug（15.6s） |
 | vector-search-optimization | Hard | **0%** | ❌ 算法正确但性能不达标（6s vs 1.5s） |
-| kafka2clickhouse-debug | Medium | **100%** | ✅ 静态分析成功识别生产 bug |
 
 ---
 
@@ -61,13 +62,14 @@
 
 | # | 任务 | 难度 | 考察点 |
 |---|------|------|--------|
-| 1 | [stream-window-aggregator](./examples/tasks/stream-window-aggregator/TASK.md) | Hard | Lock-free 编程、事件时间语义、padding 细节 |
-| 2 | [bitmap-vector-fix](./examples/tasks/bitmap-vector-fix/TASK.md) | Medium | C++ 调试、边界条件 |
-| 3 | [stream-ingest-deadlock](./examples/tasks/stream-ingest-deadlock/TASK.md) | Hard | Python 并发、锁语义 |
-| 4 | [distributed-chaos-system](./examples/tasks/distributed-chaos-system/TASK.md) | Extreme | 分布式系统、非确定性行为 |
-| 5 | [clickhouse-to-doris](./examples/tasks/clickhouse-to-doris/TASK.md) | Medium | 数据库 schema 迁移、索引优化 |
-| 6 | [vector-search-optimization](./examples/tasks/vector-search-optimization/TASK.md) | Hard | C++ 向量检索优化、ANN 算法、标准库约束 |
-| 7 | [kafka2clickhouse-debug](./examples/tasks/kafka2clickhouse-debug/README.md) | Medium | Kafka 消费逻辑、生产 bug 诊断、静态代码分析 |
+| 1 | [bitmap-vector-fix](./examples/tasks/bitmap-vector-fix/) | Medium | C++ 调试、边界条件 |
+| 2 | [stream-window-aggregator](./examples/tasks/stream-window-aggregator/) | Hard | Lock-free 编程、事件时间语义、padding 细节 |
+| 3 | [stream-ingest-deadlock](./examples/tasks/stream-ingest-deadlock/) | Hard | Python 并发、锁语义 |
+| 4 | [kafka2clickhouse-debug](./examples/tasks/kafka2clickhouse-debug/) | Medium | Kafka 消费逻辑、生产 bug 诊断、静态代码分析 |
+| 5 | [distributed-chaos-system](./examples/tasks/distributed-chaos-system/) | Extreme | 分布式系统、非确定性行为 |
+| 6 | [clickhouse-to-doris](./examples/tasks/clickhouse-to-doris/) | Medium | 数据库 schema 迁移、索引优化 |
+| 7 | [clickhouse-mergetree-debug](./examples/tasks/clickhouse-mergetree-debug/) | Medium | ClickHouse crash 分析、vector 边界检查 |
+| 8 | [vector-search-optimization](./examples/tasks/vector-search-optimization/) | Hard | C++ 向量检索优化、ANN 算法、标准库约束 |
 
 ---
 

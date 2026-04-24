@@ -11,17 +11,18 @@ examples/tasks/vector-search-optimization/data/*.bin
 !examples/tasks/vector-search-optimization/data/generate_data.py
 
 # 编译产物
-examples/tasks/vector-search-optimization/app/search
+examples/tasks/**/app/search
 *.o
 *.out
 
-# Kafka-to-ClickHouse debug task - 临时测试文件
-examples/tasks/kafka2clickhouse-debug/results/*.json
-examples/tasks/kafka2clickhouse-debug/results/*.txt
-examples/tasks/kafka2clickhouse-debug/results/*.md
-# 但保留 README 和报告（手动提交）
-!examples/tasks/kafka2clickhouse-debug/README.md
-!examples/tasks/kafka2clickhouse-debug/KIMI_DEBUG_REPORT.md
+# ClickHouse MergeTree debug task - 临时测试文件
+examples/tasks/clickhouse-mergetree-debug/results/*.json
+examples/tasks/clickhouse-mergetree-debug/results/*.txt
+examples/tasks/clickhouse-mergetree-debug/results/*.md
+
+# Python virtual environments
+.venv/
+venv/
 
 # IDE / 工具目录
 .codeflicker/
